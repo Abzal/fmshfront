@@ -53,7 +53,7 @@ export default {
         /*background: rgba(13, 33, 71, 0.65);*/
         background: #222222;
         padding: 30px 0;
-        margin-top: 300px;
+
     }
     .footer__item{
         display: flex;

@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
 
-        <div class="container" style="margin-top: -5px">
+        <div class="top__img" style="margin-top: -5px">
             <Icon name="main-school" alt="image" style="margin-bottom: 20px;" />
             <div class="content-head">
                 <h1>Миссия школы</h1>
@@ -10,8 +10,24 @@
                 <p>Способствовать повышению качества Казахстанского образования через воспитание интеллектуального и физически развитого гражданина мира с высокими моральными ценностями</p>
             </div>
         </div>
+
+        <about-school2></about-school2>
+        <last-news></last-news>
         <grid-box style="margin-bottom: 40px"></grid-box>
-        <news-block></news-block>
+
+
+
+
+
+
+        <!--<about-school></about-school>-->
+
+
+
+
+
+
+
 
     </div>
 
@@ -22,18 +38,21 @@
 import Icon from "@/components/Icon";
 import GridBox from "@/components/GridBox";
 import NewsBlock from "@/components/news/NewsBlock";
+import LastNews from "@/components/news/LastNews";
+import AboutSchool from "@/components/AboutSchool";
+import AboutSchool2 from "@/components/AboutSchool2";
 export default {
   name: 'HomeView',
-    components: {NewsBlock, GridBox, Icon},
+    components: {AboutSchool2, AboutSchool, LastNews, NewsBlock, GridBox, Icon},
 }
 </script>
 <style scoped>
-    .container {
+    .top__img {
         position: relative;
         margin: 0 auto;
     }
 
-    .container img {
+    .top__img img {
         vertical-align: middle;
         width: 100%;
         max-width: 1200px;
@@ -42,7 +61,7 @@ export default {
         object-fit: cover;
     }
 
-    .container .content-head {
+    .top__img .content-head {
         position: absolute;
         bottom: 200px;
         background-color: #8dc041;
@@ -53,7 +72,7 @@ export default {
         right: 0;
         font-size: 24px;
     }
-    .container .content-body{
+    .top__img .content-body{
         position: absolute;
         right: 0;
         bottom: 70px;
