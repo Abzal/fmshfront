@@ -10,19 +10,19 @@ export default {
           {
             id: 2,
             title: 'О школе',
-            to: '/',
+            to: '/about',
             childs: []
           },
           {
             id: 3,
             title: 'Нормативные документы',
-            to: '/',
+            to: '/document',
             childs: []
           },
           {
             id: 3,
             title: 'Наша команда',
-            to: '/',
+            to: '/team',
             childs: [
               {
                 id: 2,

@@ -14,21 +14,6 @@
         <about-school2></about-school2>
         <last-news></last-news>
         <grid-box style="margin-bottom: 40px"></grid-box>
-
-
-
-
-
-
-        <!--<about-school></about-school>-->
-
-
-
-
-
-
-
-
     </div>
 
 </template>
