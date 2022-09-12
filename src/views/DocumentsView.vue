@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper" style="padding-bottom: 100px;">
-        <table class="data__table">
+        <table v-for="documents in documentData" class="data__table">
             <tr>
                 <th>
-                    Нормативные документы
+                    {{ documents.title }}
                 </th>
                 <th>
                     Дата загрузки
@@ -12,80 +12,33 @@
                     Действие
                 </th>
             </tr>
-            <tr>
+            <tr v-for="doc in documents.childs">
                 <td>
-                    Обзор январь 2020 года для учителей
+                   {{ doc.name }}
                 </td>
                 <td>
-                    22.12.2022
+                    {{ doc.created_date }}
                 </td>
                 <td>
-                    <a type="button" class="file_download" target="_blank" href="#!">
-                        Скачать
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Обзор за март-август 2020г
-                </td>
-                <td>
-                    22.12.2022
-                </td>
-                <td>
-                    <a type="button" class="file_download" target="_blank" href="#!">
-                        Скачать
-                    </a>
-                </td>
-            </tr>
-        </table>
-
-        <table class="data__table">
-            <tr>
-                <th>
-                    Нормативно-правовые акты
-                </th>
-                <th>
-                    Дата загрузки
-                </th>
-                <th>
-                    Действие
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    Модель критериального оценивания, утвержденная решением Правления АОО «Назарбаев Интеллектуальные школы» от 15 августа 2016 года (протокол №39).
-                </td>
-                <td>
-                    22.12.2022
-                </td>
-                <td>
-                    <a type="button" class="file_download" target="_blank" href="#!">
-                        Скачать
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Модель внешнего оценивания учебных достижений учащихся Назарбаев Интеллектуальных школ утвержденная решением Правления АОО «Назарбаев Интеллектуальные школы» от 28 августа 2014 года (протокол №40).
-                </td>
-                <td>
-                    22.12.2022
-                </td>
-                <td>
-                    <a type="button" class="file_download" target="_blank" href="#!">
+                    <a type="button" class="file_download" target="_blank" :href="doc.url" download>
                         Скачать
                     </a>
                 </td>
             </tr>
         </table>
     </div>
+
 </template>
 
 <script>
-
+import {mapState, mapMutations, mapGetters} from 'vuex'
 export default {
-  name: 'DocumentsView',
+    name: 'DocumentsView',
+    computed:{
+        ...mapGetters({
+            documentData: 'document/getDocumentData',
+        }),
+    },
 }
 </script>
 <style scoped>

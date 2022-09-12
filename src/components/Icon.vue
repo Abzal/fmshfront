@@ -3,8 +3,8 @@
         <img v-else-if="'header-logo' === name" :src="require('@/assets/img/svg/nis-logo1.svg')" :alt="alt"/>
         <img v-else-if="'main-school' === name" :src="require('@/assets/img/main-school.jpg')" :alt="alt"/>
         <img v-else-if="'library-pic' === name" :src="require('@/assets/img/library-pic.jpg')" :alt="alt"/>
-        <img v-else-if="'museam-pic' === name" :src="require('@/assets/img/museam-pic.jpg')" :alt="alt"/>
-        <img v-else-if="'business-pic' === name" :src="require('@/assets/img/business-pic.jpg')" :alt="alt"/>
+        <img v-else-if="'museam-pic' === name" :src="require('@/assets/img/museam-pic1.jpg')" :alt="alt"/>
+        <img v-else-if="'business-pic' === name" :src="require('@/assets/img/business-pic1.jpg')" :alt="alt"/>
         <img v-else-if="'almuni-pic' === name" :src="require('@/assets/img/almuni.png')" :alt="alt"/>
         <img v-else-if="'research-pic' === name" :src="require('@/assets/img/research-pic.jpg')" :alt="alt"/>
         <img v-else-if="'sport-pic' === name" :src="require('@/assets/img/sport-pic.jpg')" :alt="alt"/>
