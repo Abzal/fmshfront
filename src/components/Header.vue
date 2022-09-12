@@ -8,12 +8,7 @@
                     </a>
                 </div>
                 <div class="header__elements" style="display: flex">
-                    <a href="#!" class="header__link-top">қаз</a>
-                    <a href="#!" class="header__link-top header__link-top-active">рус</a>
-                    <a href="#!" class="header__link-top">eng</a>
-
-                    <!--<a href="#!" v-for="locale in locales" :key="locale" :class="(this.$i18n.locale === locale)?'header__link-top-active':''" @click="switchLocale(locale)" class="header__link-top">{{ localesText[locale] }}</a>-->
-
+                    <a href="#!" v-for="locale in locales" :key="locale" :class="(this.$i18n.locale === locale)?'header__link-top-active':''" @click="switchLocale(locale)" class="header__link-top">{{ localesText[locale] }}</a>
                     <button class="header__sign">Войти</button>
                     <burger-menu class="burger__box-cmp" style="cursor: pointer;" @click="shMMenu = !shMMenu"></burger-menu>
                 </div>
@@ -75,6 +70,17 @@ export default {
     }
   },
   methods: {
+      switchLocale(locale){
+          /*TODO: optimize this*/
+          if(this.$i18n.locale !== locale){
+              this.$i18n.locale = locale
+              //const to = this.$router.resolve({params:{locale}})
+              let to = '/'+locale+ this.$route.path.substring(this.$route.path.lastIndexOf('/'));
+
+              this.$router.push(to)
+          }
+      },
+
       toggler(idx){
           if(this.togglerStore[idx])
               this.togglerStore[idx] = false

@@ -1,7 +1,7 @@
 <template>
     <div class="parent">
-    <router-link v-if="menuItem.to.startsWith('/')" :to="menuItem.to" class="desktop__item parent__desktop__item" :class="{'header__link-active': activeTopMenu}" >{{menuItem.title}}</router-link>
-      <a v-else="menuItem.to.startsWith('http')" :href="menuItem.to" class="desktop__item parent__desktop__item">{{menuItem.title}}</a>
+    <router-link :to="'/'+this.$i18n.locale + menuItem.to" class="desktop__item parent__desktop__item" :class="{'header__link-active': activeTopMenu}" >{{menuItem.title}}</router-link>
+
 
     <div class="under__box">
         <div class="under__box-row" :style="changeStyle(ownStyle)">

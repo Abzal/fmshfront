@@ -10,6 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebook, faTwitter, faInstagram, faLinkedin, faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import i18n from './i18n'
 
 library.add(fas)
 library.add(faFacebook)
@@ -19,6 +20,6 @@ library.add(faLinkedin)
 library.add(faTwitter)
 
 
-createApp(App)
+createApp(App).use(i18n)
     .component('fawesome', FontAwesomeIcon)
     .use(bscss).use(bs).use(style).use(store).use(router).mount('#app')

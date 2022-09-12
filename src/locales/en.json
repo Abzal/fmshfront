@@ -1,0 +1,11 @@
+{
+  "message": "hello!!",
+  "main-page": "Main page",
+  "esg": {
+    "title": "ESG databook"
+  },
+  "development": {
+    "title": "Sustainable development",
+    "title-desc": "Kazatomprom adheres to unshakable principles in the field of sustainable development"
+  }
+}
