@@ -500,6 +500,10 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+.wrapper_big{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .wrapper__full{
     max-width: 100%;
     margin: 0 auto;
