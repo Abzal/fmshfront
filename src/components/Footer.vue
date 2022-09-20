@@ -8,7 +8,7 @@
                 <nav class="footer__nav">
                     <ul class="footer__menu">
                         <li class="footer__menu-item">
-                            <h3 class="footer__menu-title">Контакты</h3>
+                            <h3 class="footer__menu-title">{{$t('contacts')}}</h3>
                         </li>
                         <li class="footer__menu-item">
                             <a href="#!" class="footer__menu-link">info@fmsh.nis.edu.kz</a>
@@ -17,12 +17,12 @@
                             <a href="#!" class="footer__menu-link">8 (727) 6-27-27</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">г.Шымкент, мкр. Акжайык, здание 6</a>
+                            <a href="#!" class="footer__menu-link">{{$t('address')}}</a>
                         </li>
                     </ul>
                     <ul class="footer__menu">
                         <li class="footer__menu-item">
-                            <h3 class="footer__menu-title">Следите за нами</h3>
+                            <h3 class="footer__menu-title">{{$t('follow')}}</h3>
                         </li>
                         <li class="footer__menu-item">
                             <a href="#!" class="footer__menu-link">Facebook</a>

@@ -43,7 +43,13 @@ const routes = [
         meta: { /*layout: 'main'*/ },
         name: 'team',
         component: () => import('../views/TeamView.vue')
-      }
+      },
+      {
+        path: 'coming',
+        meta: { /*layout: 'main'*/ },
+        name: 'coming',
+        component: () => import('../views/ComingSoonView.vue')
+      },
     ],
   },
   {

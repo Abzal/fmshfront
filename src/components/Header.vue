@@ -9,7 +9,7 @@
                 </div>
                 <div class="header__elements" style="display: flex">
                     <a href="#!" v-for="locale in locales" :key="locale" :class="(this.$i18n.locale === locale)?'header__link-top-active':''" @click="switchLocale(locale)" class="header__link-top">{{ localesText[locale] }}</a>
-                    <button class="header__sign">Войти</button>
+                    <button class="header__sign">{{$t("signin")}}</button>
                     <burger-menu class="burger__box-cmp" style="cursor: pointer;" @click="shMMenu = !shMMenu"></burger-menu>
                 </div>
             </div>
@@ -20,20 +20,20 @@
                     <ul class="burger__nav-ul">
                         <li v-for="(item, index) in $store.getters.getMenuData" class="burger__nav-li">
                             <div class="tabs">
-                                <router-link :to="item.to" class="desktop__item" @click="shMMenu = !shMMenu"  >{{item.title}}</router-link>
+                                <router-link :to="item.to" class="desktop__item" @click="shMMenu = !shMMenu"  >{{item.title[this.$i18n.locale]}}</router-link>
                                 <div v-if="item.childs.length > 0" class="show__down-icon" @click="toggler(index+'_p')" :class="togglerStore[index+'_p']?'show__up-icon':''"></div>
                             </div>
 
                             <ul v-show="togglerStore[index+'_p']" class="burger__nav-ul" v-if="item.childs.length > 0" style="padding: 10px 0 0 10px">
                                 <li v-for="(sub_item, sub_index) in item.childs" class="burger__nav-li">
                                     <div class="tabs">
-                                        <router-link :to="sub_item.to" class="desktop__item" @click="shMMenu = !shMMenu" >{{sub_item.title}}</router-link>
+                                        <router-link :to="sub_item.to" class="desktop__item" @click="shMMenu = !shMMenu" >{{sub_item.title[this.$i18n.locale]}}</router-link>
                                         <div v-if="sub_item.childs.length > 0" class="show__down-icon" @click="toggler(sub_index+'_sp')" :class="togglerStore[sub_index+'_sp']?'show__up-icon':''"></div>
                                     </div>
 
                                     <ul v-show="togglerStore[sub_index+'_sp']" class="burger__nav-ul" v-if="sub_item.childs.length > 0" style="padding: 10px 0 0 10px">
                                         <li v-for="(sub_sub_item, sub_sub_index) in sub_item.childs" class="burger__nav-li">
-                                            <router-link :to="sub_sub_item.to" class="desktop__item" @click="shMMenu = !shMMenu" >{{sub_sub_item.title}}</router-link>
+                                            <router-link :to="sub_sub_item.to" class="desktop__item" @click="shMMenu = !shMMenu" >{{sub_sub_item.title[this.$i18n.locale]}}</router-link>
                                         </li>
                                     </ul>
 
@@ -66,7 +66,7 @@ export default {
         shMMenu : false,
         togglerStore : {},
         locales: ['kz','ru','en'],/*process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(',')*/
-        localesText : {'kz':'қаз','ru':'руc','en':'eng'}
+        localesText : {'kz':'qaz','ru':'руc','en':'eng'}
     }
   },
   methods: {

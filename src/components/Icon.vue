@@ -1,7 +1,7 @@
 <template>
         <img v-if="'footer-logo' === name" :src="require('@/assets/img/svg/nis-footer-logo.svg')" :alt="alt" />
         <img v-else-if="'header-logo' === name" :src="require('@/assets/img/svg/nis-logo1.svg')" :alt="alt"/>
-        <img v-else-if="'main-school' === name" width="1440px"  :src="require('@/assets/img/main-school.jpg')" :alt="alt"/>
+        <img v-else-if="'main-school' === name"   :src="require('@/assets/img/main-school.jpg')" :alt="alt"/>
         <img v-else-if="'library-pic' === name" :src="require('@/assets/img/library-pic.jpg')" :alt="alt"/>
         <img v-else-if="'museam-pic' === name" :src="require('@/assets/img/museam-pic1.jpg')" :alt="alt"/>
         <img v-else-if="'business-pic' === name" :src="require('@/assets/img/business-pic1.jpg')" :alt="alt"/>

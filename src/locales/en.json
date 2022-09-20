@@ -1,11 +1,16 @@
 {
   "message": "hello!!",
-  "main-page": "Main page",
-  "esg": {
-    "title": "ESG databook"
+  "coming": "COMING SOON",
+  "signin": "Sign in",
+  "contacts": "Contacts",
+  "address": "Shymkent, md. Akzhayik, building 6",
+  "follow": "Follow Us",
+  "news": {
+    "title": "News",
+    "last-news": "Last news"
   },
-  "development": {
-    "title": "Sustainable development",
-    "title-desc": "Kazatomprom adheres to unshakable principles in the field of sustainable development"
+  "main-page":{
+    "mission": "School mission",
+    "mission-description": "Contribute to improving the quality of Kazakhstani education through the education of an intellectual and physically developed citizen of the world with high moral values"
   }
 }

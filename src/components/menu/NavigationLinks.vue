@@ -1,6 +1,6 @@
 <template>
     <div class="parent">
-    <router-link :to="'/'+this.$i18n.locale + menuItem.to" class="desktop__item parent__desktop__item" :class="{'header__link-active': activeTopMenu}" >{{menuItem.title}}</router-link>
+    <router-link :to="'/'+this.$i18n.locale + menuItem.to" class="desktop__item parent__desktop__item" :class="{'header__link-active': activeTopMenu}" >{{menuItem.title[this.$i18n.locale]}}</router-link>
 
 
     <div class="under__box">

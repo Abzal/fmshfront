@@ -1,11 +1,16 @@
 {
   "message": "Salem",
-  "main-page": "Басты бет",
-  "esg": {
-    "title": "ESG деректер банкі"
+  "coming": "JAQINDA ŞIĞADI",
+  "signin": "Kirw",
+  "contacts": "Baylanıs",
+  "address": "Şımkent, md. Aqjayıq, ğïmarat 6",
+  "follow": "Bizge Jazılıñızdar",
+  "news": {
+    "title": "Jañalıqtar",
+    "last-news": "Soñğı jañalıqtar"
   },
-  "development": {
-    "title": "Тұрақты даму",
-    "title-desc": "Казатомпром орнықты даму саласында мызғымас қағидаттарды ұстанады"
+  "main-page":{
+    "mission": "Mektep mïssïyası",
+    "mission-description": "Adamgerşilik qundılıqtarı joğarı ïntellektwaldı jäne fïzïkalıq damığan älem azamatın tärbïelew arqılı qazaqstandıq bilim sapasın arttırwğa üles qosw"
   }
 }

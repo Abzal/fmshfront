@@ -4,37 +4,18 @@
     <div class="container-fluid pt-2">
         <div class="container">
             <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Новости</span></p>
-                <h1 class="mb-4">Последние новости</h1>
+                <p class="section-title px-5"><span class="px-2">{{$t('news.title')}}</span></p>
+                <h1 class="mb-4">{{$t('news.last-news')}}</h1>
             </div>
+
             <div class="row pb-3">
-                <div class="col-lg-4 mb-4">
+                <div v-for="item in news" class="col-lg-4 mb-4" >
                     <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2"  :src="require('@/assets/img/news/blog-1.jpg')" alt="">
+                        <img class="card-img-top mb-2"  :src="require('@/assets'+item[this.$i18n.locale].image)" alt="">
                         <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Читать далее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2" :src="require('@/assets/img/news/blog-2.jpg')" alt="">
-                        <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Читать далее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2" :src="require('@/assets/img/news/blog-3.jpg')" alt="">
-                        <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Читать далее</a>
+                            <h4 class="">{{item[this.$i18n.locale].title}}</h4>
+                            <p>{{item[this.$i18n.locale].description.substring(0,153)}}...</p>
+                            <!--<a href="" class="btn btn-primary px-4 mx-auto my-2">Читать далее</a>-->
                         </div>
                     </div>
                 </div>
@@ -46,8 +27,14 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
-        name: "LastNews"
+        name: "LastNews",
+        computed: {
+            ...mapGetters({
+                news: 'news/getNews',
+            }),
+        },
     }
 </script>
 

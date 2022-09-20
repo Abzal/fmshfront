@@ -1,6 +1,6 @@
 <template>
     <div class="subparent">
-        <router-link  class="desktop__item parent__desktop__item"   :to="'/'+this.$i18n.locale + subMenuItem.to">{{subMenuItem.title}}</router-link>
+        <router-link  class="desktop__item parent__desktop__item"   :to="'/'+this.$i18n.locale + subMenuItem.to">{{subMenuItem.title[this.$i18n.locale]}}</router-link>
 
         <span class="direction_arrow" v-if="subMenuItem.childs.length>0"></span>
         <div class="subrow" v-if="subMenuItem.childs.length>0">
@@ -8,7 +8,7 @@
                 <div class="line"></div>
                 <ul class="sub-mega-links">
                     <li v-for="subItem in subMenuItem.childs" :key="subItem.id">
-                        <a class="desktop__item" href="#">{{subItem.title}}</a>
+                        <a class="desktop__item" href="#">{{subItem.title[this.$i18n.locale]}}</a>
                     </li>
                 </ul>
             </div>
