@@ -31,13 +31,12 @@
 
 import Icon from "@/components/Icon";
 import GridBox from "@/components/GridBox";
-import NewsBlock from "@/components/news/NewsBlock";
 import LastNews from "@/components/news/LastNews";
 import AboutSchool from "@/components/AboutSchool";
 import AboutSchool2 from "@/components/AboutSchool2";
 export default {
   name: 'HomeView',
-    components: {AboutSchool2, AboutSchool, LastNews, NewsBlock, GridBox, Icon},
+    components: {AboutSchool2, AboutSchool, LastNews, GridBox, Icon},
 }
 </script>
 <style scoped>

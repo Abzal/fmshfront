@@ -25,13 +25,13 @@
                             <h3 class="footer__menu-title">{{$t('follow')}}</h3>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Facebook</a>
+                            <a href="https://www.facebook.com/profile.php?id=100084372381400" target="_blank" class="footer__menu-link">Facebook</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Instagram</a>
+                            <a href="https://www.instagram.com/nis.shymkent.official/" target="_blank" class="footer__menu-link">Instagram</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Youtube</a>
+                            <a href="https://www.youtube.com/channel/UCb8nWY4ahJJSOt5dOrMVSPQ" target="_blank" class="footer__menu-link">Youtube</a>
                         </li>
                     </ul>
                 </nav>
