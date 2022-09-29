@@ -7,13 +7,14 @@
                 <div class="text-center pb-2">
                     <p class="section-title px-5"><span class="px-2">Встречайте Наших учителей</span></p>
                 </div>
-                <template v-for="key in Object.keys(teamsData)" :key="index+'_teams'">
+                <template v-for="dta in teamsData">
+
                     <div class="text-center pb-2">
-                        <h1 class="mb-4">{{key}}</h1>
+                        <h1 class="mb-4">{{dta.description}}</h1>
                     </div>
 
                     <div class="row">
-                        <template v-for="(item, idx) in teamsData[key]">
+                        <template v-for="(item, idx) in dta.team">
                             <div class="col-md-6 col-lg-3 text-center team mb-5">
                                 <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
                                     <img class="img-fluid w-100" :src="require('@/assets/img/'+item.image)" alt="" >
