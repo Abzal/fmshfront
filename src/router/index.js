@@ -39,10 +39,11 @@ const routes = [
         component: () => import('../views/DocumentsView.vue')
       },
       {
-        path: 'team',
+        path: 'team/:type',
         meta: { /*layout: 'main'*/ },
         name: 'team',
-        component: () => import('../views/TeamView.vue')
+        component: () => import('../views/TeamView.vue'),
+        props: true
       },
       {
         path: 'coming',

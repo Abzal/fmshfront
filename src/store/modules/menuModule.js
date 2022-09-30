@@ -22,7 +22,7 @@ export default {
           {
             id: 3,
             title: {ru:'Наша команда',kz:'Bizdiñ top',en:'Our team'},
-            to: '/team',
+            to: '/team/all',
             childs: [
               {
                 id: 2,
@@ -33,7 +33,7 @@ export default {
               {
                 id: 3,
                 title: {ru:'Учебно-вспомогательный персонал',kz:'Pedagogïkalıq kömekşi personal',en:'Teaching support staff'},
-                to: '/',
+                to: '/team/kurators',
                 childs: []
               },
               {

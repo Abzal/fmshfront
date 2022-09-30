@@ -8,7 +8,7 @@
                 <div class="line"></div>
                 <ul class="sub-mega-links">
                     <li v-for="subItem in subMenuItem.childs" :key="subItem.id">
-                        <a class="desktop__item" href="#">{{subItem.title[this.$i18n.locale]}}</a>
+                        <router-link class="desktop__item" :to="'/'+this.$i18n.locale + subItem.to">{{subItem.title[this.$i18n.locale]}}</router-link>
                     </li>
                 </ul>
             </div>
