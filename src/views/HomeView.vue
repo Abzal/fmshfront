@@ -11,6 +11,10 @@
         </div>
     </div>
     <div class="wrapper">
+
+
+        <about-school2></about-school2>
+        <last-news></last-news>
         <!--Vidieos start-->
         <div class="videos">
             <div class="videos__wrapper">
@@ -19,10 +23,7 @@
                 </div>
             </div>
         </div>
-
-        <about-school2></about-school2>
-        <last-news></last-news>
-        <grid-box style="margin-bottom: 40px"></grid-box>
+        <!--<grid-box style="margin-bottom: 40px"></grid-box>-->
     </div>
 
 </template>

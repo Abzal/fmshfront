@@ -33,6 +33,30 @@ const routes = [
         component: () => import('../views/AboutView.vue')
       },
       {
+        path: 'virtual',
+        meta: { /*layout: 'main'*/ },
+        name: 'virtual',
+        component: () => import('../views/VirtualSchoolView.vue')
+      },
+      {
+        path: 'vocation',
+        meta: { /*layout: 'main'*/ },
+        name: 'vocation',
+        component: () => import('../views/VocationSchoolView.vue')
+      },
+      {
+        path: 'parent-univer',
+        meta: { /*layout: 'main'*/ },
+        name: 'parent-univer',
+        component: () => import('../views/ParentUniversityView')
+      },
+      {
+        path: 'students',
+        meta: { /*layout: 'main'*/ },
+        name: 'students',
+        component: () => import('../views/StudentsView')
+      },
+      {
         path: 'document',
         meta: { /*layout: 'main'*/ },
         name: 'document',

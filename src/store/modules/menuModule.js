@@ -63,7 +63,7 @@ export default {
       {
         id: 12,
         title: {ru:'УЧЕНИКАМ',kz:'OQWŞILARGA',en:'FOR STUDENTS'},
-        to: '/coming',
+        to: '/students',
         childs: [
           {
             id: 13,
@@ -154,7 +154,7 @@ export default {
           {
             id: 14,
             title: {ru:'Родительский комитет',kz:'Ata-analar komïteti',en:'Parental committee'},
-            to: '/coming',
+            to: '/parent-univer',
             childs: []
           },
           {
@@ -186,13 +186,13 @@ export default {
           {
             id: 14,
             title: {ru:'Виртуальная школа',kz:'vïrtwaldı mektep',en:'virtual school'},
-            to: '/coming',
+            to: '/virtual',
             childs: []
           },
           {
             id: 14,
             title: {ru:'Каникулярная школа',kz:'demalıs mektebi',en:'vacation school'},
-            to: '/coming',
+            to: '/vocation',
             childs: []
           }
         ]
