@@ -8,8 +8,8 @@ export default {
           'team' : [
             {
               image: "team/kurators/team-5.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Битанова Айжанат Бердикуловна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -18,8 +18,8 @@ export default {
             },
             {
               image: "team/kurators/team-6.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Алтыбаева Ажар Умаровна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -28,8 +28,8 @@ export default {
             },
             {
               image: "team/kurators/madina.jpg",
-              name: "Мадина Сарсенбаева",
-              post: "Куратор",
+              name: "Сарсенова Мадина Есенбаевна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -38,8 +38,8 @@ export default {
             },
             {
               image: "team/kurators/dariga.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Исаева Дариха Абдихашимовна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -48,8 +48,8 @@ export default {
             },
             {
               image: "team/kurators/aigerim.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Тлегенова Айгерим Нуруллаевна",
+              post: "Учитель информатики",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -58,8 +58,8 @@ export default {
             },
             {
               image: "team/kurators/aigul.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Бурханова Айгуль Садуакасовна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -68,8 +68,8 @@ export default {
             },
             {
               image: "team/kurators/askar.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Мирзахмедов Аскар Алибекович",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -78,8 +78,8 @@ export default {
             },
             {
               image: "team/kurators/baurjan.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Смайлов Бауржан Уразалиевич",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -88,8 +88,8 @@ export default {
             },
             {
               image: "team/kurators/laura.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Турабай Лаура Саттарқызы",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -98,8 +98,8 @@ export default {
             },
             {
               image: "team/kurators/meruert.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Нурмаханбетова Меруерт Молдахановна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -108,8 +108,8 @@ export default {
             },
             {
               image: "team/kurators/nagima.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Есимбетова Надира Тойболкызы",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -118,8 +118,8 @@ export default {
             },
             {
               image: "team/kurators/new1.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Мухамедкулова Азиза Адилова",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -128,8 +128,8 @@ export default {
             },
             {
               image: "team/kurators/new2.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Ташай Таңшолпан Батыралиқызы",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -138,8 +138,8 @@ export default {
             },
             {
               image: "team/kurators/new3.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Турабай Лаура Саттарқызы",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -148,8 +148,8 @@ export default {
             },
             {
               image: "team/kurators/rabiga.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Кенжебаева Рабига Мекембаевна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -158,8 +158,8 @@ export default {
             },
             {
               image: "team/kurators/saltanat.jpg",
-              name: "Julia Smith",
-              post: "Music Teacher",
+              name: "Арысбаева Салтанат Дауреновна",
+              post: "куратор",
               contacts:{
                 twitter:"",
                 instagram:"",

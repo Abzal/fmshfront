@@ -30,43 +30,43 @@ const routes = [
         path: 'about',
         meta: { /*layout: 'main'*/ },
         name: 'about',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/about/AboutView.vue')
       },
       {
         path: 'virtual',
         meta: { /*layout: 'main'*/ },
         name: 'virtual',
-        component: () => import('../views/VirtualSchoolView.vue')
+        component: () => import('../views/applicants/VirtualSchoolView.vue')
       },
       {
         path: 'vocation',
         meta: { /*layout: 'main'*/ },
         name: 'vocation',
-        component: () => import('../views/VocationSchoolView.vue')
+        component: () => import('../views/applicants/VocationSchoolView.vue')
       },
       {
         path: 'parent-univer',
         meta: { /*layout: 'main'*/ },
         name: 'parent-univer',
-        component: () => import('../views/ParentUniversityView')
+        component: () => import('../views/parents/ParentUniversityView')
       },
       {
         path: 'students',
         meta: { /*layout: 'main'*/ },
         name: 'students',
-        component: () => import('../views/StudentsView')
+        component: () => import('../views/students/StudentsView')
       },
       {
         path: 'document',
         meta: { /*layout: 'main'*/ },
         name: 'document',
-        component: () => import('../views/DocumentsView.vue')
+        component: () => import('../views/about/DocumentsView.vue')
       },
       {
         path: 'team/:type',
         meta: { /*layout: 'main'*/ },
         name: 'team',
-        component: () => import('../views/TeamView.vue'),
+        component: () => import('../views/about/TeamView.vue'),
         props: true
       },
       {

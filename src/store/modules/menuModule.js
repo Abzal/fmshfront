@@ -4,12 +4,12 @@ export default {
     mainMenuData: [
       {
         id: 1,
-        title: {ru:'О НАС',kz:'BIZ TWRALI',en:'ABOUT US'},
+        title: {ru:'О НАС',kz:'BIZ TURALY',en:'ABOUT US'},
         to: '/',
         childs: [
           {
             id: 2,
-            title: {ru:'О школе',kz:'Mektep twralı',en:'About school'},
+            title: {ru:'О школе',kz:'Mektep turaly',en:'About school'},
             to: '/about',
             childs: []
           },
@@ -21,30 +21,30 @@ export default {
           },
           {
             id: 3,
-            title: {ru:'Наша команда',kz:'Bizdiñ top',en:'Our team'},
+            title: {ru:'Наша команда',kz:'Bızdıñ top',en:'Our team'},
             to: '/team/all',
             childs: [
               {
                 id: 2,
-                title: {ru:'Преподавательский состав (кафедры)',kz:'Oqıtwşılar quramı (kafedralar)',en:'Teaching staff (departments)'},
+                title: {ru:'Преподавательский состав (кафедры)',kz:'Mūğalımder qūramy (kafedralar)',en:'Teaching staff (departments)'},
                 to: '/',
                 childs: []
               },
               {
                 id: 3,
-                title: {ru:'Учебно-вспомогательный персонал',kz:'Pedagogïkalıq kömekşi personal',en:'Teaching support staff'},
+                title: {ru:'Учебно-вспомогательный персонал',kz:'Pedagogikalyq kömekşıler',en:'Teaching support staff'},
                 to: '/team/kurators',
                 childs: []
               },
               {
                 id: 2,
-                title: {ru:'Администрация школы',kz:'Mektep äkimşiligi',en:'School administration'},
+                title: {ru:'Администрация школы',kz:'Mektep äkımşılıgı',en:'School administration'},
                 to: '/',
                 childs: []
               },
               {
                 id: 3,
-                title: {ru:'Общежитие',kz:'Jataqxana',en:'Hostel'},
+                title: {ru:'Общежитие',kz:'Jataqhana',en:'Hostel'},
                 to: '/',
                 childs: []
               },
@@ -53,7 +53,7 @@ export default {
           },
           {
             id: 3,
-            title: {ru:'Попечительский совет',kz:'Qamqorşılıq keñesi',en:'Board of Trustees'},
+            title: {ru:'Попечительский совет',kz:'Qamqorşylyq keñes',en:'Board of Trustees'},
             to: '/coming',
             childs: []
           },
@@ -62,42 +62,42 @@ export default {
       },
       {
         id: 12,
-        title: {ru:'УЧЕНИКАМ',kz:'OQWŞILARGA',en:'FOR STUDENTS'},
+        title: {ru:'УЧЕНИКАМ',kz:'OQUŞYLARĞA',en:'FOR STUDENTS'},
         to: '/students',
         childs: [
           {
             id: 13,
-            title: {ru:'Совет лидеров',kz:'Köşbasşılar keñesi',en:'Council of Leaders'},
+            title: {ru:'Совет лидеров',kz:'Kösbasşylar keñesı',en:'Council of Leaders'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Расписание уроков',kz:'Sabaq kestesi',en:'schedule of lessons'},
+            title: {ru:'Расписание уроков',kz:'Sabaq kestesı',en:'schedule of lessons'},
             to: '/coming',
             childs: []
           },
           {
             id: 13,
-            title: {ru:'Ресурсный центр (подкурсы)',kz:'Reswrstıq ortalıq (kişi kwrstar)',en:'Resource Center (sub-courses)'},
+            title: {ru:'Ресурсный центр (подкурсы)',kz:'Resurstyq ortalyq (qosymşa kurstar)',en:'Resource Center (sub-courses)'},
             to: '/coming',
             childs: []
           },
           {
             id: 13,
-            title: {ru:'Олимпийский центр',kz:'Olïmpïada ortalığı',en:'Olympic Center'},
+            title: {ru:'Олимпийский центр',kz:'Olimpiadalyq ortalyq',en:'Olympic Center'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Элективные курсы',kz:'Tañdaw kwrstarı',en:'Elective courses'},
+            title: {ru:'Элективные курсы',kz:'Tañtau kurstary',en:'Elective courses'},
             to: '/coming',
             childs: []
           },
           {
             id: 13,
-            title: {ru:'Руководство для учащихся и родителей',kz:'Oqwşılar men ata-analarğa arnalğan nusqawlıq',en:'Guide for students and parents'},
+            title: {ru:'Руководство для учащихся и родителей',kz:'Oquşylar men ata-analarğa arnalğan nūsqaulyq',en:'Guide for students and parents'},
             to: '/coming',
             childs: []
           },
@@ -105,36 +105,36 @@ export default {
       },
       {
         id: 12,
-        title: {ru:'УЧИТЕЛЯМ',kz:'MUĞALIMDER ÜŞIN',en:'FOR TEACHERS'},
+        title: {ru:'УЧИТЕЛЯМ',kz:'MŪĞALIMDER ÜŞIN',en:'FOR TEACHERS'},
         to: '/coming',
         childs: [
           {
             id: 13,
-            title: {ru:'Нормативные документы',kz:'Ережелер',en:'Regulations'},
+            title: {ru:'Нормативные документы',kz:'Erejeler',en:'Regulations'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Конкурсы для пед работников',kz:'Ped jumısşılarına arnalğan jarıstar',en:'Competitions for ped workers'},
+            title: {ru:'Конкурсы для пед работников',kz:'Mūğalımderge arnalğan jarystar',en:'Competitions for ped workers'},
             to: '/coming',
             childs: []
           },
           {
             id: 13,
-            title: {ru:'Публикации педагогов',kz:'Pedagogtardıñ basılımdarı',en:'Publications of educators'},
+            title: {ru:'Публикации педагогов',kz:'Oqytuşylardyñ basylymdary',en:'Publications of educators'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Сертифицированные тренеры',kz:'Sertïfïkattalğan jattıqtırwşılar',en:'Certified trainers'},
+            title: {ru:'Сертифицированные тренеры',kz:'Sertifikattalğan jattyqtyruşylar',en:'Certified trainers'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Профессиональное развитие (ресурсы для учителей)',kz:'Biliktilikti arttırw (muğalimderge arnalğan reswrstar)',en:'Professional Development (Resources for Teachers)'},
+            title: {ru:'Профессиональное развитие (ресурсы для учителей)',kz:'Bılıktılıktı arttyru (mūğalımderge arnalğan resurstar)',en:'Professional Development (Resources for Teachers)'},
             to: '/coming',
             childs: []
           },
@@ -147,25 +147,25 @@ export default {
         childs: [
           {
             id: 13,
-            title: {ru:'Задать вопрос директору',kz:'Dïrektorğa suraq qoyıñız',en:'Ask a question to the director'},
+            title: {ru:'Задать вопрос директору',kz:'Basşyğa sūraq qoiu',en:'Ask a question to the director'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Родительский комитет',kz:'Ata-analar komïteti',en:'Parental committee'},
+            title: {ru:'Родительский комитет',kz:'Ata-analar kamitetı',en:'Parental committee'},
             to: '/parent-univer',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Образовательная модель школы',kz:'Mekteptiñ tärbïe modeli',en:'The educational model of the school'},
+            title: {ru:'Образовательная модель школы',kz:'Mektep tärbie modelı',en:'The educational model of the school'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Структура системы оценки',kz:'Bağalaw jüyesiniñ qurılımı',en:'Structure of the assessment system'},
+            title: {ru:'Структура системы оценки',kz:'Bağalau jüiesınıñ qūrylymy',en:'Structure of the assessment system'},
             to: '/coming',
             childs: []
           }
@@ -174,24 +174,24 @@ export default {
       },
       {
         id: 12,
-        title: {ru:'ПРЕТЕНДЕНТАМ',kz:'Ötiniş berwşilerge',en:'FOR APPLICANTS'},
+        title: {ru:'ПРЕТЕНДЕНТАМ',kz:'ÜMITKERLERGE',en:'FOR APPLICANTS'},
         to: '/coming',
         childs: [
           {
             id: 13,
-            title: {ru:'Конкурсный отбор',kz:'Konkwrstıq iriktew',en:'Competitive selection'},
+            title: {ru:'Конкурсный отбор',kz:'Konkurstyq ırıkteu',en:'Competitive selection'},
             to: '/coming',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Виртуальная школа',kz:'vïrtwaldı mektep',en:'virtual school'},
+            title: {ru:'Виртуальная школа',kz:'Virtualdy mektep',en:'virtual school'},
             to: '/virtual',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Каникулярная школа',kz:'demalıs mektebi',en:'vacation school'},
+            title: {ru:'Каникулярная школа',kz:'Demalys mektebı',en:'vacation school'},
             to: '/vocation',
             childs: []
           }
@@ -199,30 +199,30 @@ export default {
       },
       {
         id: 20,
-        title: {ru:'ШКОЛЬНАЯ ЖИЗНЬ',kz:'МЕКТЕП ӨМІРІ',en:'SCHOOL LIFE'},
+        title: {ru:'ШКОЛЬНАЯ ЖИЗНЬ',kz:'MEKTEP ÖMIRI',en:'SCHOOL LIFE'},
         to: '/coming',
         childs: [
           {
             id: 21,
-            title: {ru:'Общежитие',kz:'Jataqxana',en:'Hostel'},
+            title: {ru:'Общежитие',kz:'Jataqhana',en:'Hostel'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Социальные проекты',kz:'Älewmettik jobalar',en:'Social projects'},
+            title: {ru:'Социальные проекты',kz:'Äleumettık jobalar',en:'Social projects'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Кружковые занятия',kz:'Klwbtıq is-şaralar',en:'Club activities'},
+            title: {ru:'Кружковые занятия',kz:'Qosymşalar',en:'Club activities'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Профориентационная работа',kz:'Käsiptik bağdar berw jumısı',en:'Career guidance work'},
+            title: {ru:'Профориентационная работа',kz:'Käsıptık bağdar beru jūmystary',en:'Career guidance work'},
             to: '/coming',
             childs: []
           },
@@ -234,31 +234,31 @@ export default {
           },
           {
             id: 21,
-            title: {ru:'Библиотека',kz:'Library',en:'Kitapxana'},
+            title: {ru:'Библиотека',kz:'Kıtaphana',en:'Library'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Психологическая служба',kz:'Psïxologïyalıq qızmet',en:'Psychological service'},
+            title: {ru:'Психологическая служба',kz:'Psihalogialyq qyzmet',en:'Psychological service'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Служба питания',kz:'Tamaqtanw qızmeti',en:'Food Service'},
+            title: {ru:'Служба питания',kz:'Tamaqtanu qyzymetı',en:'Food Service'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Медицинская служба',kz:'medïcïnalıq qızmet',en:'medical service'},
+            title: {ru:'Медицинская служба',kz:'Därıgerler qyzymetı',en:'medical service'},
             to: '/coming',
             childs: []
           },
           {
             id: 21,
-            title: {ru:'Летняя школа',kz:'Jazğı mektep',en:'Summer school'},
+            title: {ru:'Летняя школа',kz:'Jazğy mektep',en:'Summer school'},
             to: '/coming',
             childs: []
           },
@@ -271,19 +271,19 @@ export default {
         childs: [
           {
             id: 49,
-            title: {ru:'Новости',kz:'Jañalıqtar',en:'News'},
+            title: {ru:'Новости',kz:'Jañalyqtar',en:'News'},
             to: '/coming',
             childs: []
           },
           {
             id: 50,
-            title: {ru:'Фото и видео',kz:'Foto jäne beyne',en:'Photo and video'},
+            title: {ru:'Фото и видео',kz:'Foto jäne beine',en:'Photo and video'},
             to: '/coming',
             childs: []
           },
           {
             id: 51,
-            title: {ru:'О нас в СМИ',kz:'Buqaralıq aqparat quraldarında biz twralı',en:'About us in the media'},
+            title: {ru:'О нас в СМИ',kz:'Bız turaly BAQ-ta',en:'About us in the media'},
             to: '/coming',
             childs: []
           }
@@ -296,37 +296,37 @@ export default {
         childs: [
           {
             id: 55,
-            title: {ru:'Наши обязательства',kz:'Bizdiñ mindettemelerimiz',en:'Our Commitments'},
+            title: {ru:'Наши обязательства',kz:'Bızdıñ mındettemelerımız',en:'Our Commitments'},
             to: '/coming',
             childs: []
           },
           {
             id: 56,
-            title: {ru:'Кого мы ищем',kz:'Kimdi izdeymiz',en:'Who are we looking for'},
+            title: {ru:'Кого мы ищем',kz:'Kımdı ızdeudemız',en:'Who are we looking for'},
             to: '/coming',
             childs: []
           },
           {
             id: 57,
-            title: {ru:'Вакансии',kz:'Jumıs orındarı',en:'Jobs'},
+            title: {ru:'Вакансии',kz:'Jumys oryndary',en:'Jobs'},
             to: '/coming',
             childs: []
           },
           {
             id: 58,
-            title: {ru:'Итоги отбора',kz:'Tañdaw nätïjeleri',en:'Selection results'},
+            title: {ru:'Итоги отбора',kz:'Tañdau nätijelerı',en:'Selection results'},
             to: '/coming',
             childs: []
           },
           {
             id: 59,
-            title: {ru:'Процесс подбора',kz:'Tañdaw procesi',en:'Selection process'},
+            title: {ru:'Процесс подбора',kz:'Tañdau barysy',en:'Selection process'},
             to: '/coming',
             childs: []
           },
           {
             id: 61,
-            title: {ru:'Часто задаваемые вопросы',kz:'Jïi qoyılatın suraqtar',en:'Frequently asked Questions'},
+            title: {ru:'Часто задаваемые вопросы',kz:'Jiı qoiylatyn sūraqtar',en:'Frequently asked Questions'},
             to: '/coming',
             childs: []
           }

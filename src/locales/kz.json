@@ -1,16 +1,24 @@
 {
   "message": "Salem",
-  "coming": "JAQINDA ŞIĞADI",
-  "signin": "Kirw",
-  "contacts": "Baylanıs",
-  "address": "Şımkent, md. Aqjayıq, ğïmarat 6",
-  "follow": "Bizge Jazılıñızdar",
+  "coming": "JAQYNDA ŞYĞAMYZ",
+  "signin": "Kıru",
+  "contacts": "Bailanys",
+  "address": "Şymkent qalasy, m.a. Aqjaiyq, , 6 - ğimarat",
+  "follow": "Bızge jazylyñyzdar",
+  "read-more": "Köbırek bılu....",
   "news": {
-    "title": "Jañalıqtar",
-    "last-news": "Soñğı jañalıqtar"
+    "title": "Jañalyqtar",
+    "last-news": "Soñğy jañalyqtar"
   },
   "main-page":{
-    "mission": "Mektep mïssïyası",
-    "mission-description": "Adamgerşilik qundılıqtarı joğarı ïntellektwaldı jäne fïzïkalıq damığan älem azamatın tärbïelew arqılı qazaqstandıq bilim sapasın arttırwğa üles qosw"
+    "mission": "Mektep misiasy",
+    "mission-description": "Zamanui bılım dağdylaryn meñgergen ziatker, adamgerşılıgı mol, salauatty älem azamatyn tärbieleu",
+    "about": "Mektep turaly",
+    "best-school": "Sızdıñ balalaryñyz üşın eñ jaqsy tañdau",
+    "about-text": "Şymkent qalasyndağy fizika-matematika bağytyndağy Nazarbaev Ziatkerlık mektebı 2013 jyldyñ 16 aqpanynda aşyldy. Saltanatty şarağa Oñtüstık Qazaqstan oblysynyñ äkımı Asqar Myrzahmetov qatysty. Qazaqstannyñ eñ ırı öñırlerınıñ bırındegı jaña mektep Nazarbaev Ziatkerlık mektepterı otbasyndağy toğyzynşy boldy jäne bılım berudıñ sapaly ösuın qamtamasyz etuge, oqu üderısıne innovasialardy engızuge, mūğalımderdıñ bılıktılıgın arttyruğa arnalğan. personal. Ol üşın barlyq jağdai jasalğan.",
+    "almuni": "TÜLEKTER",
+    "foreign-graduate": "ŞETEL UNİVERSİTETINE TÜSKENDER",
+    "local-graduate": "QAZAQSTAN UNİVERSİTETINE TUSKENDER",
+    "nu-graduate": "NAZARBAEV UNİVERSİTETINE TÜSKENDER"
   }
 }

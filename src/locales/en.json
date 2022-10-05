@@ -5,12 +5,20 @@
   "contacts": "Contacts",
   "address": "Shymkent, md. Akzhayik, building 6",
   "follow": "Follow Us",
+  "read-more": "To learn more....",
   "news": {
     "title": "News",
     "last-news": "Last news"
   },
   "main-page":{
     "mission": "School mission",
-    "mission-description": "Contribute to improving the quality of Kazakhstani education through the education of an intellectual and physically developed citizen of the world with high moral values"
+    "mission-description": "Contribute to improving the quality of Kazakhstani education through the education of an intellectual and physically developed citizen of the world with high moral values",
+    "about": "About school",
+    "best-school": "The best school for your children",
+    "about-text": "Nazarbayev Intellectual School of Physics and Mathematics in Shymkent opened on February 16, 2013. Akim of the South Kazakhstan region Askar Myrzakhmetov took part in the solemn event. The new school in one of the largest regions of Kazakhstan has become the ninth in the family of Nazarbayev Intellectual Schools and is designed to ensure the qualitative growth of education, the introduction of innovations in the educational process, and the improvement of the qualifications of teaching staff. All conditions are created for this.",
+    "almuni": "GRADUATES",
+    "foreign-graduate": "GET INTO A FOREIGN UNIVERSITY",
+    "local-graduate": "ENTERED A KAZAKHSTAN UNIVERSITY",
+    "nu-graduate": "GET INTO NAZARBAYEV UNIVERSITY"
   }
 }
