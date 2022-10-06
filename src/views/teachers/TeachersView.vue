@@ -1,37 +1,81 @@
 <template>
-    <template>
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <img class="img-fluid rounded mb-5 mb-lg-0" :src="require('@/assets/img/students/feedback.png')" alt="">
-                    </div>
-                    <div class="col-lg-7">
-                        <p class="section-title pr-5"><span class="pr-2">О совете лидеров</span></p>
-                        <p>Организация ученического самоуправления - это форма участия учащихся Назарбаев Интеллектуальной школы в самоуправлении, где члены организации самоуправления совместно с руководством интеллектуальной школы и координаторами работают над решением вопросов организации общественных работ.</p>
-                        <p>Основная цель организации ученического самоуправления - реализация прав учащихся в управлении школой, воспитание личности с организаторскими качествами, интеллектуального, нравственного, здорового гражданина мира, способного самостоятельно принимать решения, ответственного и дисциплинированного, имеющего активную жизненную позицию и обладающего современными образовательными навыками.</p>
-                    </div>
-                </div>
-                <div class="row align-items-center">
+    <!-- Testimonials -->
+    <div class="slider-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" :src="require('@/assets/img/teachers/testimonials-2-men-talking.svg')" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <h2 style="padding-right: 50px;">{{ $t("teachers.best") }}</h2>
 
-                    <div class="col-lg-7">
-                        <p class="section-title pr-5"><span class="pr-2">О кружках</span></p>
-                        <p>Дополнительное образование учащихся Интеллектуальных школ направлено на формирование и развитие творческих способностей, удовлетворение их индивидуальных потребностей в интеллектуальном, нравственном и физическом совершенствовании, формирование культуры здорового и безопасного образа жизни, укрепление здоровья, а также на организацию их свободного времени.</p>
-                        <p>Дополнительное образование помогает ребенку адаптироваться к жизни в современном обществе, обеспечивает профессиональную ориентацию детей, а также выявление и поддержку детей, проявивших исключительные способности.</p>
-                        <p>Система дополнительного образования НИШ представлена широким спектром форм активизации и взаимодействия учащихся, но все они влияют на формирование и становление личности.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <img class="img-fluid rounded mb-5 mb-lg-0" :src="require('@/assets/img/students/brainstorming.png')" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </template>
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" style="object-fit: cover; object-position: 20% 20%;" :src="require('@/assets/img/'+trainerData[this.tIdx].image)" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">{{trainerData[this.tIdx].course[this.$i18n.locale]}}</p>
+                                            <p class="testimonial-author">{{trainerData[this.tIdx].name[this.$i18n.locale] + ' - "'+ trainerData[this.tIdx].level[this.$i18n.locale] + '"'}}</p>
+                                            <br />
+                                            <br />
+                                            <router-link to="trainers" class="btn btn-info px-4 mx-auto my-2">{{ $t("teachers.all") }}</router-link>
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+
+                            </div> <!-- end of swiper-wrapper -->
+
+                            <!-- Add Arrows -->
+                            <div @click="nextTrainer(1)" class="swiper-button-next"></div>
+                            <div @click="nextTrainer(-1)" class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-2 -->
+    <!-- end of testimonials -->
 </template>
 
 <script>
+    import {mapState, mapMutations, mapGetters} from 'vuex'
     export default {
-        name: "TeachersView"
+        name: "TeachersView",
+        data(){
+          return{
+              tIdx : Math.floor(Math.random() * 10)
+          }
+        },
+        computed:{
+            ...mapGetters({
+                 trainerData: 'trainer/getTrainers',
+            }),
+        },
+        methods : {
+            nextTrainer(i){
+                let t = this.tIdx + i
+                if(t < 0)
+                    this.tIdx = this.trainerData.length - 1
+                else if (t >= this.trainerData.length)
+                    this.tIdx = 0
+                else this.tIdx = t;
+            }
+        }
+
     }
 </script>
 

@@ -20,5 +20,9 @@
     "foreign-graduate": "GET INTO A FOREIGN UNIVERSITY",
     "local-graduate": "ENTERED A KAZAKHSTAN UNIVERSITY",
     "nu-graduate": "GET INTO NAZARBAYEV UNIVERSITY"
+  },
+  "teachers": {
+    "best": "The best trainers",
+    "all": "All trainers"
   }
 }

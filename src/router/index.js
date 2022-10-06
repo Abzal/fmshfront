@@ -57,6 +57,18 @@ const routes = [
         component: () => import('../views/students/StudentsView')
       },
       {
+        path: 'teachers',
+        meta: { /*layout: 'main'*/ },
+        name: 'teachers',
+        component: () => import('../views/teachers/TeachersView')
+      },
+      {
+        path: 'trainers',
+        meta: { /*layout: 'main'*/ },
+        name: 'trainers',
+        component: () => import('../views/teachers/TrainersView')
+      },
+      {
         path: 'document',
         meta: { /*layout: 'main'*/ },
         name: 'document',

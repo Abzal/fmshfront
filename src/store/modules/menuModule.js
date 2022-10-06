@@ -106,7 +106,7 @@ export default {
       {
         id: 12,
         title: {ru:'УЧИТЕЛЯМ',kz:'MŪĞALIMDER ÜŞIN',en:'FOR TEACHERS'},
-        to: '/coming',
+        to: '/teachers',
         childs: [
           {
             id: 13,
@@ -129,7 +129,7 @@ export default {
           {
             id: 14,
             title: {ru:'Сертифицированные тренеры',kz:'Sertifikattalğan jattyqtyruşylar',en:'Certified trainers'},
-            to: '/coming',
+            to: '/trainers',
             childs: []
           },
           {

@@ -20,5 +20,9 @@
     "foreign-graduate": "ŞETEL UNİVERSİTETINE TÜSKENDER",
     "local-graduate": "QAZAQSTAN UNİVERSİTETINE TUSKENDER",
     "nu-graduate": "NAZARBAEV UNİVERSİTETINE TÜSKENDER"
+  },
+  "teachers": {
+    "best": "Üzdık jattyqtyruşylar",
+    "all": "Barlyq jattyqtyruşylar"
   }
 }

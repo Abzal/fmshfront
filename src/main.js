@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import style from '@/assets/css/style.css'
+import swiper from '@/assets/css/swiper.css'
 import bscss from "bootstrap/dist/css/bootstrap.min.css"
 import bs from "bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -22,4 +23,10 @@ library.add(faTwitter)
 
 createApp(App).use(i18n)
     .component('fawesome', FontAwesomeIcon)
-    .use(bscss).use(bs).use(style).use(store).use(router).mount('#app')
+    .use(bscss)
+    .use(bs)
+    .use(style)
+    .use(swiper)
+    .use(store)
+    .use(router)
+    .mount('#app')
