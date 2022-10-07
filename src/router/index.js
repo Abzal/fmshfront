@@ -33,6 +33,12 @@ const routes = [
         component: () => import('../views/about/AboutView.vue')
       },
       {
+        path: 'applicant',
+        meta: { /*layout: 'main'*/ },
+        name: 'applicant',
+        component: () => import('../views/applicants/ApplicantsView')
+      },
+      {
         path: 'virtual',
         meta: { /*layout: 'main'*/ },
         name: 'virtual',
@@ -67,6 +73,12 @@ const routes = [
         meta: { /*layout: 'main'*/ },
         name: 'trainers',
         component: () => import('../views/teachers/TrainersView')
+      },
+      {
+        path: 'live',
+        meta: { /*layout: 'main'*/ },
+        name: 'live',
+        component: () => import('../views/live/LiveView')
       },
       {
         path: 'document',

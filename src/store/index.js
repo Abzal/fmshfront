@@ -4,6 +4,7 @@ import document from '@/store/modules/documentModule'
 import news from "@/store/modules/newsModule";
 import teams from "@/store/modules/teamsModule";
 import trainer from "@/store/modules/trainerModule"
+import live from "@/store/modules/liveModule";
 export default createStore({
   state: {
   },
@@ -18,6 +19,7 @@ export default createStore({
     document,
     news,
     teams,
-    trainer
+    trainer,
+    live
   }
 })

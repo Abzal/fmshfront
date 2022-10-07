@@ -175,7 +175,7 @@ export default {
       {
         id: 12,
         title: {ru:'ПРЕТЕНДЕНТАМ',kz:'ÜMITKERLERGE',en:'FOR APPLICANTS'},
-        to: '/coming',
+        to: '/applicant',
         childs: [
           {
             id: 13,
@@ -200,7 +200,7 @@ export default {
       {
         id: 20,
         title: {ru:'ШКОЛЬНАЯ ЖИЗНЬ',kz:'MEKTEP ÖMIRI',en:'SCHOOL LIFE'},
-        to: '/coming',
+        to: '/live',
         childs: [
           {
             id: 21,

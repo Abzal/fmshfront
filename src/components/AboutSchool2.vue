@@ -16,7 +16,7 @@
                         <!--<h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">О школе</h6>-->
                         <h1 class="display-4">{{ $t('main-page.best-school') }}</h1>
                     </div>
-                    <p> {{ $t('main-page.about-text') }} <a href="#!" class="text-decoration-none"> {{ $t('read-more') }}</a></p>
+                    <p> {{ $t('main-page.about-text') }} <router-link to="about" class="text-decoration-none"> {{ $t('read-more') }}</router-link></p>
                     <div class="row pt-3 mx-0">
                         <div class="col-3 px-0" >
                             <div class="bg-success text-center p-4 h-100">
