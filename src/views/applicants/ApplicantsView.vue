@@ -6,40 +6,21 @@
                 <div class="col-lg-7 mb-5 mb-lg-0">
                     <div class="section-title position-relative mb-4">
                         <div class="text-center pb-2">
-                            <p class="section-title px-5"><span class="px-2">Why Choose Us?</span></p>
+                            <p class="section-title px-5"><span class="px-2">{{ mainData[0].pretitle[this.$i18n.locale] }}</span></p>
                         </div>
-                        <h1 class="display-4">Why You Should Start Learning with Us?</h1>
+                        <h1 class="display-4">{{ mainData[0].title[this.$i18n.locale] }}</h1>
                     </div>
                     <p class="mb-4 pb-2">
-                        У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии
+                        {{ mainData[0].description[this.$i18n.locale] }}
                     </p>
-                    <div class="d-flex mb-3">
-                        <div class="btn-icon bg-primary mr-4">
-                            <i class="fa fa-2x fa-graduation-cap text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>Skilled Instructors</h4>
-                            <p>Самые квалифицированные учителя были выбраны и обучены лучшими специалистами Казахстана и мира</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <div class="btn-icon bg-secondary mr-4">
+                    <!--bg-primary bg-secondary bg-warning-->
+                    <div v-for="item in mainData[0].benefits" class="d-flex mb-3">
+                        <div class="btn-icon mr-4" :class="item.class">
                             <i class="fa fa-2x fa-certificate text-white"></i>
                         </div>
                         <div class="mt-n1">
-                            <h4>Каникулярная школа</h4>
-                            <p>Создана для поддержки претендентов по поступлению в Интеллектуальные школы. <router-link to="vocation" class="text-decoration-none"> {{ $t('read-more') }}</router-link></p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="btn-icon bg-warning mr-4">
-                            <i class="fa fa-2x fa-book-reader text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>Online Classes</h4>
-                            <p class="m-0">
-                                Дистанционные образовательные технологий, позволяющий учащимся в режиме онлайн проходить обучение по профильным предметам Интеллектуальных школ. <router-link to="virtual" class="text-decoration-none"> {{ $t('read-more') }}</router-link>
-                            </p>
+                            <h4>{{ item.title[this.$i18n.locale] }}</h4>
+                            <p>{{ item.description[this.$i18n.locale] }} <router-link v-if="item.link" :to="item.link" class="text-decoration-none"> {{ $t('read-more') }}</router-link></p>
                         </div>
                     </div>
                 </div>
@@ -55,8 +36,14 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
     export default {
-        name: "ApplicantsView"
+        name: "ApplicantsView",
+        computed:{
+            ...mapGetters({
+                mainData: 'applicant/getMain',
+            }),
+        },
     }
 </script>
 

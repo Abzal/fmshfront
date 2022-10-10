@@ -5,6 +5,8 @@ import news from "@/store/modules/newsModule";
 import teams from "@/store/modules/teamsModule";
 import trainer from "@/store/modules/trainerModule"
 import live from "@/store/modules/liveModule";
+import applicant from "@/store/modules/applicantModule";
+
 export default createStore({
   state: {
   },
@@ -20,6 +22,7 @@ export default createStore({
     news,
     teams,
     trainer,
-    live
+    live,
+    applicant
   }
 })

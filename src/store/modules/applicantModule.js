@@ -17,7 +17,52 @@ export default {
             kz:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
             ru:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
             en:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
-          }
+          },
+          benefits:[
+            {
+              title:{
+                kz:"Bılıktı mamandar",
+                ru:"Квалифицированные инструкторы",
+                en:"Skilled Instructors"
+              },
+              description:{
+                kz:"Qazaqstannyñ eñ bılıktı ūstazdary jäne älemnıñ üzdık mamandarymen tajıribe almastyq",
+                ru:"Самые квалифицированные учителя были выбраны и обучены лучшими специалистами Казахстана и мира",
+                en:"The most qualified teachers were selected and trained by the best specialists in Kazakhstan and the world",
+              },
+              link: null,
+              class:'bg-primary'
+            },
+            {
+              title:{
+                kz:"Demalys mektebı",
+                ru:"Каникулярная школа",
+                en:"Vacation school"
+              },
+              description:{
+                kz:"Ziatkerlık mektepterge tüsuge ümıtkerlerdı qoldau üşın qūrylğan.",
+                ru:"Создана для поддержки претендентов по поступлению в Интеллектуальные школы.",
+                en:"Created to support applicants for admission to the Intellectual Schools.",
+              },
+              link: 'vocation',
+              class:'bg-secondary'
+            },
+            {
+              title:{
+                kz:"Virtualdy mektep",
+                ru:"Виртуальная школа",
+                en:"Online Classes"
+              },
+              description:{
+                kz:"Ziatkerlık mektepterdıñ beiındık pänderı boiynşa studentterge onlain oquğa mümkındık beretın qaşyqtyqtan bılım beru tehnologialary.",
+                ru:"Дистанционные образовательные технологий, позволяющий учащимся в режиме онлайн проходить обучение по профильным предметам Интеллектуальных школ.",
+                en:"Distance educational technologies that allow students to study online in specialized subjects of the Intellectual Schools.",
+              },
+              link: 'virtual',
+              class:'bg-warning'
+            },
+          ]
+
         },
       ]
   },
