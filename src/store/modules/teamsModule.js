@@ -4,12 +4,12 @@ export default {
       [
         {
           'type' : 'kurators',
-          'description' : 'Учебно-вспомогательный персонал',
+          'description' : {ru:'Учебно-вспомогательный персонал',kz:'Pedagogikalyq kömekşıler',en:'Teaching support staff'},
           'team' : [
             {
               image: "team/kurators/team-5.jpg",
-              name: "Битанова Айжанат Бердикуловна",
-              post: "куратор",
+              name: {ru:'Битанова Айжанат Бердикуловна',kz:'Bitanova Aijanat Berdikulovna',en:'Bitanova Aijanat Berdikulovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -18,8 +18,8 @@ export default {
             },
             {
               image: "team/kurators/team-6.jpg",
-              name: "Алтыбаева Ажар Умаровна",
-              post: "куратор",
+              name: {ru:'Алтыбаева Ажар Умаровна',kz:'Altybaeva Ajar Umarovna',en:'Altybayeva Azhar Umarovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -28,8 +28,8 @@ export default {
             },
             {
               image: "team/kurators/madina.jpg",
-              name: "Сарсенова Мадина Есенбаевна",
-              post: "куратор",
+              name: {ru:'Сарсенова Мадина Есенбаевна',kz:'Sarsenova Madina Yesenbaevna',en:'Sarsenova Madina Yesenbaevna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -38,8 +38,8 @@ export default {
             },
             {
               image: "team/kurators/dariga.jpg",
-              name: "Исаева Дариха Абдихашимовна",
-              post: "куратор",
+              name: {ru:'Исаева Дариха Абдихашимовна',kz:'İsaeva Dariha Abdihaşimovna',en:'Isaeva Dariha Abdihashimovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -48,8 +48,8 @@ export default {
             },
             {
               image: "team/kurators/aigerim.jpg",
-              name: "Тлегенова Айгерим Нуруллаевна",
-              post: "Учитель информатики",
+              name: {ru:'Тлегенова Айгерим Нуруллаевна',kz:'Tlegenova Aigerim Nurullaevna',en:'Tlegenova Aigerim Nurullaevna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -58,8 +58,8 @@ export default {
             },
             {
               image: "team/kurators/aigul.jpg",
-              name: "Бурханова Айгуль Садуакасовна",
-              post: "куратор",
+              name: {ru:'Бурханова Айгуль Садуакасовна',kz:'Burhanova Aigül Saduakasovna',en:'Burkhanova Aigul Saduakasovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -68,8 +68,8 @@ export default {
             },
             {
               image: "team/kurators/askar.jpg",
-              name: "Мирзахмедов Аскар Алибекович",
-              post: "куратор",
+              name: {ru:'Мирзахмедов Аскар Алибекович',kz:'Mirzahmedov Askar Alibekovich',en:'Mirzakhmedov Askar Alibekovich'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -78,8 +78,8 @@ export default {
             },
             {
               image: "team/kurators/baurjan.jpg",
-              name: "Смайлов Бауржан Уразалиевич",
-              post: "куратор",
+              name: {ru:'Смайлов Бауржан Уразалиевич',kz:'Smailov Baurjan Urazalievich',en:'Smailov Baurzhan Urazalievich'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -88,8 +88,8 @@ export default {
             },
             {
               image: "team/kurators/laura.jpg",
-              name: "Турабай Лаура Саттарқызы",
-              post: "куратор",
+              name: {ru:'Турабай Лаура Саттарқызы',kz:'Turabai Laura Sattarqyzy',en:'Turabay Laura Sattarkyzy'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -98,8 +98,8 @@ export default {
             },
             {
               image: "team/kurators/meruert.jpg",
-              name: "Нурмаханбетова Меруерт Молдахановна",
-              post: "куратор",
+              name: {ru:'Нурмаханбетова Меруерт Молдахановна',kz:'Nurmahanbetova Meruert Moldahanovna',en:'Nurmakhanbetova Meruert Moldakhanovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -108,8 +108,8 @@ export default {
             },
             {
               image: "team/kurators/nagima.jpg",
-              name: "Есимбетова Надира Тойболкызы",
-              post: "куратор",
+              name: {ru:'Есимбетова Надира Тойболкызы',kz:'Esimbetova Nadira Toibolkyzy',en:'Esimbetova Nadira Toybolkyzy'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -118,7 +118,7 @@ export default {
             },
             {
               image: "team/kurators/new1.jpg",
-              name: "Мухамедкулова Азиза Адилова",
+              name: {ru:'Мухамедкулова Азиза Адилова',kz:'Muhamedkulova Aziza Adilova',en:'Mukhamedkulova Aziza Adilova'},
               post: "куратор",
               contacts:{
                 twitter:"",
@@ -128,8 +128,8 @@ export default {
             },
             {
               image: "team/kurators/new2.jpg",
-              name: "Ташай Таңшолпан Батыралиқызы",
-              post: "куратор",
+              name: {ru:'Ташай Таңшолпан Батыралиқызы',kz:'Taşai Tañşolpan Batyraliqyzy',en:'Tashay Tansholpan Batyralykyzy'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -138,8 +138,8 @@ export default {
             },
             {
               image: "team/kurators/new3.jpg",
-              name: "Турабай Лаура Саттарқызы",
-              post: "куратор",
+              name: {ru:'Турабай Лаура Саттарқызы',kz:'Turabai Laura Sattarqyzy',en:'Turabay Laura Sattarkyzy'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -148,8 +148,8 @@ export default {
             },
             {
               image: "team/kurators/rabiga.jpg",
-              name: "Кенжебаева Рабига Мекембаевна",
-              post: "куратор",
+              name: {ru:'Кенжебаева Рабига Мекембаевна',kz:'Kenjebaeva Rabiga Mekembaevna',en:'Kenzhebaeva Rabiga Mekembaevna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",
@@ -158,8 +158,8 @@ export default {
             },
             {
               image: "team/kurators/saltanat.jpg",
-              name: "Арысбаева Салтанат Дауреновна",
-              post: "куратор",
+              name: {ru:'Арысбаева Салтанат Дауреновна',kz:'Arysbaeva Saltanat Daurenovna',en:'Arysbayeva Saltanat Daurenovna'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
                 instagram:"",

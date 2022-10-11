@@ -6,6 +6,7 @@ import teams from "@/store/modules/teamsModule";
 import trainer from "@/store/modules/trainerModule"
 import live from "@/store/modules/liveModule";
 import applicant from "@/store/modules/applicantModule";
+import parent from "@/store/modules/parentModule";
 
 export default createStore({
   state: {
@@ -23,6 +24,7 @@ export default createStore({
     teams,
     trainer,
     live,
-    applicant
+    applicant,
+    parent
   }
 })

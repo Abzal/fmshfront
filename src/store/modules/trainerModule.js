@@ -5,469 +5,469 @@ export default {
         {
           image: "teachers/trainer/abisheva_k.jpg",
           name: {
-            kz:"Абишева К.М.",
+            kz:"Abişeva K.M.",
             ru:"Абишева К.М.",
-            en:"Абишева К.М."
+            en:"Abisheva K.M."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/djunusbayeva_g.jpg",
           name: {
-            kz:"Джунусбаева Г.А.",
+            kz:"Junusbaeva G.A",
             ru:"Джунусбаева Г.А.",
-            en:"Джунусбаева Г.А."
+            en:"Dzhunusbayeva G.A."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/kontayev_e.jpg",
           name: {
-            kz:"Контаев Е.Н.",
+            kz:"Kontaev E.N.",
             ru:"Контаев Е.Н.",
-            en:"Контаев Е.Н."
+            en:"Kontaev E.N."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/bekaidar_g.jpg",
           name: {
-            kz:"Турлыбекова С.К.",
+            kz:"Turlybekova S.K.",
             ru:"Турлыбекова С.К.",
-            en:"Турлыбекова С.К."
+            en:"Turlybekova S.K."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/suleimenova_g.jpg",
           name: {
-            kz:"Сулейменова Г.М.",
+            kz:"Suleimenova G.M.",
             ru:"Сулейменова Г.М.",
-            en:"Сулейменова Г.М."
+            en:"Suleimenova G.M."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/kerimshieva_i.jpg",
           name: {
-            kz:"Керимшеева И.",
+            kz:"Kerimşeeva İ.",
             ru:"Керимшеева И.",
-            en:"Керимшеева И."
+            en:"Kerimsheeva I."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
-            en:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период"
+            en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
         {
           image: "teachers/trainer/beiseeva_g.jpg",
           name: {
-            kz:"Бейсеева Г.Ж.",
+            kz:"Beiseeva G.J.",
             ru:"Бейсеева Г.Ж.",
-            en:"Бейсеева Г.Ж."
+            en:"Beiseeva G.Zh."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по программе Развитие одарённости в школе",
+            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
             ru:"Тренер по программе Развитие одарённости в школе",
-            en:"Тренер по программе Развитие одарённости в школе"
+            en:"Trainer for the program Development of Giftedness at school"
           }
         },
         {
           image: "teachers/trainer/doskulov_e.jpg",
           name: {
-            kz:"Доскулов Е.Ж.",
+            kz:"Doskulov E.J.",
             ru:"Доскулов Е.Ж.",
-            en:"Доскулов Е.Ж."
+            en:"Doskulov E.Zh."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по программе Развитие одарённости в школе",
+            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
             ru:"Тренер по программе Развитие одарённости в школе",
-            en:"Тренер по программе Развитие одарённости в школе"
+            en:"Trainer for the program Development of Giftedness at school"
           }
         },
         {
           image: "teachers/trainer/bolsunova_m.jpg",
           name: {
-            kz:"Болсынова М.И.",
+            kz:"Bolsynova M.İ.",
             ru:"Болсынова М.И.",
-            en:"Болсынова М.И."
+            en:"Bolsynova M.I."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по программе Развитие одарённости в школе",
+            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
             ru:"Тренер по программе Развитие одарённости в школе",
-            en:"Тренер по программе Развитие одарённости в школе"
+            en:"Trainer for the program Development of Giftedness at school"
           }
         },
         {
           image: "teachers/trainer/otegenov_m.jpg",
           name: {
-            kz:"Отегенов М.",
+            kz:"Otegenov M.",
             ru:"Отегенов М.",
-            en:"Отегенов М."
+            en:"Otegenov M."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по программе Развитие одарённости в школе",
+            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
             ru:"Тренер по программе Развитие одарённости в школе",
-            en:"Тренер по программе Развитие одарённости в школе"
+            en:"Trainer for the program Development of Giftedness at school"
           }
         },
         {
           image: "teachers/trainer/baimusaev_sh.jpg",
           name: {
-            kz:"Баймусаев Ш.С.",
+            kz:"Baimusaev Ş.S.",
             ru:"Баймусаев Ш.С.",
-            en:"Баймусаев Ш.С."
+            en:"Baimusaev Sh.S."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trenerL",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/zhalmahanova_s.jpg",
           name: {
-            kz:"Жалмаханова С.А.",
+            kz:"Jalmahanova S.A.",
             ru:"Жалмаханова С.А.",
-            en:"Жалмаханова С.А."
+            en:"Zhalmakhanova S.A."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/joldasova_a.jpg",
           name: {
-            kz:"Жолдасова А.А.",
+            kz:"Joldasova A.A.",
             ru:"Жолдасова А.А.",
-            en:"Жолдасова А.А."
+            en:"Zholdasova A.A."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expertt"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/bedebayeva_m.jpg",
           name: {
-            kz:"Бедебаева М.Е.",
+            kz:"Bedebaeva M.E.",
             ru:"Бедебаева М.Е.",
-            en:"Бедебаева М.Е."
+            en:"Bedebaeva M.E."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/sarsenbayeva_a.jpg",
           name: {
-            kz:"Сарсенбаева А.С.",
+            kz:"Sarsenbaeva A.S.",
             ru:"Сарсенбаева А.С.",
-            en:"Сарсенбаева А.С."
+            en:"Sarsenbayeva A.S."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/botabekov_n.jpg",
           name: {
-            kz:"Ботабеков Н.О.",
+            kz:"Botabekov N.O.",
             ru:"Ботабеков Н.О.",
-            en:"Ботабеков Н.О."
+            en:"Botabekov N.O."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/abdikerova_j.jpg",
           name: {
-            kz:"Абдикерова Ж.Р.",
+            kz:"Abdikerova J.R.",
             ru:"Абдикерова Ж.Р.",
-            en:"Абдикерова Ж.Р."
+            en:"Abdikerova Zh.R."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер CLIL",
+            kz:"CLIL boiynşa trener",
             ru:"Тренер CLIL",
-            en:"Тренер CLIL"
+            en:"CLIL trainer"
           }
         },
         {
           image: "teachers/trainer/ermekbayeva_a.jpg",
           name: {
-            kz:"Ермекбаева А.Т.",
+            kz:"Ermekbaeva A.T.",
             ru:"Ермекбаева А.Т.",
-            en:"Ермекбаева А.Т."
+            en:"Ermekbaeva A.T."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер программы ЦПМ",
+            kz:"PŞO bağdarlamalary boiynşa trener",
             ru:"Тренер программы ЦПМ",
-            en:"Тренер программы ЦПМ"
+            en:"Trainer of the CPE"
           }
         },
         {
           image: "teachers/trainer/naimanbayeva_m.jpg",
           name: {
-            kz:"Найманбаева М.И.",
+            kz:"Naimanbaeva M.İ.",
             ru:"Найманбаева М.И.",
-            en:"Найманбаева М.И."
+            en:"Naimanbayeva M.I."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер программы ЦПМ",
+            kz:"PŞO bağdarlamalary boiynşa trener",
             ru:"Тренер программы ЦПМ",
-            en:"Тренер программы ЦПМ"
+            en:"Trainer of the CPE"
           }
         },
         {
           image: "teachers/trainer/tleulov_e.jpg",
           name: {
-            kz:"Тлеулов Е.Э.",
+            kz:"Tleulov E.E.",
             ru:"Тлеулов Е.Э.",
-            en:"Тлеулов Е.Э."
+            en:"Tleulov E.E."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер программы ЦПМ",
+            kz:"PŞO bağdarlamalary boiynşa trener",
             ru:"Тренер программы ЦПМ",
-            en:"Тренер программы ЦПМ"
+            en:"Trainer of the CPE"
           }
         },
         {
           image: "teachers/trainer/gasanov_n.jpg",
           name: {
-            kz:"Гасанов Н.А",
+            kz:"Gasanov N.A",
             ru:"Гасанов Н.А",
-            en:"Гасанов Н.А"
+            en:"Gasanov N.A."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер программы ЦПМ",
+            kz:"PŞO bağdarlamalary boiynşa trener",
             ru:"Тренер программы ЦПМ",
-            en:"Тренер программы ЦПМ"
+            en:"Trainer of the CPE"
           }
         },
         {
           image: "teachers/trainer/shaldarbekov_j.jpg",
           name: {
-            kz:"Шалдарбеков Ж.М.",
+            kz:"Şaldarbekov J.M.",
             ru:"Шалдарбеков Ж.М.",
-            en:"Шалдарбеков Ж.М."
+            en:"Shaldarbekov Zh.M."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по робототехнике",
+            kz:"Robototehnika boiynşa trener",
             ru:"Тренер по робототехнике",
-            en:"Тренер по робототехнике"
+            en:"Robotics trainer"
           }
         },
         {
           image: "teachers/trainer/turanov_a.jpg",
           name: {
-            kz:"Туранов А.К.",
+            kz:"Turanov A.K.",
             ru:"Туранов А.К.",
-            en:"Туранов А.К."
+            en:"Turanov A.K."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер по робототехнике",
+            kz:"Robototehnika boiynşa trener",
             ru:"Тренер по робототехнике",
-            en:"Тренер по робототехнике"
+            en:"Robotics trainer"
           }
         },
         {
           image: "teachers/trainer/kim_i.jpg",
           name: {
-            kz:"Ким И.М.",
+            kz:"Kim İ.M.",
             ru:"Ким И.М.",
-            en:"Ким И.М."
+            en:"Kim I.M."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер разработчик тестовых заданий CITO",
+            kz:"СITO тест тапсырмаларын құрастырушы тренер",
             ru:"Тренер разработчик тестовых заданий CITO",
-            en:"Тренер разработчик тестовых заданий CITO"
+            en:"CITO test developer"
           }
         },
         {
           image: "teachers/trainer/aijanova_g.jpg",
           name: {
-            kz:"Айжанова Г.Т.",
+            kz:"Aijanova G.T.",
             ru:"Айжанова Г.Т.",
-            en:"Айжанова Г.Т."
+            en:"Aizhanova G.T."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер разработчик тестовых заданий CITO",
+            kz:"СITO тест тапсырмаларын құрастырушы тренер",
             ru:"Тренер разработчик тестовых заданий CITO",
-            en:"Тренер разработчик тестовых заданий CITO"
+            en:"CITO test developer"
           }
         },
         {
           image: "teachers/trainer/petuhova_t.jpg",
           name: {
-            kz:"Петухова Т.В.",
+            kz:"Petuhova T.V.",
             ru:"Петухова Т.В.",
-            en:"Петухова Т.В."
+            en:"Petukhova T.V."
           },
           level: {
-            kz:"Учитель – эксперт",
+            kz:"Mūğalım - sarapşy",
             ru:"Учитель – эксперт",
-            en:"Учитель – эксперт"
+            en:"Teacher - expert"
           },
           course:{
-            kz:"Тренер разработчик тестовых заданий CITO",
+            kz:"СITO тест тапсырмаларын құрастырушы тренер",
             ru:"Тренер разработчик тестовых заданий CITO",
-            en:"Тренер разработчик тестовых заданий CITO"
+            en:"CITO test developer"
           }
         },
       ]

@@ -44,7 +44,7 @@ export default {
               },
               {
                 id: 3,
-                title: {ru:'Общежитие',kz:'Jataqhana',en:'Hostel'},
+                title: {ru:'Общежитие',kz:'Jataqhana',en:'Dormitory'},
                 to: '/',
                 childs: []
               },
@@ -73,7 +73,7 @@ export default {
           },
           {
             id: 14,
-            title: {ru:'Расписание уроков',kz:'Sabaq kestesı',en:'schedule of lessons'},
+            title: {ru:'Расписание уроков',kz:'Sabaq kestesı',en:'Schedule of lessons'},
             to: '/coming',
             childs: []
           },
@@ -143,7 +143,7 @@ export default {
       {
         id: 12,
         title: {ru:'РОДИТЕЛЯМ',kz:'ATA-ANALAR ÜŞIN',en:'FOR PARENTS'},
-        to: '/coming',
+        to: '/parents',
         childs: [
           {
             id: 13,
@@ -185,13 +185,13 @@ export default {
           },
           {
             id: 14,
-            title: {ru:'Виртуальная школа',kz:'Virtualdy mektep',en:'virtual school'},
+            title: {ru:'Виртуальная школа',kz:'Virtualdy mektep',en:'Virtual school'},
             to: '/virtual',
             childs: []
           },
           {
             id: 14,
-            title: {ru:'Каникулярная школа',kz:'Demalys mektebı',en:'vacation school'},
+            title: {ru:'Каникулярная школа',kz:'Demalys mektebı',en:'Vacation school'},
             to: '/vocation',
             childs: []
           }
@@ -204,7 +204,7 @@ export default {
         childs: [
           {
             id: 21,
-            title: {ru:'Общежитие',kz:'Jataqhana',en:'Hostel'},
+            title: {ru:'Общежитие',kz:'Jataqhana',en:'Dormitory'},
             to: '/coming',
             childs: []
           },
@@ -252,7 +252,7 @@ export default {
           },
           {
             id: 21,
-            title: {ru:'Медицинская служба',kz:'Därıgerler qyzymetı',en:'medical service'},
+            title: {ru:'Медицинская служба',kz:'Därıgerler qyzymetı',en:'Medical service'},
             to: '/coming',
             childs: []
           },

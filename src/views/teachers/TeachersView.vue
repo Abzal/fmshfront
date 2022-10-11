@@ -9,7 +9,7 @@
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    <h2 style="padding-right: 50px;">{{ $t("teachers.best") }}</h2>
+                    <h2 style="padding-right: 50px; font-size: 2rem;">{{ $t("teachers.best") }}</h2>
 
                     <!-- Card Slider -->
                     <div class="slider-container">

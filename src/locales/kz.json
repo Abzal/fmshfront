@@ -19,10 +19,18 @@
     "almuni": "TÜLEKTER",
     "foreign-graduate": "ŞETEL UNİVERSİTETINE TÜSKENDER",
     "local-graduate": "QAZAQSTAN UNİVERSİTETINE TUSKENDER",
-    "nu-graduate": "NAZARBAEV UNİVERSİTETINE TÜSKENDER"
+    "nu-graduate": "NAZARBAEV UNİVERSİTETINE TÜSKENDER",
+    "meet-teachers": "Bızdıñ mūğalımdermen tanysyñyz"
+  },
+  "document": {
+    "regulation": "Erejeler",
+    "date": "Jükteu künı",
+    "action": "Äreket"
   },
   "teachers": {
     "best": "Üzdık jattyqtyruşylar",
-    "all": "Barlyq jattyqtyruşylar"
+    "all": "Barlyq jattyqtyruşylar",
+    "trainers-cert": "Sertifikattalğan jattyqtyruşylar",
+    "trainers-list": "Jattyqtyruşylar tızımı"
   }
 }

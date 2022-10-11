@@ -5,13 +5,13 @@
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="text-center pb-2">
-                    <p class="section-title px-5"><span class="px-2">Встречайте Наших учителей</span></p>
+                    <p class="section-title px-5"><span class="px-2">{{ $t('main-page.meet-teachers') }}</span></p>
                 </div>
 
                 <template v-for="dta in teamsData">
                     <template v-if="this.$route.params.type === dta.type || 'all' === this.$route.params.type">
                         <div class="text-center pb-2">
-                            <h1 class="mb-4">{{dta.description}}</h1>
+                            <h1 class="mb-4">{{dta.description[this.$i18n.locale]}}</h1>
                         </div>
                         <div class="row">
                             <template v-for="(item, idx) in dta.team">
@@ -27,8 +27,8 @@
                                                href="#"> <fawesome icon="fab fa-instagram" /> </a>
                                         </div>
                                     </div>
-                                    <h4>{{item.name}}</h4>
-                                    <i>{{item.post}}</i>
+                                    <h4 style="font-size: 1.5rem; font-weight: 500;">{{item.name[this.$i18n.locale]}}</h4>
+                                    <i>{{item.post[this.$i18n.locale]}}</i>
                                 </div>
                             </template>
                         </div>

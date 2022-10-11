@@ -20,25 +20,25 @@
                     <div class="row pt-3 mx-0">
                         <div class="col-3 px-0" >
                             <div class="bg-success text-center p-4 h-100">
-                                <h1 class="text-white" data-toggle="counter-up">698</h1>
+                                <h1 class="text-white" data-toggle="counter-up" style="font-size: 2rem; font-weight: 500; margin-bottom: 10px;">698</h1>
                                 <h6 class="text-uppercase text-white">{{ $t('main-page.almuni') }}<span class="d-block">2015-2021</span></h6>
                             </div>
                         </div>
                         <div class="col-3 px-0">
                             <div class="bg-primary text-center p-4 h-100">
-                                <h1 class="text-white" data-toggle="counter-up">63</h1>
+                                <h1 class="text-white" data-toggle="counter-up" style="font-size: 2rem; font-weight: 500; margin-bottom: 10px;">63</h1>
                                 <h6 class="text-uppercase text-white">{{ $t('main-page.foreign-graduate') }}</h6>
                             </div>
                         </div>
                         <div class="col-3 px-0">
                             <div class="bg-secondary text-center p-4 h-100">
-                                <h1 class="text-white" data-toggle="counter-up">429</h1>
+                                <h1 class="text-white" data-toggle="counter-up" style="font-size: 1.5rem; font-weight: 500; margin-bottom: 10px;">429</h1>
                                 <h6 class="text-uppercase text-white">{{ $t('main-page.local-graduate') }}</h6>
                             </div>
                         </div>
                         <div class="col-3 px-0">
                             <div class="bg-warning text-center p-4 h-100">
-                                <h1 class="text-white" data-toggle="counter-up">206</h1>
+                                <h1 class="text-white" data-toggle="counter-up" style="font-size: 2rem; font-weight: 500; margin-bottom: 10px;">206</h1>
                                 <h6 class="text-uppercase text-white">{{ $t('main-page.nu-graduate') }}</h6>
                             </div>
                         </div>

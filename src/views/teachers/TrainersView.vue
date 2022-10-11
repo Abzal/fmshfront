@@ -5,8 +5,8 @@
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="text-center pb-2">
-                    <p class="section-title px-5"><span class="px-2">Сертифицированные тренеры</span></p>
-                    <h1 class="mb-4">СПИСОК ТРЕНЕРОВ</h1>
+                    <p class="section-title px-5"><span class="px-2">{{ $t('teachers.trainers-cert') }}</span></p>
+                    <h1 class="mb-4">{{ $t('teachers.trainers-list') }}</h1>
                 </div>
                 <div class="row pb-3">
                     <template v-for="item in trainerData">
@@ -19,7 +19,7 @@
                                         <small class="mr-3"><i class="fa fa-user text-primary"></i>{{item.level[this.$i18n.locale]}}</small>
                                     </div>
                                     <p>{{item.course[this.$i18n.locale]}}</p>
-                                    <a href="" class="btn btn-primary px-4 mx-auto my-2">Узнать больше</a>
+                                    <router-link to="coming" class="btn btn-primary px-4 mx-auto my-2">{{ $t('read-more') }}</router-link>
                                 </div>
                             </div>
                         </div>

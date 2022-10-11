@@ -3,21 +3,21 @@
         <table v-for="documents in documentData" class="data__table">
             <tr>
                 <th>
-                    {{ documents.title }}
+                    {{ $t('document.regulation') }}
                 </th>
                 <th>
-                    Дата загрузки
+                    {{ $t('document.date') }}
                 </th>
                 <th>
-                    Действие
+                    {{ $t('document.action') }}
                 </th>
             </tr>
             <tr v-for="doc in documents.childs">
                 <td>
-                   {{ doc.name }}
+                   {{ doc.name[this.$i18n.locale] }}
                 </td>
                 <td>
-                    {{ doc.created_date }}
+                    {{ doc.created_date[this.$i18n.locale] }}
                 </td>
                 <td>
                     <a type="button" class="file_download" target="_blank" :href="doc.url" download>

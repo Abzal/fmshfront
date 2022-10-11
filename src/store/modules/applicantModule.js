@@ -14,9 +14,9 @@ export default {
             en:"WHY YOU SHOULD START LEARNING WITH US?"
           },
           description:{
-            kz:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
+            kz:"Bızde köp jyldyq täjıribe jäne eñ joğary akademialyq nätijeler bar. Bız özımızge senımdılıktı, käsıbi mamandardyñ tūraqty qamqorlyğyn jäne qoldauyn qalyptastyramyz. Sonymen qatar, bız barlyğyna teñ mümkındıkter beremız. Bız stereotipsız, JOO-ğa tüsuge senımdı jäne käsıptı erte tañdağan köşbasşylardy tärbielep jatyrmyz.",
             ru:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
-            en:"У нас многолетний опыт, самые высокие академические результаты, воспитываем уверенность в себе, постоянный уход и поддержка от профессионалов, у нас равные возможности у всех, учим быть лидерами, освобождены от стереотипов, уверенное поступление в ВУЗ, ранний выбор будущей профессии",
+            en:"We have many years of experience and the highest academic results. We foster self-confidence, constant care and support from professionals. Furthermore, we provide equal opportunities for everyone. We are educating leaders who are stereotype-free, confident in their admission to a university, and have made an early career choice.",
           },
           benefits:[
             {
