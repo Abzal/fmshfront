@@ -8,12 +8,14 @@ export default {
           'team' : [
             {
               image: "team/kurators/team-5.jpg",
-              name: {ru:'Битанова Айжанат Бердикуловна',kz:'Bitanova Aijanat Berdikulovna',en:'Bitanova Aijanat Berdikulovna'},
-              post: {ru:'куратор',kz:'kurator',en:'curator'},
+              name: {kz:'Bitanova Aijanat Berdikulovna',ru:'Битанова Айжанат Бердикуловна',en:'Bitanova Aijanat Berdikulovna'},
+              post: {kz:'matematika mūğalımı',ru:'учитель математики',en:'mathematic teacher'},
+              level: {kz:'mūğalım maman',ru:'учитель эксперт',en:'teacher expert'},
+              quote: {kz:'Eşteñe ıstemeitın adam eşqaşan qatelespeidı',ru:'Никогда не ошибается тот, кто ничего не делает',en:'The one who does nothing is never wrong'},
               contacts:{
                 twitter:"",
-                instagram:"",
-                facebook:"",
+                instagram:"https://www.instagram.com/nis.shymkent.official/",
+                facebook:"https://www.facebook.com/profile.php?id=100084372381400",
               }
             },
             {

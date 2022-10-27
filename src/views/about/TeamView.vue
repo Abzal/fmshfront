@@ -27,7 +27,7 @@
                                                href="#"> <fawesome icon="fab fa-instagram" /> </a>
                                         </div>
                                     </div>
-                                    <h4 style="font-size: 1.5rem; font-weight: 500;">{{item.name[this.$i18n.locale]}}</h4>
+                                    <h4 style="font-size: 1.3rem; font-weight: 500;">{{item.name[this.$i18n.locale]}}</h4>
                                     <i>{{item.post[this.$i18n.locale]}}</i>
                                 </div>
                             </template>

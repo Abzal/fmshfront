@@ -15,6 +15,7 @@
 
         <about-school2></about-school2>
         <last-news></last-news>
+        <last-activities></last-activities>
         <!--Vidieos start-->
         <div class="videos">
             <div class="videos__wrapper">
@@ -35,9 +36,10 @@ import GridBox from "@/components/GridBox";
 import LastNews from "@/components/news/LastNews";
 import AboutSchool from "@/components/AboutSchool";
 import AboutSchool2 from "@/components/AboutSchool2";
+import LastActivities from "@/components/activities/LastActivities";
 export default {
   name: 'HomeView',
-    components: {AboutSchool2, AboutSchool, LastNews, GridBox, Icon},
+    components: {LastActivities, AboutSchool2, AboutSchool, LastNews, GridBox, Icon},
 }
 </script>
 <style scoped>

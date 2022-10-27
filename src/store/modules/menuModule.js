@@ -230,7 +230,14 @@ export default {
             id: 21,
             title: {ru:'Проекты',kz:'Jobalar',en:'Projects'},
             to: '/coming',
-            childs: []
+            childs: [
+              {
+                id: 21,
+                title: {ru:'Креативный полет',kz:'Kreativtı samğau',en:'Creative ideas'},
+                to: '/creative',
+                childs: []
+              },
+            ]
           },
           {
             id: 21,

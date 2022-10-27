@@ -32,5 +32,12 @@
     "all": "All trainers",
     "trainers-cert": "Certified trainers",
     "trainers-list": "LIST OF TRAINERS"
+  },
+  "live": {
+    "fest": "VII Festival of Creative Ideas",
+    "creative": "Creative ideas",
+    "until": "Until the end of the registration of applications left:",
+    "activities": "Events",
+    "last-activities": "Recent events"
   }
 }

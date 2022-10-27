@@ -85,7 +85,29 @@ const routes = [
         path: 'live',
         meta: { /*layout: 'main'*/ },
         name: 'live',
-        component: () => import('../views/live/LiveView')
+        component: () => import('../views/live/LiveView'),
+        children:[
+          {
+            path: 'projects',
+            meta: { /*layout: 'main'*/ },
+            name: 'projects',
+            component: () => import('../views/ComingSoonView'),
+            children:[
+              {
+                path: 'creative',
+                meta: { /*layout: 'main'*/ },
+                name: 'creative',
+                component: () => import('../views/live/projects/CreativeIdeas')
+              },
+            ]
+          },
+        ]
+      },
+      {
+        path: 'creative',
+        meta: { /*layout: 'main'*/ },
+        name: 'creative',
+        component: () => import('../views/live/projects/CreativeIdeas')
       },
       {
         path: 'document',

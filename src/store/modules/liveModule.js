@@ -69,11 +69,39 @@ export default {
           },
           pic:"dormitory/dji.jpg"
         },
-      ]
+      ],
+    activities: [
+      {
+        'kz':{
+          title: "Kreativtı samğau",
+          description: "VII Şyğarmaşylyq ideialar festivalı",
+          url:"creative",
+          urlText:"Tırkelu",
+          image:"/img/live/creative.png"
+        },
+        'ru':{
+          title: "Креативный полет",
+          description: "VII Фестиваль творческих идей",
+          url:"creative",
+          urlText:"Регистрация",
+          image:"/img/live/creative.png"
+        },
+        'en':{
+          title: "Creative ideas",
+          description: "VII Festival of Creative Ideas",
+          url:"creative",
+          urlText:"Registration",
+          image:"/img/live/creative.png"
+        }
+      }
+    ]
   },
   getters: {
     getMain (state) {
       return state.main
+    },
+    getActivities (state){
+      return state.activities
     }
   },
   mutations: {
