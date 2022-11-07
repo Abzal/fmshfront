@@ -140,7 +140,7 @@ export default {
             },
             {
               image: "team/kurators/new3.jpg",
-              name: {ru:'Турабай Лаура Саттарқызы',kz:'Turabai Laura Sattarqyzy',en:'Turabay Laura Sattarkyzy'},
+              name: {ru:'Исмаилова Лаззат Жумабаевна',kz:'İsmailova Lazzat Jumabaevna',en:'İsmailova Lazzat Jumabaevna'},
               post: {ru:'куратор',kz:'kurator',en:'curator'},
               contacts:{
                 twitter:"",
