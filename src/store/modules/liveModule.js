@@ -93,7 +93,8 @@ export default {
           urlText:"Registration",
           image:"/img/live/creative.png"
         }
-      }
+      },
+
     ]
   },
   getters: {

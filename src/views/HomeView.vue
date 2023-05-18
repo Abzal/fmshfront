@@ -12,10 +12,13 @@
     </div>
     <div class="wrapper">
 
+        <!--<video-transliasia></video-transliasia>-->
+
+        <!--<notification2-modal v-if="showNotification" @close="showNotification=false"></notification2-modal>-->
 
         <about-school2></about-school2>
         <last-news></last-news>
-        <last-activities></last-activities>
+        <!--<last-activities></last-activities>-->
         <!--Vidieos start-->
         <div class="videos">
             <div class="videos__wrapper">
@@ -37,9 +40,24 @@ import LastNews from "@/components/news/LastNews";
 import AboutSchool from "@/components/AboutSchool";
 import AboutSchool2 from "@/components/AboutSchool2";
 import LastActivities from "@/components/activities/LastActivities";
+import NotificationModal from "@/components/NotificationModal";
+import Notification2Modal from "@/components/Notification2Modal";
+import VideoTransliasia from "@/components/VideoTransliasia";
 export default {
   name: 'HomeView',
-    components: {LastActivities, AboutSchool2, AboutSchool, LastNews, GridBox, Icon},
+    components: {
+        VideoTransliasia,
+        Notification2Modal,
+        NotificationModal, LastActivities, AboutSchool2, AboutSchool, LastNews, GridBox, Icon},
+    data(){
+      return{
+          showNotification: false,
+          showNotification2: false
+      }
+    },
+    created() {
+      setTimeout(()=>{this.showNotification=true},2000)
+    }
 }
 </script>
 <style scoped>

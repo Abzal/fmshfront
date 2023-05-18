@@ -39,6 +39,12 @@ const routes = [
         component: () => import('../views/applicants/ApplicantsView')
       },
       {
+        path: 'konkurs',
+        meta: { /*layout: 'main'*/ },
+        name: 'konkurs',
+        component: () => import('../views/applicants/ConcursView')
+      },
+      {
         path: 'virtual',
         meta: { /*layout: 'main'*/ },
         name: 'virtual',

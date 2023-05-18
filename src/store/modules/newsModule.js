@@ -4,6 +4,51 @@ export default {
     news: [
         {
             'kz':{
+                title: "IT älemınde",
+                description: "«IT älemınde» jelılık kömpüterlık jobalar baiqauynyñ nätijesı",
+                url:"https://mailnisedu-my.sharepoint.com/:b:/g/personal/abzal_amantay_fmsh_nis_edu_kz/EVhVAIzlMGpPmqYqcD2Hy8UBTQTXnArtB9-iiO96qyaipw?e=cNNTuz",
+                image:"/img/news/itworld.jpg"
+            },
+            'ru':{
+                title: "In the IT world",
+                description: "Результат конкурса онлайн-компьютерных проектов «В мире IT».",
+                url:"https://mailnisedu-my.sharepoint.com/:b:/g/personal/abzal_amantay_fmsh_nis_edu_kz/EVhVAIzlMGpPmqYqcD2Hy8UBTQTXnArtB9-iiO96qyaipw?e=cNNTuz",
+                image:"/img/news/itworld.jpg"
+            },
+            'en':{
+                title: "Pursuit of knowledge, diligence and patriotism",
+                description: "The result of the competition of online computer projects \"In the IT world\".",
+                url:"https://mailnisedu-my.sharepoint.com/:b:/g/personal/abzal_amantay_fmsh_nis_edu_kz/EVhVAIzlMGpPmqYqcD2Hy8UBTQTXnArtB9-iiO96qyaipw?e=cNNTuz",
+                image:"/img/news/itworld.jpg"
+            }
+        },
+
+/*        {
+            'kz':{
+                title: "2023-2024 oqu jylyna 7-synyp oquşylaryn konkurstyq ırıkteuge qūjattardy qabyldau",
+                description: "«Nazarbaev Ziatkerlık mektepterı» derbes bılım beru ūiymy 2023-2024 oqu jylyna studentter kontingentın qalyptastyru maqsatynda Qazaqstan Respublikasy Tūñğyş Prezidentınıñ bılım grantyn tağaiyndauğa ümıtkerlerdı konkurstyq ırıkteu merzımın habarlaidy. Nazarbaev Ziatkerlık mektepterınıñ 7-synybynda bılım beru üşın Elbasy «Örken»...",
+                url:"https://www.nis.edu.kz/ru/applicants/evets-pupil/?id=11161",
+                url2:"https://outlook.office365.com/owa/calendar/Bookings973113@nis.edu.kz/bookings/s/j_VHU0k6VEujQ1xASVgGrw2",
+                image:"/img/news/n3.png"
+            },
+            'ru':{
+                title: "Прием документов на конкурсный отбор учащихся в 7 классы на 2023-2024 учебный год",
+                description: "Автономная организация образования «Назарбаев Интеллектуальные школы» с целью формирования ученического контингента на 2023-2024 учебный год объявляет сроки проведения конкурсного отбора претендентов для присуждения образовательного гранта Первого Президента Республики Казахстан – Елбасы «Өркен» на обучение в 7 классах Назарбаев Интеллектуальных школ..",
+                url:"https://www.nis.edu.kz/ru/applicants/evets-pupil/?id=11161",
+                url2:"https://outlook.office365.com/owa/calendar/Bookings973113@nis.edu.kz/bookings/s/j_VHU0k6VEujQ1xASVgGrw2",
+                image:"/img/news/n3.png"
+            },
+            'en':{
+                title: "Acceptance of documents for the competitive selection of students in grades 7 for the 2023-2024 academic year",
+                description: "The autonomous organization of education \"Nazarbayev Intellectual Schools\" in order to form a student body for the 2023-2024 academic year announces the deadlines for the competitive selection of applicants for the award of the educational grant of the First President of the Republic of Kazakhstan - Elbasy \"Orken\" for education in the 7th grade of Nazarbayev Intellectual Schools.",
+                url:"https://www.nis.edu.kz/ru/applicants/evets-pupil/?id=11161",
+                url2:"https://outlook.office365.com/owa/calendar/Bookings973113@nis.edu.kz/bookings/s/j_VHU0k6VEujQ1xASVgGrw2",
+                image:"/img/news/n3.png"
+            }
+        },*/
+
+        {
+            'kz':{
                 title: "Bilimge degen umtılıs, eñbekqorlıq jäne patrïotïzm",
                 description: "Şımkent qalası fïzïka-matematïka bağıtındağı NZM-te «alğaşqı qoñırawdı» respwblïkalıq olïmpïadanıñ jenimpazı Añsar Abdwlla men iriktew kezeñinde 1366 upay jïnağan Ğutıqzım Maratzım. «Saltanattılıqtıñ dästürine aynalğan «bilim kiltin»taw räsiminde özin-özi basqarw uyımınıñ qatıswşı Abay Ädilet mektep tabaldırığın attağan ozıq oqwşılar tizimindegi Arwjan Ornıqpayğa, aldıñğı bwın jetistigin jalğastırwdı jalğastıradı: - Tarıday bolıp kirgen uyadan tawday bolıp şığıñdar. aqıldastar.",
                 url:"",

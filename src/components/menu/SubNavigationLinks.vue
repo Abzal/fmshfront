@@ -1,6 +1,8 @@
 <template>
     <div class="subparent">
-        <router-link  class="desktop__item parent__desktop__item"   :to="'/'+this.$i18n.locale + subMenuItem.to">{{subMenuItem.title[this.$i18n.locale]}}</router-link>
+        <a class="desktop__item parent__desktop__item" v-if="subMenuItem.to.startsWith('http')" :href="subMenuItem.to" target="_blank">{{subMenuItem.title[this.$i18n.locale]}}</a>
+        <router-link v-else  class="desktop__item parent__desktop__item"   :to="'/'+this.$i18n.locale + subMenuItem.to">{{subMenuItem.title[this.$i18n.locale]}}</router-link>
+
 
         <span class="direction_arrow" v-if="subMenuItem.childs.length>0"></span>
         <div class="subrow" v-if="subMenuItem.childs.length>0">

@@ -13,9 +13,11 @@
                     <div class="card border-0 shadow-sm mb-2">
                         <img class="card-img-top mb-2"  :src="require('@/assets'+item[this.$i18n.locale].image)" alt="">
                         <div class="card-body bg-light text-center p-4">
-                            <h4 class="">{{item[this.$i18n.locale].title}}</h4>
+                            <h4 class=""  style="font-size: 18px; font-weight: 500; padding-bottom: 5px;">{{item[this.$i18n.locale].title}}</h4>
                             <p>{{item[this.$i18n.locale].description.substring(0,153)}}...</p>
-                            <!--<a href="" class="btn btn-primary px-4 mx-auto my-2">Читать далее</a>-->
+                            <a :href="item[this.$i18n.locale].url" class="btn btn-primary px-4 mx-auto my-2">{{ $t('read-more') }}</a>
+                            <br/>
+                            <a v-if="item[this.$i18n.locale].url2" :href="item[this.$i18n.locale].url2" class="btn btn-primary px-4 mx-auto my-2"  >{{ $t('booking') }}</a>
                         </div>
                     </div>
                 </div>

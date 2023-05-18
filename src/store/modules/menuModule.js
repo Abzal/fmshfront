@@ -15,7 +15,7 @@ export default {
           },
           {
             id: 3,
-            title: {ru:'Нормативные документы',kz:'Erejeler',en:'Regulations'},
+            title: {ru:'Нормативные документы и отчеты',kz:'Normativtık qūjattar men esepter',en:'Regulatory documents and reports'},
             to: '/document',
             childs: []
           },
@@ -179,8 +179,14 @@ export default {
         childs: [
           {
             id: 13,
+            title: {ru:'Бронирование',kz:'Brondau',en:'Booking'},
+            to: 'https://outlook.office365.com/owa/calendar/Bookings973113@nis.edu.kz/bookings/s/j_VHU0k6VEujQ1xASVgGrw2',
+            childs: []
+          },
+          {
+            id: 13,
             title: {ru:'Конкурсный отбор',kz:'Konkurstyq ırıkteu',en:'Competitive selection'},
-            to: '/coming',
+            to: '/konkurs',
             childs: []
           },
           {
