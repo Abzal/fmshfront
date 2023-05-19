@@ -14,7 +14,7 @@
                             <a href="#!" class="footer__menu-link">info@fmsh.nis.edu.kz</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">8 (727) 6-27-27</a>
+                            <a href="#!" class="footer__menu-link">8 (7252) 29-44-88</a>
                         </li>
                         <li class="footer__menu-item">
                             <a href="#!" class="footer__menu-link">{{$t('address')}}</a>

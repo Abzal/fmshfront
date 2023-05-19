@@ -23,7 +23,8 @@
         <div class="videos">
             <div class="videos__wrapper">
                 <div class="video__item">
-                    <iframe class="video__element" src="https://www.youtube.com/embed/vtYM2dy22lM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <iframe class="video__element" src="https://www.youtube.com/embed/1z-TnLOb8e4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
