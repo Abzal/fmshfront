@@ -4,7 +4,7 @@ export default {
       [
         {
           title:{
-            kz:"Jazğy mektep",
+            kz:"Жазғы мектеп",
             ru:"Летняя школа",
             en:"Summer school"
           },
@@ -16,7 +16,7 @@ export default {
         },
         {
           title:{
-            kz:"Medisinalyq qyzmet",
+            kz:"медициналық қызмет",
             ru:"Медицинская служба",
             en:"Medical service"
           },
@@ -42,7 +42,7 @@ export default {
         },
         {
           title:{
-            kz:"Kıtaphana turaly",
+            kz:"Кітапхана туралы",
             ru:"О Библиотеке",
             en:"About the Library"
           },
@@ -55,7 +55,7 @@ export default {
         },
         {
           title:{
-            kz:"Mektep jataqhanasy",
+            kz:"Мектеп жатақханасы",
             ru:"Общежитие школы",
             en:"School dormitory"
           },
@@ -73,10 +73,10 @@ export default {
     activities: [
       {
         'kz':{
-          title: "Kreativtı samğau",
-          description: "VII Şyğarmaşylyq ideialar festivalı",
+          title: "Шығармашылық ұшу",
+          description: "VII Шығармашылық идеялар фестивалі",
           url:"creative",
-          urlText:"Tırkelu",
+          urlText:"Тіркеу",
           image:"/img/live/creative.png"
         },
         'ru':{

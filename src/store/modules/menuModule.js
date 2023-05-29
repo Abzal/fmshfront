@@ -21,7 +21,7 @@ export default {
           },
           {
             id: 3,
-            title: {ru:'Наша команда',kz:'Біздің топ',en:'Our team'},
+            title: {ru:'Наша команда',kz:'Біздің ұжым',en:'Our team'},
             to: '/team/all',
             childs: [
               {
@@ -32,7 +32,7 @@ export default {
               },
               {
                 id: 3,
-                title: {ru:'Учебно-вспомогательный персонал',kz:'Педагогикалық көмекшілер',en:'Teaching support staff'},
+                title: {ru:'Учебно-вспомогательный персонал',kz:'Педагог-уймдастырушы-кураторлар',en:'Teaching support staff'},
                 to: '/team/kurators',
                 childs: []
               },

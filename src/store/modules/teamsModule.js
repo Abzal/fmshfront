@@ -9,7 +9,7 @@ export default {
             {
               image: "team/kurators/team-5.jpg",
               name: {kz:'Bitanova Aijanat Berdikulovna',ru:'Битанова Айжанат Бердикуловна',en:'Bitanova Aijanat Berdikulovna'},
-              post: {kz:'matematika mūğalımı',ru:'учитель математики',en:'mathematic teacher'},
+              post: {ru:'куратор',kz:'kurator',en:'curator'},
               level: {kz:'mūğalım maman',ru:'учитель эксперт',en:'teacher expert'},
               quote: {kz:'Eşteñe ıstemeitın adam eşqaşan qatelespeidı',ru:'Никогда не ошибается тот, кто ничего не делает',en:'The one who does nothing is never wrong'},
               contacts:{

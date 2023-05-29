@@ -15,8 +15,8 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
-            ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
+            ru:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
         },
@@ -33,7 +33,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
@@ -51,7 +51,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
@@ -69,7 +69,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
@@ -87,7 +87,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
@@ -105,7 +105,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Atestasiaaralyq kezeñde pedagogterdıñ käsıbi damuy boiynşa trener",
+            kz:"Аттестация аралық кезеңде мұғалімдердің кәсіби дамуын қолдау бойынша тренер",
             ru:"Тренер по поддержке профессионального развития педагогов в меж аттестационный период",
             en:"Trainer to support the professional development of teachers during the inter-certification period"
           }
@@ -414,42 +414,6 @@ export default {
             kz:"Robototehnika boiynşa trener",
             ru:"Тренер по робототехнике",
             en:"Robotics trainer"
-          }
-        },
-        {
-          image: "teachers/trainer/kim_i.jpg",
-          name: {
-            kz:"Kim İ.M.",
-            ru:"Ким И.М.",
-            en:"Kim I.M."
-          },
-          level: {
-            kz:"Mūğalım - sarapşy",
-            ru:"Учитель – эксперт",
-            en:"Teacher - expert"
-          },
-          course:{
-            kz:"СITO тест тапсырмаларын құрастырушы тренер",
-            ru:"Тренер разработчик тестовых заданий CITO",
-            en:"CITO test developer"
-          }
-        },
-        {
-          image: "teachers/trainer/aijanova_g.jpg",
-          name: {
-            kz:"Aijanova G.T.",
-            ru:"Айжанова Г.Т.",
-            en:"Aizhanova G.T."
-          },
-          level: {
-            kz:"Mūğalım - sarapşy",
-            ru:"Учитель – эксперт",
-            en:"Teacher - expert"
-          },
-          course:{
-            kz:"СITO тест тапсырмаларын құрастырушы тренер",
-            ru:"Тренер разработчик тестовых заданий CITO",
-            en:"CITO test developer"
           }
         },
         {

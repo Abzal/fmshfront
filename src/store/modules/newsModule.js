@@ -4,8 +4,8 @@ export default {
     news: [
         {
             'kz':{
-                title: "IT älemınde",
-                description: "«IT älemınde» jelılık kömpüterlık jobalar baiqauynyñ nätijesı",
+                title: "IT әлемінде",
+                description: "«IT әлемінде» желілік компдтерлік жобалар байқауының нәтижесі",
                 url:"https://mailnisedu-my.sharepoint.com/:b:/g/personal/abzal_amantay_fmsh_nis_edu_kz/EVhVAIzlMGpPmqYqcD2Hy8UBTQTXnArtB9-iiO96qyaipw?e=cNNTuz",
                 image:"/img/news/itworld.jpg"
             },
@@ -49,8 +49,8 @@ export default {
 
         {
             'kz':{
-                title: "Bilimge degen umtılıs, eñbekqorlıq jäne patrïotïzm",
-                description: "Şımkent qalası fïzïka-matematïka bağıtındağı NZM-te «alğaşqı qoñırawdı» respwblïkalıq olïmpïadanıñ jenimpazı Añsar Abdwlla men iriktew kezeñinde 1366 upay jïnağan Ğutıqzım Maratzım. «Saltanattılıqtıñ dästürine aynalğan «bilim kiltin»taw räsiminde özin-özi basqarw uyımınıñ qatıswşı Abay Ädilet mektep tabaldırığın attağan ozıq oqwşılar tizimindegi Arwjan Ornıqpayğa, aldıñğı bwın jetistigin jalğastırwdı jalğastıradı: - Tarıday bolıp kirgen uyadan tawday bolıp şığıñdar. aqıldastar.",
+                title: "Білімге деген умтылыс, еңбекқорлық және патриотизм",
+                description: "Шымкент қаласындағы физика-математика бағытындағы НЗМ-де республикалық пәндік олимпиаданың жеңімпазы Аңсар Абдулла мен Гүлсезім Маратқызы іріктеу кезеңінде 1366 ұпай жинаған «алғашқы қоңырауды» көрсетті. «Білім кілтін» салтанатты түрде тапсыру рәсімінде мектептің өзін-өзі басқару басқармасының төрағасы Әділет Абай биылғы жылдың үздік қатысушыларының бірі Аружан Орнықпайға жоғары басшылық жолын жалғастыруға сәттілік тіледі. «Енді сендердің міндеттерің – мектебіміздің абыройын асқақтату», – деді Әділет Абай.",
                 url:"",
                 image:"/img/news/n1.jpg"
             },
@@ -69,8 +69,8 @@ export default {
         },
         {
             'kz':{
-                title: "Şımkenttik muğalim Ulıbrïtanïya mektebinde täjirïbe almastı",
-                description: "Şımkenttegi fïzïka-matematïka bağıtındağı Nazarbaev Zïyatkerlik mektebiniñ muğalimi Ğalımjan Qulajanov Ulıbrïtïyanıñ Bottïşam awıl kolledji (BVC) mektebinde täjirbïe alması. Kembrïdj qalasındağı (Wlıbrïtanïya) oqw saparına joldaman NZM damıtw köri ötken jıldıñ qazan ayında Zïyatkerlik mektep ustazdarı twralı jazılğan eñ üzdik oqïğa sayısınıñ jılınıñ tabıstağan. Şımkenttegi Zïyatkerlik mektep tülegi Ayjan Sağudın ustazı Ğalımjan Sädibekulı twralı oqïğası oqırmannıñ kҿñilinen şığıp, jҽne boldı. 2021 jıldıӊ mawsım ayında ötken Bölisw Muğalimdermdïn käsibï grattew dagdılarınıñ Damıta takırıbında ötken täjiriba sapar matematïka päniniñ üşïn oqwşılarımen terer baylanıswdï qmısın aşqan. Mektep erejelileri qatarında katañ jaza bulğanına qaramastan oqwşıları men muğalimder erkin jana aşıq. Qarım -qatınastar ozara qurmet pen senimge qurılğan, kommwnïkacïya negizgi nısanı - dïalog. Soñğı küni biz bir apta işinde alğan bilimimizdi köretindey kele, mektep pen oqw ürdisin damıtqan naqtı josparın jüzge asıqwğa tırıstıq, - deydi Ğalımjan Qulajanov.",
+                title: "Шімкенттік мұғалім Ұлыбритания мектебінде тәжірибе алмасты",
+                description: "Шымкент қаласындағы Назарбаев Зияткерлік мектебінің физика-математика бағытындағы мұғалімі Ғалымжан Құлажанов Ұлыбританиядағы Bottisham Village колледжінде (BVC) тәжірибе алмасты. Кембриджге (Ұлыбритания) саяхат өткен жылдың қазан айында өткен зияткерлік мектеп мұғалімдері туралы үздік әңгіме байқауының жеңімпазына НЗМ Даму Қоры табыс етті. Шымкент зияткерлік мектебінің түлегі Айжан Сағудың ұстазы Ғалымжан Сәдібекұлы туралы әңгімесі оқырманның назарын аударды. 2021 жылдың маусым айында өткен Share жобасы аясында Ғалымжан Құлажанов Нұр-Сұлтандық ұстаздармен бірге Ұлыбританияға аттанды. Мұғалімдердің кәсіби зерттеушілік дағдыларын дамыту мақсатындағы тәжірибе алмасу сапары математика пәнінің мұғаліміне оқушылармен терең байланыстың сырын ашты: - БЭК-те көрген-білгендер мектеп философиясын түсінуге көмектеседі. Мектеп ережелерінде қатаң жаза қарастырылғанымен, оқушылар мен мұғалімдер еркін және ашық. Қарым-қатынастар өзара сыйластық пен сенімге құрылған, қарым-қатынастың негізгі түрі – диалог. Соңғы күні апта бойы алған білімімізді қорытындылай келе, мектепті және оқу-тәрбие үдерісін дамытудың нақты жоспарын жүзеге асыруға тырыстық, – дейді Ғалымжан Құлажанов.",
                 url:"",
                 image:"/img/news/n2.jpg"
             },

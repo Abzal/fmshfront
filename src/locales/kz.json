@@ -17,29 +17,29 @@
     "mission-description": "Замануи білім дағдыларын меңгерген зиаткер, адамгершілігі мол, салауатты әлем азаматын тәрбиелеу.",
     "about": "Мектеп туралы",
     "best-school": "Сіздің балаларыңыз үшын ең жақсы таңдау",
-    "about-text": "Шымкент қаласындағы физика-математика бағытындағы Назарбаев Зиаткерлік мектебі 2013 жылдың 16 ақпанында ашылды. Салтанатты шараға Оңтүстік Қазақыстан обылысының әкімі Асқар Мырзахметов қатысты. Қазақыстанның ең ірі өңірлерінің біріндегі жаңа мектеп Назарбаев Зияткерлік мектептері отбасындағы тоғызыншы болды және білім берудің сапалы өсуін қамтамасыз етуге, оқу үдерісіне иновациаларды енгізуге, мұғалімдердің біліктіл arttyruğa arnalğan. personal. Ol üşın barlyq jağdai jasalğan.",
-    "almuni": "TÜLEKTER",
-    "foreign-graduate": "ŞETEL UNİVERSİTETINE TÜSKENDER",
-    "local-graduate": "QAZAQSTAN UNİVERSİTETINE TUSKENDER",
-    "nu-graduate": "NAZARBAEV UNİVERSİTETINE TÜSKENDER",
-    "meet-teachers": "Bızdıñ mūğalımdermen tanysyñyz"
+    "about-text": "Шымкент қаласындағы физика-математика бағытындағы Назарбаев Зиаткерлік мектебі 2013 жылдың 16 ақпанында ашылды. Салтанатты шараға Оңтүстік Қазақыстан обылысының әкімі Асқар Мырзахметов қатысты. Қазақыстанның ең ірі өңірлерінің біріндегі жаңа мектеп Назарбаев Зияткерлік мектептері отбасындағы тоғызыншы болды және білім берудің сапалы өсуін қамтамасыз етуге, оқу үдерісіне иновациаларды енгізуге, мұғалімдердің біліктілігін арттыруға арналған персонал. Ол үшін барлық жағдай жасалған.",
+    "almuni": "ТҮЛЕКТЕР",
+    "foreign-graduate": "ШЕТЕЛ УНИВЕРСИТЕТІНЕ ТҮСКЕНДЕР",
+    "local-graduate": "ҚАЗАҚСТАН УНИВЕРСИТЕТІНЕ ТҮСКЕНДЕР",
+    "nu-graduate": "НАЗАРБАЕВ УНИВЕРСИТЕТІНЕ ТҮСКЕНДЕР",
+    "meet-teachers": "Біздің мұғалімдермен танысыңыз"
   },
   "document": {
-    "regulation": "Erejeler",
-    "date": "Jükteu künı",
-    "action": "Äreket"
+    "regulation": "Ережелер",
+    "date": "Жүкту күні",
+    "action": "Әрекет"
   },
   "teachers": {
-    "best": "Üzdık jattyqtyruşylar",
-    "all": "Barlyq jattyqtyruşylar",
-    "trainers-cert": "Sertifikattalğan jattyqtyruşylar",
-    "trainers-list": "Jattyqtyruşylar tızımı"
+    "best": "Үздік жаттықтырушылар",
+    "all": "Барлық жаттықтырушылар",
+    "trainers-cert": "Сертификатталған жаттықтырушылар",
+    "trainers-list": "Жаттықтырушылар тізімі"
   },
   "live": {
-    "fest": "VII Şyğarmaşylyq ideialar festivalı",
-    "creative": "Kreativtı samğau",
-    "until": "Ötınışterdı tırkeu aiaqtalu uaqyty:",
-    "activities": "Оqiğalar",
-    "last-activities": "Soñğy oqiğalar"
+    "fest": "VII Шығармашылық идеялар фестивалі",
+    "creative": "Креативті самғау",
+    "until": "Өтініштерді тіркеу аяқталу уақыты",
+    "activities": "Оқиғалар",
+    "last-activities": "Сонғы жаңалықтар"
   }
 }
