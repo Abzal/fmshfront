@@ -33,6 +33,12 @@ const routes = [
         component: () => import('../views/about/AboutView.vue')
       },
       {
+        path: 'trustees',
+        meta: { /*layout: 'main'*/ },
+        name: 'trustees',
+        component: () => import('../views/about/TrusteesView')
+      },
+      {
         path: 'applicant',
         meta: { /*layout: 'main'*/ },
         name: 'applicant',

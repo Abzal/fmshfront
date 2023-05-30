@@ -51,55 +51,56 @@ export default {
 
             ]
           },
-/*          /!*{
+          {
             id: 3,
             title: {ru:'Попечительский совет',kz:'Қамқоршылық кеңес',en:'Board of Trustees'},
-            to: '/coming',
+            to: '/trustees',
             childs: []
-          },*!/
-          {
-            id: 54,
-            title: {ru:'КАРЬЕРА',kz:'Мансап',en:'CAREER'},
-            to: '/coming',
-            childs: [
+          },
+          /*
+        {
+          id: 54,
+          title: {ru:'КАРЬЕРА',kz:'Мансап',en:'CAREER'},
+          to: '/coming',
+          childs: [
 /!*              {
-                id: 55,
-                title: {ru:'Наши обязательства',kz:'Bızdıñ mındettemelerımız',en:'Our Commitments'},
-                to: '/coming',
-                childs: []
-              },*!/
-  /!*            {
-                id: 56,
-                title: {ru:'Кого мы ищем',kz:'Kımdı ızdeudemız',en:'Who are we looking for'},
-                to: '/coming',
-                childs: []
-              },*!/
-              {
-                id: 57,
-                title: {ru:'Вакансии',kz:'Жұмыс орындары',en:'Jobs'},
-                to: '/coming',
-                childs: []
-              },
-              {
-                id: 58,
-                title: {ru:'Итоги отбора',kz:'Таңдау нәтижелері',en:'Selection results'},
-                to: '/coming',
-                childs: []
-              },
-              {
-                id: 59,
-                title: {ru:'Процесс подбора',kz:'Таңдау барысы',en:'Selection process'},
-                to: '/coming',
-                childs: []
-              },
-              {
-                id: 61,
-                title: {ru:'Часто задаваемые вопросы',kz:'Жиі қойылатын сұрақтар',en:'Frequently asked Questions'},
-                to: '/coming',
-                childs: []
-              }
-            ]
-          }*/
+              id: 55,
+              title: {ru:'Наши обязательства',kz:'Bızdıñ mındettemelerımız',en:'Our Commitments'},
+              to: '/coming',
+              childs: []
+            },*!/
+/!*            {
+              id: 56,
+              title: {ru:'Кого мы ищем',kz:'Kımdı ızdeudemız',en:'Who are we looking for'},
+              to: '/coming',
+              childs: []
+            },*!/
+            {
+              id: 57,
+              title: {ru:'Вакансии',kz:'Жұмыс орындары',en:'Jobs'},
+              to: '/coming',
+              childs: []
+            },
+            {
+              id: 58,
+              title: {ru:'Итоги отбора',kz:'Таңдау нәтижелері',en:'Selection results'},
+              to: '/coming',
+              childs: []
+            },
+            {
+              id: 59,
+              title: {ru:'Процесс подбора',kz:'Таңдау барысы',en:'Selection process'},
+              to: '/coming',
+              childs: []
+            },
+            {
+              id: 61,
+              title: {ru:'Часто задаваемые вопросы',kz:'Жиі қойылатын сұрақтар',en:'Frequently asked Questions'},
+              to: '/coming',
+              childs: []
+            }
+          ]
+        }*/
         ]
       },
       {
