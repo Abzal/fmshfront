@@ -17,7 +17,7 @@
 
         <div class="row align-items-center">
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Алимбеков Тоқтар.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/at_1.png')" alt="">
           </div>
           <div class="col-lg-7">
             <p class="section-title pr-5"><span class="pr-2">Алимбеков Тоқтар Мұратұлы</span></p>
@@ -31,13 +31,13 @@
             <p>«Аманат» партиясының мүшесі, Шымкент қаласының Кәсіпкерлер палатасының іскер әйелдер кеңесінің төрайымы</p>
           </div>
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Архабаева Алма.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/aa_2.png')" alt="">
           </div>
         </div>
 
         <div class="row align-items-center">
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Мусаев Сейфулла.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/ms_3.png')" alt="">
           </div>
           <div class="col-lg-7">
             <p class="section-title pr-5"><span class="pr-2">Мусаев Сейфулла Тлеубергенович </span></p>
@@ -51,13 +51,13 @@
             <p>«Лидер -Агро» ЖШС директоры</p>
           </div>
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Рамазанова Гулжан.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/rg_4.png')" alt="">
           </div>
         </div>
 
         <div class="row align-items-center">
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Тағаев Бақтияр.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/tb_5.png')" alt="">
           </div>
           <div class="col-lg-7">
             <p class="section-title pr-5"><span class="pr-2">Тағаев Бақтияр Мұратұлы </span></p>
@@ -71,7 +71,7 @@
             <p>Оңтүстік  Қазақстан мемлекеттік педагогикалық университеті «Музыкалық білім» кафедрасының доценті, Түркістан облысы ардагерлер кеңесінің мүшесі</p>
           </div>
           <div class="col-lg-5">
-            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/Тәжібаева Ұлболсын.png')" alt="">
+            <img class="img-fluid rounded mb-5 mb-lg-0" style="max-height: 600px" :src="require('@/assets/img/trustees/tu_6.png')" alt="">
           </div>
         </div>
 
