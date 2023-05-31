@@ -57,25 +57,7 @@ export default {
 
       }
     },
-    methods:{
-        convert(){
-            let abcLat = ['ı','I','u','U','k','K','e','Е','n','N','g','G','ş','Ş','z','Z','h','H','f','F','y','Y','v','V','a','A','p','P','r','R','o','O','l','L','d','D','j','J','s','S','m','M','i','I','t','T','b','B','ä','Ä','ñ','ğ','Ğ','ü','Ü','ū','Ū','q','Q','ö','Ö','h','H',' '];
-            let abcKer = ['і','І','у','У','к','К','е','Е','н','Н','г','Г','ш','Ш','з','З','х','Х','ф','Ф','ы','Ы','в','В','а','А','п','П','р','Р','о','О','л','Л','д','Д','ж','Ж','с','С','м','М','и','И','т','Т','б','Б','ә','Ә','ң','ғ','Ғ','ү','Ү','ұ','Ұ','қ','Қ','ө','Ө','һ','Н',' '];
-            let txt = 'Şımkenttik muğalim Ulıbrïtanïya mektebinde täjirïbe almastı';
 
-            let nTxt = '';
-            for (let i = 0; i < txt.length; i++){
-                for (let j = 0; j < abcLat.length; j++){
-                    if (abcLat[j] == txt.charAt(i)){
-                        nTxt = nTxt + abcKer[j];
-                        break;
-                    }
-
-                }
-            }
-            console.log(nTxt)
-        }
-    },
     created() {
       setTimeout(()=>{this.showNotification=true},2000);
       this.convert();

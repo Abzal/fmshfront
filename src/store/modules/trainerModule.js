@@ -123,7 +123,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
+            kz:"Мектепте дарындылықты дамыту бағдарламасы бойынша тренер",
             ru:"Тренер по программе Развитие одарённости в школе",
             en:"Trainer for the program Development of Giftedness at school"
           }
@@ -141,7 +141,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
+            kz:"Мектепте дарындылықты дамыту бағдарламасы бойынша тренер",
             ru:"Тренер по программе Развитие одарённости в школе",
             en:"Trainer for the program Development of Giftedness at school"
           }
@@ -159,7 +159,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
+            kz:"Мектепте дарындылықты дамыту бағдарламасы бойынша тренер",
             ru:"Тренер по программе Развитие одарённости в школе",
             en:"Trainer for the program Development of Giftedness at school"
           }
@@ -177,7 +177,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Mektepte daryndylyqty damytu bağdarlamasy boiynşa trener",
+            kz:"Мектепте дарындылықты дамыту бағдарламасы бойынша тренер",
             ru:"Тренер по программе Развитие одарённости в школе",
             en:"Trainer for the program Development of Giftedness at school"
           }
@@ -195,7 +195,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trenerL",
+            kz:"CLIL жаттықтырушыL",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -213,7 +213,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -231,7 +231,7 @@ export default {
             en:"Teacher - expertt"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -249,7 +249,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -267,7 +267,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -285,7 +285,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -303,7 +303,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"CLIL boiynşa trener",
+            kz:"CLIL жаттықтырушы",
             ru:"Тренер CLIL",
             en:"CLIL trainer"
           }
@@ -321,7 +321,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"PŞO bağdarlamalary boiynşa trener",
+            kz:"CPM бағдарламасының жаттықтырушысы",
             ru:"Тренер программы ЦПМ",
             en:"Trainer of the CPE"
           }
@@ -339,7 +339,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"PŞO bağdarlamalary boiynşa trener",
+            kz:"CPM бағдарламасының жаттықтырушысы",
             ru:"Тренер программы ЦПМ",
             en:"Trainer of the CPE"
           }
@@ -357,7 +357,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"PŞO bağdarlamalary boiynşa trener",
+            kz:"CPM бағдарламасының жаттықтырушысы",
             ru:"Тренер программы ЦПМ",
             en:"Trainer of the CPE"
           }
@@ -375,7 +375,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"PŞO bağdarlamalary boiynşa trener",
+            kz:"CPM бағдарламасының жаттықтырушысы",
             ru:"Тренер программы ЦПМ",
             en:"Trainer of the CPE"
           }
@@ -393,7 +393,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Robototehnika boiynşa trener",
+            kz:"Робототехника жаттықтырушы",
             ru:"Тренер по робототехнике",
             en:"Robotics trainer"
           }
@@ -411,7 +411,7 @@ export default {
             en:"Teacher - expert"
           },
           course:{
-            kz:"Robototehnika boiynşa trener",
+            kz:"Робототехника жаттықтырушы",
             ru:"Тренер по робототехнике",
             en:"Robotics trainer"
           }
