@@ -196,7 +196,7 @@ export default {
           },*/
           {
             id: 14,
-            title: {ru:'Родительский комитет',kz:'Ата-аналар камитеті',en:'Parental committee'},
+            title: {ru:'Родительский комитет',kz:'Ата-аналар комитеті',en:'Parental committee'},
             to: '/parent-univer',
             childs: []
           },
@@ -343,6 +343,31 @@ export default {
             to: '/coming',
             childs: []
           }*/
+        ]
+      },
+      {
+        id: 49,
+        title: {ru:'Места в общежитии',kz:'Жатақханадағы орындар',en:'Места в общежитии'},
+        to: '/results',
+        childs: [
+          /* {
+             id: 49,
+             title: {ru:'Новости',kz:'Jañalyqtar',en:'News'},
+             to: '/coming',
+             childs: []
+           },
+           {
+             id: 50,
+             title: {ru:'Фото и видео',kz:'Foto jäne beine',en:'Photo and video'},
+             to: '/coming',
+             childs: []
+           },
+           {
+             id: 51,
+             title: {ru:'О нас в СМИ',kz:'Bız turaly BAQ-ta',en:'About us in the media'},
+             to: '/coming',
+             childs: []
+           }*/
         ]
       },
 

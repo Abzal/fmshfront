@@ -140,6 +140,12 @@ const routes = [
         name: 'coming',
         component: () => import('../views/ComingSoonView.vue')
       },
+      {
+        path: 'results',
+        meta: { /*layout: 'main'*/ },
+        name: 'results',
+        component: () => import('../views/results/results')
+      },
     ],
   },
   {

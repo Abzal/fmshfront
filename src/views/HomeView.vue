@@ -60,7 +60,7 @@ export default {
 
     created() {
       setTimeout(()=>{this.showNotification=true},2000);
-      this.convert();
+
     }
 }
 </script>

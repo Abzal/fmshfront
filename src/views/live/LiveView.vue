@@ -9,9 +9,9 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <div class="tm-flex-center p-5">
-                    <q class="tm-quote tm-text-color-gray">
+                    <p class="mb-4">
                         {{mainData[0].description[this.$i18n.locale]}}
-                    </q>
+                    </p>
                 </div>
             </div>
         </section>
