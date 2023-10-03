@@ -146,6 +146,13 @@ const routes = [
         name: 'results',
         component: () => import('../views/results/results')
       },
+      {
+        path: 'forparents',
+        meta: { /*layout: 'main'*/ },
+        name: 'forparents',
+        component: () => import('../views/dormitories/ParentWorkView')
+      },
+
     ],
   },
   {

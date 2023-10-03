@@ -347,27 +347,45 @@ export default {
       },
       {
         id: 49,
-        title: {ru:'Места в общежитии',kz:'Жатақханадағы орындар',en:'Места в общежитии'},
-        to: '/results',
+        title: {ru:'ОБЩЕЖИТИЯ',kz:'ЖАТАҚХАНА',en:'DORMITORIES'},
+        to: '/',
         childs: [
-          /* {
-             id: 49,
-             title: {ru:'Новости',kz:'Jañalyqtar',en:'News'},
-             to: '/coming',
-             childs: []
-           },
            {
              id: 50,
-             title: {ru:'Фото и видео',kz:'Foto jäne beine',en:'Photo and video'},
-             to: '/coming',
+             title: {ru:'Места в общежитии',kz:'Жатақханадағы орындар',en:'Места в общежитии'},
+             to: '/results',
              childs: []
            },
            {
              id: 51,
-             title: {ru:'О нас в СМИ',kz:'Bız turaly BAQ-ta',en:'About us in the media'},
-             to: '/coming',
+             title: {ru:'Ұжым',kz:'Ұжым',en:'Ұжым'},
+             to: '/',
              childs: []
-           }*/
+           },
+           {
+             id: 52,
+             title: {ru:'Жатақхана өмірі',kz:'Жатақхана өмірі',en:'Жатақхана өмірі'},
+             to: '/',
+             childs: []
+           },
+          {
+            id: 53,
+            title: {ru:'Жобалар мен үйірмелер',kz:'Жобалар мен үйірмелер',en:'Жобалар мен үйірмелер'},
+            to: '/',
+            childs: []
+          },
+          {
+            id: 54,
+            title: {ru:'Ата-анамен жумыс',kz:'Ата-анамен жумыс',en:'Ата-анамен жумыс'},
+            to: '/forparents',
+            childs: []
+          },
+          {
+            id: 55,
+            title: {ru:'Өзін-өзі басқару ұйымы',kz:'Өзін-өзі басқару ұйымы',en:'Өзін-өзі басқару ұйымы'},
+            to: '/',
+            childs: []
+          }
         ]
       },
 
