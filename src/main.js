@@ -9,9 +9,10 @@ import bs from "bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-
 import { faFacebook, faTwitter, faInstagram, faLinkedin, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import i18n from './i18n'
+
+
 
 library.add(fas)
 library.add(faFacebook)
@@ -19,6 +20,17 @@ library.add(faFacebookF)
 library.add(faInstagram)
 library.add(faLinkedin)
 library.add(faTwitter)
+
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+    components,
+    directives,
+})
 
 
 createApp(App).use(i18n)
@@ -29,4 +41,5 @@ createApp(App).use(i18n)
     .use(swiper)
     .use(store)
     .use(router)
+    .use(vuetify)
     .mount('#app')

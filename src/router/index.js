@@ -27,6 +27,12 @@ const routes = [
         component: HomeView
       },
       {
+        path: 'login',
+        name: 'login',
+        meta: { /*layout: 'main'*/ },
+        component: () => import('../views/auth/LoginView')
+      },
+      {
         path: 'about',
         meta: { /*layout: 'main'*/ },
         name: 'about',

@@ -9,7 +9,8 @@
                 </div>
                 <div class="header__elements" style="display: flex">
                     <a href="#!" v-for="locale in locales" :key="locale" :class="(this.$i18n.locale === locale)?'header__link-top-active':''" @click="switchLocale(locale)" class="header__link-top">{{ localesText[locale] }}</a>
-                    <button class="header__sign">{{$t("signin")}}</button>
+                    <!--<button class="header__sign">{{$t("signin")}}</button>-->
+                    <v-btn class="header__sign" @click="this.$router.push('login')">{{$t("signin")}}</v-btn>
                     <burger-menu class="burger__box-cmp" style="cursor: pointer;" @click="shMMenu = !shMMenu"></burger-menu>
                 </div>
             </div>
