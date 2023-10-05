@@ -66,8 +66,8 @@ export default {
     return {
         shMMenu : false,
         togglerStore : {},
-        locales: ['kz','ru','en'],/*process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(',')*/
-        localesText : {'kz':'қаз','ru':'руc','en':'eng'}
+        locales: ['kz','en','ru'],/*process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(',')*/
+        localesText : {'kz':'қаз','en':'eng','ru':'руc'}
     }
   },
   methods: {

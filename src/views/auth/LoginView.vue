@@ -3,9 +3,9 @@
 
     <v-container>
       <v-form @submit="login">
-        <v-text-field v-model="username" label="Корпоративная почта школы"></v-text-field>
-        <v-text-field v-model="password" label="Пароль" type="password"></v-text-field>
-        <v-btn type="submit" color="success">Вход</v-btn>
+        <v-text-field v-model="username" :label="$t('corp_email')"></v-text-field>
+        <v-text-field v-model="password" :label="$t('password')" type="password"></v-text-field>
+        <v-btn type="submit" color="success">{{$t('signin')}}</v-btn>
       </v-form>
     </v-container>
 
