@@ -2,7 +2,7 @@
   <div class="wrapper">
 
     <v-container>
-      <v-form @submit="login">
+      <v-form @submit.prevent="login">
         <v-text-field v-model="username" :label="$t('corp_email')"></v-text-field>
         <v-text-field v-model="password" :label="$t('password')" type="password"></v-text-field>
         <v-btn type="submit" color="success">{{$t('signin')}}</v-btn>
@@ -12,6 +12,8 @@
   </div>
 </template>
 <script>
+  import {mapActions} from 'vuex'
+  import {LOGIN_ACTION} from "@/store/storeconstants";
   export default {
     data() {
       return {
@@ -21,15 +23,15 @@
     },
 
     methods: {
+      ...mapActions('auth', {
+        loginAction: LOGIN_ACTION
+      }),
       login() {
-        // Add your login logic here
-        if (this.username === 'test' && this.password === 'test') {
-          // Successful login, redirect or show a success message
-          alert('Login successful');
-        } else {
-          // Failed login, show an error message
-          alert('Login failed');
-        }
+        this.loginAction({email: this.username,password: this.password}).then(res => {
+          console.log(res);
+        }).catch(err => {
+          console.log(err);
+        })
       },
     },
 

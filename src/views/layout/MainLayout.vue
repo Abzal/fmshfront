@@ -13,6 +13,8 @@
 
 import HeaderSlot from "@/components/Header";
 import FooterSlot from "@/components/Footer";
+import { mapGetters, mapActions } from "vuex";
+import {AUTO_LOGIN_ACTION, GET_USER_DATA_GETTER} from "@/store/storeconstants";
 export default {
   name: 'MainLayout',
     components: {FooterSlot, HeaderSlot},
@@ -20,8 +22,17 @@ export default {
     return {
 
     }
-
   },
+
+    created() {
+        this.autoAuth();
+    },
+    methods: {
+        ...mapActions("auth",{
+            autoAuth: AUTO_LOGIN_ACTION
+        })
+    }
+
 }
 </script>
 <style scoped>

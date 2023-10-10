@@ -7,16 +7,10 @@ import trainer from "@/store/modules/trainerModule"
 import live from "@/store/modules/liveModule";
 import applicant from "@/store/modules/applicantModule";
 import parent from "@/store/modules/parentModule";
+import form from "@/store/modules/formModule";
+import auth from "@/store/modules/auth";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
     menu,
     document,
@@ -25,6 +19,8 @@ export default createStore({
     trainer,
     live,
     applicant,
-    parent
+    parent,
+    form,
+    auth
   }
 })
