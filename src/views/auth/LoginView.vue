@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-
+    <span v-if="error" style="color: red;">Ошибка входа, попробуйте позднее</span>
     <v-container>
       <v-form @submit.prevent="login">
         <v-text-field v-model="username" :label="$t('corp_email')"></v-text-field>
@@ -19,6 +19,7 @@
       return {
         username: '',
         password: '',
+        error: false
       };
     },
 
@@ -28,9 +29,9 @@
       }),
       login() {
         this.loginAction({email: this.username,password: this.password}).then(res => {
-          console.log(res);
+          this.$router.push({name: 'cabinet'})
         }).catch(err => {
-          console.log(err);
+          this.error = true;
         })
       },
     },

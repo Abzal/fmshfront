@@ -34,6 +34,24 @@ const routes = [
         meta: { /*layout: 'main'*/ auth: false},
         component: () => import('../views/auth/LoginView')
       },
+
+      {
+        path: 'cabinet',
+        name: 'cabinet',
+        meta: { /*layout: 'main'*/ auth: true},
+        component: () => import('../views/forms/CriteriaView'),
+        beforeEnter: (to, from, next) => {
+          // Check the user's authentication status
+          const isAuthenticated = store.getters[`auth/${IS_USER_AUTHENTICATE_GETTER}`]; // Replace this with your actual authentication logic
+
+          if (to.matched.some((record) => record.meta.auth) && !isAuthenticated) {
+            next({ name: 'login' }); // Redirect to the Home page if not authenticated
+          } else {
+            next();
+          }
+        },
+      },
+
       {
         path: 'about',
         meta: { /*layout: 'main'*/ auth: false},
@@ -184,13 +202,13 @@ router.beforeEach((to, from, next) => {
       to.meta.auth &&
       !store.getters[`auth/${IS_USER_AUTHENTICATE_GETTER}`]
   ) {
-    next("/login");
+    next({name:'login'});
   } else if (
       "auth" in to.meta &&
       !to.meta.auth &&
       store.getters[`auth/${IS_USER_AUTHENTICATE_GETTER}`]
   ) {
-    next("");
+    next();
   } else {
     next();
   }

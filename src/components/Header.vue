@@ -11,10 +11,10 @@
                     <a href="#!" v-for="locale in locales" :key="locale" :class="(this.$i18n.locale === locale)?'header__link-top-active':''" @click="switchLocale(locale)" class="header__link-top">{{ localesText[locale] }}</a>
                     <!--<button class="header__sign">{{$t("signin")}}</button>-->
                     <template v-if="userData.token" >
-                        <v-btn class="header__sign" @click="onLogout">{{$t("cabinet")}}</v-btn>
+                        <v-btn class="header__sign" @click="this.$router.push('cabinet')">{{$t("cabinet")}}</v-btn>
                         <v-btn class="header__sign" @click="onLogout">{{$t("signout")}}{{"(" + userData.name + ")"}}</v-btn>
                     </template>
-                    <v-btn v-else class="header__sign" @click="this.$router.push('login')">{{$t("signin")}}</v-btn>
+                    <v-btn v-else class="header__sign" @click="this.$router.push({name:'login'})">{{$t("signin")}}</v-btn>
                     <burger-menu class="burger__box-cmp" style="cursor: pointer;" @click="shMMenu = !shMMenu"></burger-menu>
                 </div>
             </div>

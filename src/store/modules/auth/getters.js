@@ -10,11 +10,6 @@ export default {
         return state.user;
     },
     [IS_USER_AUTHENTICATE_GETTER](state){
-        let uD = sessionStorage.getItem('user');
-        console.log('****************');
-        console.log(state.user.token);
-        console.log(!!state.user.token);
-        console.log('****************');
         return !!state.user.token;
     },
 };

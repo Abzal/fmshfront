@@ -7,8 +7,8 @@ import trainer from "@/store/modules/trainerModule"
 import live from "@/store/modules/liveModule";
 import applicant from "@/store/modules/applicantModule";
 import parent from "@/store/modules/parentModule";
-import form from "@/store/modules/formModule";
 import auth from "@/store/modules/auth";
+import form from "@/store/modules/form";
 
 export default createStore({
   modules: {
@@ -20,7 +20,7 @@ export default createStore({
     live,
     applicant,
     parent,
-    form,
-    auth
+    auth,
+    form
   }
 })
