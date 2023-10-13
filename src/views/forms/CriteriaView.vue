@@ -1,24 +1,429 @@
 <template>
   <div class="wrapper">
 
-    <p>{{teachers}}</p>
+    <v-autocomplete
+            v-model="selectedItem"
+            label="Teachers"
+            :items="teachersFio"
+    ></v-autocomplete>
+
+
+    <v-container>
+      <v-form @submit.prevent="submitSurvey">
+        <v-card>
+          <v-card-title class="headline">Наблюдение урока {{selectedItem?'"'+selectedItem+'"':''}}</v-card-title>
+          <v-card-text>
+            <template v-for="form in strForm">
+
+                <v-row v-if="form.type === 'combobox'">
+                  <v-col cols="8">
+                    <v-textarea v-model="form.title" rows="2"  :label="form.tags.join(',')" readonly></v-textarea>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-slider
+                            :ticks="seasons"
+                            :max="2"
+                            step="1"
+                            show-ticks="always"
+                            thumb-label="always"
+                            thumb-color="orange"
+                            tick-size="2"
+                    >
+                      <template v-slot:thumb-label="{ modelValue }">
+                        {{ satisfactionEmojis[modelValue] }}
+                      </template>
+
+                    </v-slider>
+                  </v-col>
+                </v-row>
+
+
+              <v-row v-if="form.type === 'textarea'">
+                <v-textarea rows="2"  :label="form.title" ></v-textarea>
+              </v-row>
+
+
+
+            </template>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="primary" type="submit">Submit</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-form>
+    </v-container>
+
 
   </div>
+
 </template>
 <script>
   import {mapActions, mapGetters} from 'vuex'
-  import {FETCH_TEACHERS_ACTION, GET_TEACHERS_GETTER, LOGIN_ACTION} from "@/store/storeconstants";
+  import {
+    FETCH_TEACHERS_ACTION,
+    GET_TEACHERS_FIO_GETTER,
+    GET_TEACHERS_GETTER,
+    LOGIN_ACTION
+  } from "@/store/storeconstants";
   export default {
     data() {
       return {
+
+        selectedItem: null,
+        seasons: {
+          0: 'Н/Н',
+          1: 'Н/У',
+          2: 'хорошо',
+        },
+        satisfactionEmojis: ['☹️', '😐', '😍'],
+
+
+        strForm : [
+          {
+            title: 'Учитель организует классное пространство и оборудование для разных форм работы, для поддержки активности и свободного передвижения во время урока',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Class management'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Климат в классе свидетельствует о взаимной вежливости и уважении (учитель - ученик/ученик - ученик). Ученики получают поддержку как в вербальной, так и невербальной форме.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Class management'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Учитель минимизирует время ожидания учеников между заданиями',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Time management'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'частая смена задач обеспечивает концентрацию внимания и сосредоточенность на задании',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Time management'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Поведение учеников и качество их учебной работы свидетельствуют о том, что им понятны цели обучения и ожидаемые результаты урока.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Управление поведением учеников'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'В ходе урока учебная деятельность учеников эффективно отслеживается, неприемлемое поведение останавливается.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Управление поведением учеников'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Урок учителя разработан самостоятельно / совместно с коллегами / в рамках исследования урока (LS) / в рамках исследования практики (AR) / по авторской программе / по авторской методике',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Планирование'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Структура плана урока отражает логическую взаимосвязь между этапами урока. ',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Планирование'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Учебный материал отражает взаимосвязь темы с другими темами и разделами учебной программы, преемственность и непрерывность ее изучения, межпредметные связи.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Планирование'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Учитель обсуждает с учащимися цели обучения, вовлекает в осмысление целей, логики и результатов урока. ',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Преподавание'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Выбранные формы работы, повышают эффективность учебной деятельности. Учитель использует ресурсы, направленные на удовлетворение потребностей / развитие способностей учащихся / исследовательских навыков.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Преподавание'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Ученики имеют возможность самостоятельно практиковаться в изучаемых понятиях и учениях, применяются различные виды дифференциации (персонализация, индивидуализация). ',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Преподавание'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Учитель предлагает учащимся критерии и дескрипторы оценивания в соответствии с целями обучения. ',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Оценивание'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Применяется определенная форма оценивания (диагностическое/формативное/суммативное), разнообразные инструменты оценивания направлены на достижение целей.',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Оценивание'],
+            type: 'combobox',
+            required: true
+          },
+          {
+            title: 'Учитель обеспечивает всех учеников своевременной обратной связью. ',
+            values: [
+              {
+                title: 'не наблюдается',
+                value: 0
+              },
+              {
+                title: 'нуждается в улучшении',
+                value: 1
+              },
+              {
+                title: 'хорошо',
+                value: 2
+              },
+            ],
+            defaultValue: null,
+            tags: ['Оценивание'],
+            type: 'combobox',
+            required: true
+          },
+
+          {
+            title: 'Краткий отзыв о наблюдении урока',
+            values: null,
+            defaultValue: null,
+            tags: [],
+            type: 'textarea',
+            required: false
+          },
+          {
+            title: 'Краткий отзыв о продвижении учителя к достижению цели профессионального развития ',
+            values: null,
+            defaultValue: null,
+            tags: [],
+            type: 'textarea',
+            required: false
+          },
+
+        ],
+
 
       };
     },
 
     computed: {
       ...mapGetters('form', {
-        teachers: GET_TEACHERS_GETTER
-      })
+        teachers: GET_TEACHERS_GETTER,
+        teachersFio: GET_TEACHERS_FIO_GETTER
+      }),
+
     },
 
     created() {
@@ -32,7 +437,56 @@
       ...mapActions('form', {
         fetchTeachers: FETCH_TEACHERS_ACTION
       }),
+
+      season (val) {
+        return this.icons[val]
+      },
+
+      searchItems(query) {
+        // Filter the data based on the user's input
+        this.data = this.data.filter((item) =>
+                item.displayName.toLowerCase().includes(query.toLowerCase())
+        );
+      },
+
+      submitSurvey() {
+        // Handle the form submission and answers here
+        console.log('Survey Answers:', this.answers);
+      },
+
     },
 
   }
 </script>
+<style scoped>
+  .data__table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .data__table td, .data__table th {
+    border: 1px solid #ECECEC;
+    padding: 12px;
+  }
+  .data__table tr:nth-child(even){background-color: #FAFAFA;}
+  .data__table th {
+    padding: 16px 12px 20px 13px;
+    text-align: left;
+    background-color: #F2F6FD;
+    color: #224084;
+    border-bottom: 1px solid #6E96CB;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .data__table th, .data__table td{
+    text-align: right;
+    vertical-align: middle;
+  }
+  .data__table th:first-child{
+    text-align: left;
+  }
+  .data__table td:first-child{
+    text-align: left;
+  }
+
+</style>

@@ -13,4 +13,5 @@ export const IS_USER_AUTHENTICATE_GETTER = '[getters] is user authenticated';
 /**form*/
 export const FETCH_TEACHERS_ACTION = '[actions] fetch all teachers';
 export const GET_TEACHERS_GETTER = '[getters] get all teachers';
+export const GET_TEACHERS_FIO_GETTER = '[getters] get all teachers fio';
 export const SET_TEACHERS_MUTATION = '[mutations] set all teachers';
