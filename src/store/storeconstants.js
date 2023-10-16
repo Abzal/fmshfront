@@ -15,3 +15,7 @@ export const FETCH_TEACHERS_ACTION = '[actions] fetch all teachers';
 export const GET_TEACHERS_GETTER = '[getters] get all teachers';
 export const GET_TEACHERS_FIO_GETTER = '[getters] get all teachers fio';
 export const SET_TEACHERS_MUTATION = '[mutations] set all teachers';
+export const SAVE_FORM_ACTION = '[actions] save new form';
+export const SAVE_FORM_ANSWER_ACTION = '[actions] save form answer';
+export const FETCH_SINGLE_FORM_BY_ID_ACTION = '[action] get single form';
+export const FETCH_FORMS_ACTION = '[action] fetch forms';

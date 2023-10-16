@@ -31,7 +31,6 @@ export default {
 
   [AUTO_LOGIN_ACTION](context) {
     let user = sessionStorage.getItem('user');
-    console.log(user);
     try {
       if (user) {
         let userData = JSON.parse(user);

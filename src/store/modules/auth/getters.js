@@ -10,6 +10,12 @@ export default {
         return state.user;
     },
     [IS_USER_AUTHENTICATE_GETTER](state){
-        return !!state.user.token;
+        let userStr = sessionStorage.getItem('user');
+        let token = state.user.token;
+        if(userStr){
+            token = JSON.parse(userStr).token;
+        }
+
+        return !!token;
     },
 };
