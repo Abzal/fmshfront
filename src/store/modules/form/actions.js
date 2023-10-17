@@ -1,6 +1,6 @@
 import axios from "axios";
 import {
-  FETCH_TEACHERS_ACTION,
+  FETCH_TEACHERS_ACTION, FETCH_USER_ANSWERS_ACTION,
   SAVE_FORM_ACTION,
   SAVE_FORM_ANSWER_ACTION,
   SET_TEACHERS_MUTATION
@@ -33,6 +33,17 @@ export default {
     return await axios.post('form/answer', payload).then(response => {
       if (response.status === 200) {
         return true;
+      }else return false;
+    }).catch(error => {
+      console.log(error);
+      return false;
+    })
+  },
+
+  async [FETCH_USER_ANSWERS_ACTION](context, payload) {
+    return await axios.post('form/answer/all', payload).then(response => {
+      if (response.status === 200) {
+        return response.data.result;
       }else return false;
     }).catch(error => {
       console.log(error);
