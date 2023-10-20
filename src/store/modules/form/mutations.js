@@ -14,8 +14,11 @@ export default {
             let iinFio = '';
             let email = '';
             teach.forEach(tch => {
-                if(tch.type === 'nISEDUKZIIN' || tch.type === 'displayName'){
+                /*if(tch.type === 'nISEDUKZIIN' || tch.type === 'displayName'){
                     iinFio.length > 0? iinFio += ' ' + tch.values[0] : iinFio += tch.values[0];
+                }*/
+                if(tch.type === 'displayName'){
+                    iinFio += tch.values[0];
                 }
                 if(tch.type === 'userPrincipalName'){
                     email = tch.values[0];

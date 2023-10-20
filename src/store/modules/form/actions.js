@@ -30,7 +30,7 @@ export default {
   },
 
   async [SAVE_FORM_ANSWER_ACTION](context, payload) {
-    return await axios.post('form/answer', payload).then(response => {
+    return await axios.post('form/answers', payload).then(response => {
       if (response.status === 200) {
         return true;
       }else return false;
@@ -41,7 +41,7 @@ export default {
   },
 
   async [FETCH_USER_ANSWERS_ACTION](context, payload) {
-    return await axios.post('form/answer/all', payload).then(response => {
+    return await axios.post('form/answers/my', payload).then(response => {
       if (response.status === 200) {
         return response.data.result;
       }else return false;

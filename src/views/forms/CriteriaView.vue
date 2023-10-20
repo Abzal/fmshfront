@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-<!--{{allUserAnswers}}-->
+
     <v-card>
       <v-tabs
               v-model="tab"
@@ -8,7 +8,7 @@
               align-tabs="center"
       >
         <v-tab :value="1">Наблюдение урока</v-tab>
-        <v-tab :value="2">Графики</v-tab>
+        <v-tab :value="2">Feedback</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item
@@ -30,10 +30,11 @@
                     item-value="desc"
                     item-text="title"
                     :error-messages="errorMsg"
+                    return-object
             ></v-autocomplete>
             <v-form @submit.prevent="submitSurvey">
               <v-card>
-                <v-card-title class="headline">Наблюдение урока {{selectedItem?'"'+selectedItem+'"':''}}</v-card-title>
+                <v-card-title class="headline">Наблюдение урока {{selectedItem?'"'+selectedItem.desc+'"':''}}</v-card-title>
                 <v-card-text>
                   <template v-for="(form,idx) in strForm"  :key="idx + '_str_form'">
 
@@ -86,9 +87,20 @@
                 :key="2"
                 :value="2"
         >
-          <v-container fluid>
-
-            <Radar :data="radarData" :options="radarOptions" />
+          <v-container >
+            <v-card>
+              <Radar :data="radarDta" :options="radarOptions" />
+            </v-card>
+            <v-card>
+              <v-list lines="one">
+                <v-list-item
+                        v-for="(uans, n) in allUserAnswers"
+                        :key="n"
+                        :title="uans.authorName"
+                        :subtitle="JSON.parse(uans.answer)[15]+ '; ' + JSON.parse(uans.answer)[16]"
+                ></v-list-item>
+              </v-list>
+            </v-card>
 
           </v-container>
         </v-window-item>
@@ -153,9 +165,9 @@
             'Учитель обсуждает с учащимися цели обучения, вовлекает в осмысление целей, логики и результатов урока. ',
             'Выбранные формы работы, повышают эффективность учебной деятельности. Учитель использует ресурсы, направленные на удовлетворение потребностей / развитие способностей учащихся / исследовательских навыков.',
             'Ученики имеют возможность самостоятельно практиковаться в изучаемых понятиях и учениях, применяются различные виды дифференциации (персонализация, индивидуализация). ',
-            'Cycling',
-            'Running',
-            'Running'
+            'Учитель обеспечивает всех учеников своевременной обратной связью. ',
+            'Краткий отзыв о наблюдении урока',
+            'Краткий отзыв о продвижении учителя к достижению цели профессионального развития'
           ],
           datasets: [
             {
@@ -183,7 +195,11 @@
         radarOptions: {
           responsive: true,
           maintainAspectRatio: false,
+
           plugins: {
+            legend: {
+              position: 'left'
+            },
             datalabels: {
               color: function(context) {
 
@@ -349,11 +365,51 @@
     computed: {
       ...mapGetters('form', {
         teachers: GET_TEACHERS_GETTER,
-        teachersFio: GET_TEACHERS_FIO_GETTER
+        teachersFio: GET_TEACHERS_FIO_GETTER,
+        allUserAnswers: FETCH_USER_ANSWERS_ACTION
       }),
       ...mapGetters('auth', {
         author: GET_USER_DATA_GETTER
-      })
+      }),
+      radarDta() {
+          let datasets = [];
+          this.allUserAnswers.forEach(ans => {
+            const r = Math.floor(Math.random() * 256); // Random value between 0 and 255 for red
+            const g = Math.floor(Math.random() * 256); // Random value between 0 and 255 for green
+            const b = Math.floor(Math.random() * 256); // Random value between 0 and 255 for blue
+
+            datasets.push({
+              label: ans.authorName,
+              backgroundColor: `rgba(${r},${g},${b},0.2)`,
+              borderColor: `rgba(${r},${g},${b},1)`,
+              pointBackgroundColor: `rgba(${r},${g},${b},1)`,
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: `rgba(${r},${g},${b},1)`,
+              data: JSON.parse(ans.answer)?.slice(0,15)
+            })
+          });
+
+        let labels = [
+          'Учитель организует классное пространство и оборудование для разных форм работы, для поддержки активности и свободного передвижения во время урока',
+          'Климат в классе свидетельствует о взаимной вежливости и уважении (учитель - ученик/ученик - ученик). Ученики получают поддержку как в вербальной, так и невербальной форме.',
+          'Учитель минимизирует время ожидания учеников между заданиями',
+          'частая смена задач обеспечивает концентрацию внимания и сосредоточенность на задании',
+          'Поведение учеников и качество их учебной работы свидетельствуют о том, что им понятны цели обучения и ожидаемые результаты урока.',
+          'В ходе урока учебная деятельность учеников эффективно отслеживается, неприемлемое поведение останавливается.',
+          'Урок учителя разработан самостоятельно / совместно с коллегами / в рамках исследования урока (LS) / в рамках исследования практики (AR) / по авторской программе / по авторской методике',
+          'Структура плана урока отражает логическую взаимосвязь между этапами урока. ',
+          'Учебный материал отражает взаимосвязь темы с другими темами и разделами учебной программы, преемственность и непрерывность ее изучения, межпредметные связи.',
+          'Учитель обсуждает с учащимися цели обучения, вовлекает в осмысление целей, логики и результатов урока. ',
+          'Выбранные формы работы, повышают эффективность учебной деятельности. Учитель использует ресурсы, направленные на удовлетворение потребностей / развитие способностей учащихся / исследовательских навыков.',
+          'Ученики имеют возможность самостоятельно практиковаться в изучаемых понятиях и учениях, применяются различные виды дифференциации (персонализация, индивидуализация). ',
+          'Учитель обеспечивает всех учеников своевременной обратной связью. ',
+          'Краткий отзыв о наблюдении урока',
+          'Краткий отзыв о продвижении учителя к достижению цели профессионального развития'
+        ];
+
+        return {labels: labels, datasets: datasets};
+      }
 
 
     },
@@ -390,7 +446,13 @@
             answers.push(form.value);
             form.value = 0;
           });
-          this.saveAnswers({'authorEmail': this.author.email, 'subjectEmail': this.selectedItem, 'answer': answers }).then(responce => {
+          this.saveAnswers({
+            'authorEmail': this.author.email,
+            'authorName': this.author.name,
+            'subjectEmail': this.selectedItem.desc,
+            'subjectName': this.selectedItem.title,
+            'answer': answers
+          }).then(responce => {
             this.selectedItem = null;
             console.log(responce);
           }).catch(error => {
