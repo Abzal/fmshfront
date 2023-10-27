@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  FETCH_ALL_ANSWERS_ACTION,
   FETCH_TEACHERS_ACTION, FETCH_USER_ANSWERS_ACTION,
   SAVE_FORM_ACTION,
   SAVE_FORM_ANSWER_ACTION,
@@ -43,11 +44,50 @@ export default {
   async [FETCH_USER_ANSWERS_ACTION](context, payload) {
     return await axios.post('form/answers/my', payload).then(response => {
       if (response.status === 200) {
-        return response.data.result;
+
+        let otvet = [];
+
+        response.data.result.forEach(ans => {
+          let value =  new Date(ans.createdAt);
+          let title = value.toLocaleDateString('kz-KZ', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
+          otvet.push({...ans, ...{formatedDate: title}});
+        })
+
+        return otvet;
+      }else return false;
+    }).catch(error => {
+      console.log(error);
+      return false;
+    })
+  },
+
+  async [FETCH_ALL_ANSWERS_ACTION](context, payload) {
+    return await axios.post('form/answers/all', payload).then(response => {
+      if (response.status === 200) {
+
+        let otvet = [];
+
+        response.data.result.forEach(ans => {
+          let value =  new Date(ans.createdAt);
+          let title = value.toLocaleDateString('kz-KZ', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
+          otvet.push({...ans, ...{formatedDate: title}});
+        })
+
+        return otvet;
       }else return false;
     }).catch(error => {
       console.log(error);
       return false;
     })
   }
+
+
 };

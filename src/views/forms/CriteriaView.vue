@@ -9,6 +9,7 @@
       >
         <v-tab :value="1">Наблюдение урока</v-tab>
         <v-tab :value="2">Feedback</v-tab>
+        <v-tab :value="3">statistics</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item
@@ -88,13 +89,20 @@
                 :value="2"
         >
           <v-container >
+
             <v-card>
-              <Radar :data="radarDta" :options="radarOptions" />
-            </v-card>
-            <v-card>
+              <p>
+                <v-autocomplete
+                        v-model="selectedDate"
+                        :items="dateArr"
+                        label="Выбрать дату"
+                        item-value="desc"
+                        item-text="title"
+                ></v-autocomplete>
+              </p>
               <v-list lines="one">
                 <v-list-item
-                        v-for="(uans, n) in allUserAnswers"
+                        v-for="(uans, n) in descArr"
                         :key="n"
                         :title="uans.authorName"
                         :subtitle="JSON.parse(uans.answer)[15]+ '; ' + JSON.parse(uans.answer)[16]"
@@ -102,8 +110,30 @@
               </v-list>
             </v-card>
 
+            <v-card>
+              <Radar :data="radarDta" :options="radarOptions" />
+            </v-card>
           </v-container>
         </v-window-item>
+
+        <v-window-item
+                :key="3"
+                :value="3"
+        >
+          <v-container >
+            <v-autocomplete
+                    v-model="selectedDate"
+                    :items="dateArr"
+                    label="Выбрать дату"
+                    item-value="desc"
+                    item-text="title"
+            ></v-autocomplete>
+
+            {{allUsersAnswers}}
+
+          </v-container>
+        </v-window-item>
+
 
       </v-window>
     </v-card>
@@ -119,6 +149,7 @@
 <script>
   import {mapActions, mapGetters} from 'vuex'
   import {
+    FETCH_ALL_ANSWERS_ACTION,
     FETCH_TEACHERS_ACTION, FETCH_USER_ANSWERS_ACTION,
     GET_TEACHERS_FIO_GETTER,
     GET_TEACHERS_GETTER, GET_USER_DATA_GETTER,
@@ -150,7 +181,7 @@
     },
     data() {
       return {
-
+        selectedDate : null,
         radarData: {
           labels: [
             'Учитель организует классное пространство и оборудование для разных форм работы, для поддержки активности и свободного передвижения во время урока',
@@ -227,6 +258,7 @@
         selectedItem: null,
         tab: null,
         allUserAnswers: null,
+        allUsersAnswers: null,
         answers: {
           0: 'Н/Н',
           1: 'Н/У',
@@ -367,27 +399,84 @@
         teachers: GET_TEACHERS_GETTER,
         teachersFio: GET_TEACHERS_FIO_GETTER,
         allUserAnswers: FETCH_USER_ANSWERS_ACTION
+
       }),
       ...mapGetters('auth', {
         author: GET_USER_DATA_GETTER
       }),
+
+      dateArr() {
+        let dataSet = [];
+        this.allUserAnswers.forEach(ans => {
+          if (!dataSet.includes(ans.formatedDate)) {
+            dataSet.push(ans.formatedDate);
+          }
+        });
+        return dataSet;
+      },
+
+      descArr() {
+        let dataSet = [];
+        this.allUserAnswers.forEach(ans => {
+            if(this.selectedDate === null){
+              dataSet.push(ans)
+            }else if(this.selectedDate === ans.formatedDate){
+              dataSet.push(ans)
+            }
+        });
+        return dataSet;
+      },
+
+      statArr() {
+        let dataSet = [];
+
+        this.allUsersAnswers.forEach(ans = {
+
+        })
+
+
+      },
+
       radarDta() {
           let datasets = [];
           this.allUserAnswers.forEach(ans => {
-            const r = Math.floor(Math.random() * 256); // Random value between 0 and 255 for red
-            const g = Math.floor(Math.random() * 256); // Random value between 0 and 255 for green
-            const b = Math.floor(Math.random() * 256); // Random value between 0 and 255 for blue
 
-            datasets.push({
-              label: ans.authorName,
-              backgroundColor: `rgba(${r},${g},${b},0.2)`,
-              borderColor: `rgba(${r},${g},${b},1)`,
-              pointBackgroundColor: `rgba(${r},${g},${b},1)`,
-              pointBorderColor: '#fff',
-              pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: `rgba(${r},${g},${b},1)`,
-              data: JSON.parse(ans.answer)?.slice(0,15)
-            })
+            if(this.selectedDate === null){
+
+              const r = Math.floor(Math.random() * 256); // Random value between 0 and 255 for red
+              const g = Math.floor(Math.random() * 256); // Random value between 0 and 255 for green
+              const b = Math.floor(Math.random() * 256); // Random value between 0 and 255 for blue
+
+              datasets.push({
+                label: ans.authorName,
+                backgroundColor: `rgba(${r},${g},${b},0.2)`,
+                borderColor: `rgba(${r},${g},${b},1)`,
+                pointBackgroundColor: `rgba(${r},${g},${b},1)`,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: `rgba(${r},${g},${b},1)`,
+                data: JSON.parse(ans.answer)?.slice(0,15)
+              })
+
+            }else if(ans.formatedDate === this.selectedDate){
+
+              const r = Math.floor(Math.random() * 256); // Random value between 0 and 255 for red
+              const g = Math.floor(Math.random() * 256); // Random value between 0 and 255 for green
+              const b = Math.floor(Math.random() * 256); // Random value between 0 and 255 for blue
+
+              datasets.push({
+                label: ans.authorName,
+                backgroundColor: `rgba(${r},${g},${b},0.2)`,
+                borderColor: `rgba(${r},${g},${b},1)`,
+                pointBackgroundColor: `rgba(${r},${g},${b},1)`,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: `rgba(${r},${g},${b},1)`,
+                data: JSON.parse(ans.answer)?.slice(0,15)
+              })
+            }
+
+
           });
 
         let labels = [
@@ -421,6 +510,11 @@
       });
       this.fetchUserAnswers({email:this.author.email}).then(res => {
         this.allUserAnswers = res;
+      });
+      this.fetchAllAnswers().then(res => {
+        this.allUsersAnswers = res;
+      }).catch(err => {
+        console.log(err);
       })
     },
     methods: {
@@ -428,7 +522,8 @@
         fetchTeachers: FETCH_TEACHERS_ACTION,
         saveForm: SAVE_FORM_ACTION,
         saveAnswers: SAVE_FORM_ANSWER_ACTION,
-        fetchUserAnswers: FETCH_USER_ANSWERS_ACTION
+        fetchUserAnswers: FETCH_USER_ANSWERS_ACTION,
+        fetchAllAnswers: FETCH_ALL_ANSWERS_ACTION
       }),
 
 
