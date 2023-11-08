@@ -20,7 +20,7 @@
                             <a href="#!" class="footer__menu-link">{{$t('address')}}</a>
                         </li>
                     </ul>
-                    <ul class="footer__menu">
+                    <ul class="footer__menu footer__menu-social">
                         <li class="footer__menu-item">
                             <h3 class="footer__menu-title">{{$t('follow')}}</h3>
                         </li>
@@ -83,5 +83,21 @@ export default {
     }
     .footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active{
         opacity: .75;
+    }
+    @media screen and (max-width: 600px) {
+        .footer__menu-title{
+            font-size: 12px;
+            line-height: 6px;
+        }
+        .footer__menu-link{
+            font-size: 9px;
+            line-height: 2px;
+        }
+        .footer__logo{
+            display: none;
+        }
+        .footer__menu-social{
+            display: none;
+        }
     }
 </style>

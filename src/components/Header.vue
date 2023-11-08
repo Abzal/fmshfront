@@ -46,6 +46,19 @@
                             </ul>
 
                         </li>
+                        <template v-if="userData.token" >
+                            <li class="burger__nav-li">
+                                <a @click="()=>{shMMenu = !shMMenu; this.$router.push('cabinet');}" class="desktop__item" >{{$t("cabinet")}}</a>
+                            </li>
+                            <li class="burger__nav-li">
+                                <a @click="()=>{onLogout();shMMenu = !shMMenu;}" class="desktop__item" >{{$t("signout")}}{{"(" + userData.name + ")"}}</a>
+                            </li>
+                        </template>
+                        <template v-else>
+                            <li class="burger__nav-li">
+                                <a @click="()=>{shMMenu = !shMMenu;this.$router.push({name:'login'});}" class="desktop__item" >{{$t("signin")}}</a>
+                            </li>
+                        </template>
                     </ul>
                     <div class="header__nav-close" style="cursor: pointer;" v-on:click="shMMenu = !shMMenu">
                         <span class="header__nav-close-line"></span>
@@ -120,6 +133,9 @@ export default {
     }
     @media screen and (max-width: 930px) {
         .main__menu-cmp{
+            display: none !important;
+        }
+        .header__sign{
             display: none !important;
         }
         .burger__box-cmp{

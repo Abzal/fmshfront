@@ -29,7 +29,7 @@
       }),
       login() {
         this.loginAction({email: this.username,password: this.password}).then(res => {
-          this.$router.push({name: 'cabinet'})
+          this.$router.push({name: 'cabinet'});
         }).catch(err => {
           this.error = true;
         })

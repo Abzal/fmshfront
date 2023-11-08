@@ -8,7 +8,7 @@
       >
         <v-tab :value="1">Наблюдение урока</v-tab>
         <v-tab :value="2">Feedback</v-tab>
-        <v-tab :value="3">statistics</v-tab>
+        <!--<v-tab :value="3">statistics</v-tab>-->
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item
@@ -25,12 +25,12 @@
           <criteria-graph :all-user-answers="allUserAnswers"></criteria-graph>
         </v-window-item>
 
-        <v-window-item
+       <!-- <v-window-item
                 :key="3"
                 :value="3"
         >
           <criteria-statistic :form="strForm" :all-users-answers="allUsersAnswers"></criteria-statistic>
-        </v-window-item>
+        </v-window-item>-->
 
 
       </v-window>

@@ -22,10 +22,10 @@
                     <template v-for="(form,idx) in strForm"  :key="idx + '_str_form'">
 
                         <v-row v-if="form.type === 'combobox'">
-                            <v-col cols="8">
+                            <v-col >
                                 <v-textarea v-model="form.title" rows="2"  :label="form.tags.join(',')" readonly></v-textarea>
                             </v-col>
-                            <v-col cols="4">
+                            <v-col>
                                 <v-slider
                                         v-model="strForm[idx].value"
                                         :ticks="answers"
@@ -126,5 +126,9 @@
 </script>
 
 <style scoped>
-
+    @media screen and (max-width: 830px) {
+        .v-row {
+            flex-direction: column;
+        }
+    }
 </style>
