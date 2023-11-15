@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    {{author}}
     <v-card>
       <v-tabs
               v-model="tab"
@@ -63,7 +64,11 @@
         strForm : criteria.strForm
       };
     },
-
+    watch: {
+      tab(n){
+        console.log(n);
+      }
+    },
     computed: {
       ...mapGetters('auth', {
         author: GET_USER_DATA_GETTER
