@@ -10,6 +10,8 @@
         <v-tab :value="1">Наблюдение урока</v-tab>
         <v-tab :value="2">Feedback</v-tab>
         <!--<v-tab :value="3">statistics</v-tab>-->
+        <v-tab :value="4">Профиль</v-tab>
+        <v-tab :value="5">План урока</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item
@@ -33,6 +35,12 @@
           <criteria-statistic :form="strForm" :all-users-answers="allUsersAnswers"></criteria-statistic>
         </v-window-item>-->
 
+        <v-window-item
+                :key="4"
+                :value="4"
+        >
+          <teacher-portfolio></teacher-portfolio>
+        </v-window-item>
 
       </v-window>
     </v-card>
@@ -49,9 +57,11 @@
   import CreateCriteria from "@/views/forms/tabs/CreateCriteria";
   import CriteriaGraph from "@/views/forms/tabs/CriteriaGraph";
   import CriteriaStatistic from "@/views/forms/tabs/CriteriaStatistic";
+  import TeacherPortfolio from "@/views/forms/tabs/TeacherPortfolio";
 
   export default {
     components: {
+      TeacherPortfolio,
       CriteriaStatistic,
       CriteriaGraph,
       CreateCriteria
