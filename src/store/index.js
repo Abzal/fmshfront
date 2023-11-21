@@ -9,6 +9,7 @@ import applicant from "@/store/modules/applicantModule";
 import parent from "@/store/modules/parentModule";
 import auth from "@/store/modules/auth";
 import form from "@/store/modules/form";
+import user from "@/store/modules/user";
 
 export default createStore({
   modules: {
@@ -21,6 +22,7 @@ export default createStore({
     applicant,
     parent,
     auth,
-    form
+    form,
+    user
   }
 })

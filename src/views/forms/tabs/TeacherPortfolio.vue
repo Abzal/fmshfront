@@ -2,32 +2,63 @@
     <v-container>
         <v-form>
             <v-row>
-                <v-col cols="12">
-                    <v-text-field v-model="profile.teacherName" label="1. ФИО Учителя" :readonly="!isEditing"></v-text-field>
-                </v-col>
-            </v-row>
-
-            <v-row>
-                <v-col cols="12" md="6">
-                    <v-select
-                            v-model="profile.skillLevel"
-                            :items="skillLevels"
-                            label="2. Уровень педагогического мастерства"
-                            :readonly="!isEditing"
-                    ></v-select>
-                </v-col>
-                <v-col cols="12" md="6">
-                    <v-text-field v-model="profile.subject" label="3. Аттестационный период (в формате 2023-2024г)" :readonly="!isEditing"></v-text-field>
+                <v-col>
+                    <v-text-field v-model="requiredProfile[0].value" :label="requiredProfile[0].label" :readonly="!isEditing"></v-text-field>
                 </v-col>
             </v-row>
 
             <v-row>
                 <v-col>
-                    <v-textarea v-model="profile.lessonTopic" label="4. Тема исследования урока Lesson Study / исследования практики Action Research" :readonly="!isEditing"></v-textarea>
+                    <v-select
+                            v-model="requiredProfile[1].value"
+                            :items="skillLevels"
+                            :label="requiredProfile[1].label"
+                            :readonly="!isEditing"
+                    ></v-select>
+                </v-col>
+                <v-col>
+                    <v-text-field
+                            v-model="requiredProfile[2].value"
+                            :label="requiredProfile[2].label"
+                            :readonly="!isEditing">
+                    </v-text-field>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col>
+                    <v-textarea
+                            v-model="requiredProfile[3].value"
+                            :label="requiredProfile[3].label"
+                            :readonly="!isEditing">
+                    </v-textarea>
                 </v-col>
             </v-row>
 
+
+            <v-row v-for="(item, index) in additionalProfile">
+                <v-col>
+                    <v-textarea
+                            v-model="additionalProfile[index].label"
+                            label="Наименование"
+                            :readonly="!isEditing"
+                    ></v-textarea>
+                </v-col>
+                <v-col>
+                    <v-textarea
+                            v-model="additionalProfile[index].value"
+                            label="Значение"
+                            :readonly="!isEditing">
+                    </v-textarea>
+                </v-col>
+            </v-row>
+
+            <v-row>
+                <v-col>
+                    <v-btn @click="()=>additionalProfile.push({label: '', value: ''})" style="width: 100%">+ добавить поле</v-btn>
+                </v-col>
+            </v-row>
             <!-- Дополнительные поля -->
+
 
 
             <v-row>
@@ -42,8 +73,8 @@
 </template>
 
 <script>
-    import {mapGetters} from "vuex";
-    import {GET_USER_DATA_GETTER} from "@/store/storeconstants";
+    import {mapActions, mapGetters} from "vuex";
+    import {CREATE_PROFILE_ACTION, GET_TEACHER_PROFILE_ACTION, GET_USER_DATA_GETTER} from "@/store/storeconstants";
 
     export default {
         name: "TeacherPortfolio",
@@ -60,22 +91,23 @@
                 ],
                 requiredProfile: [
                     {
-                        label: '2. Уровень педагогического мастерства',
+                        label: '1. ФИО Учителя',
                         value: ''
                     },
                     {
                         label: '2. Уровень педагогического мастерства',
                         value: ''
+                    },
+                    {
+                        label: '3. Аттестационный период (в формате 2023-2024г)',
+                        value: ''
+                    },
+                    {
+                        label: '4. Тема исследования урока Lesson Study / исследования практики Action Research',
+                        value: ''
                     }
                 ],
-                profile: {
-                    teacherName: 'John Doe',
-                    skillLevel: '',
-                    period: '',
-                    lessonTopic: '',
-                    // Дополнительные поля
-                    // ...
-                },
+                additionalProfile: [],
                 menu: false,
             };
         },
@@ -84,20 +116,46 @@
                 author: GET_USER_DATA_GETTER
             }),
         },
+        created() {
+            if(this.requiredProfile[0].value === ''){
+                this.requiredProfile[0].value = this.author.name;
+            }
+            this.getTeacherProfile(this.author.email).then(res => {
+                let profile = JSON.parse(res);
+                this.requiredProfile = profile.requiredProfile;
+                this.additionalProfile = profile.additionalProfile;
+            }).catch(err => {
+                console.log(err)
+            })
+        },
         methods: {
+            ...mapActions('user', {
+                createTeacherProfile: CREATE_PROFILE_ACTION,
+                getTeacherProfile: GET_TEACHER_PROFILE_ACTION
+            }),
+
             toggleEditing() {
                 if (this.isEditing) {
                     // Ваш код для сохранения профиля
                     // Обычно это будет запрос к API
                     this.isSaving = true;
 
-                    // Ваш код для сохранения данных
-
-                    // Предположим, что сохранение успешно
-                    setTimeout(() => {
+                    this.createTeacherProfile({
+                        profile: JSON.stringify({
+                            requiredProfile: this.requiredProfile,
+                            additionalProfile: this.additionalProfile,
+                        }),
+                        email: this.author.email,
+                        iin: this.author.iin
+                    }).then(res => {
+                        console.log(res);
                         this.isSaving = false;
-                        this.isEditing = false;
-                    }, 1000);
+                    }).catch(err => {
+                        console.log(err);
+                        this.isSaving = false;
+                    })
+
+
                 } else {
                     this.isEditing = true;
                 }

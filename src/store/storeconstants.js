@@ -21,3 +21,6 @@ export const FETCH_USER_ANSWERS_ACTION = '[actions] fetch current user answers';
 export const FETCH_ALL_ANSWERS_ACTION = '[actions] fetch all answers';
 export const FETCH_SINGLE_FORM_BY_ID_ACTION = '[action] get single form';
 export const FETCH_FORMS_ACTION = '[action] fetch forms';
+/**user*/
+export const CREATE_PROFILE_ACTION = '[actions] create profile';
+export const GET_TEACHER_PROFILE_ACTION = '[actions] get teacher profile';
