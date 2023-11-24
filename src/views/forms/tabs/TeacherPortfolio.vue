@@ -154,7 +154,7 @@
                         console.log(err);
                         this.isSaving = false;
                     })
-
+                    this.isEditing = false;
 
                 } else {
                     this.isEditing = true;

@@ -26,7 +26,11 @@
                                 <v-textarea v-model="form.title" rows="2"  :label="form.tags.join(',')" readonly></v-textarea>
                             </v-col>
                             <v-col>
-                                <v-slider
+                                <v-select
+                                        label="Select"
+                                        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+                                ></v-select>
+                                <!--<v-slider
                                         v-model="strForm[idx].value"
                                         :ticks="answers"
                                         :max="2"
@@ -40,7 +44,7 @@
                                         {{ satisfactionEmojis[modelValue] }}
                                     </template>
 
-                                </v-slider>
+                                </v-slider>-->
                             </v-col>
                         </v-row>
 

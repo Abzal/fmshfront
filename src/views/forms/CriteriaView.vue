@@ -42,6 +42,14 @@
           <teacher-portfolio></teacher-portfolio>
         </v-window-item>
 
+        <v-window-item
+                :key="5"
+                :value="5"
+        >
+          <lesson-plan></lesson-plan>
+        </v-window-item>
+
+
       </v-window>
     </v-card>
   </div>
@@ -58,9 +66,11 @@
   import CriteriaGraph from "@/views/forms/tabs/CriteriaGraph";
   import CriteriaStatistic from "@/views/forms/tabs/CriteriaStatistic";
   import TeacherPortfolio from "@/views/forms/tabs/TeacherPortfolio";
+  import LessonPlan from "@/views/forms/tabs/LessonPlan";
 
   export default {
     components: {
+      LessonPlan,
       TeacherPortfolio,
       CriteriaStatistic,
       CriteriaGraph,
