@@ -1,18 +1,36 @@
 <template>
-    <v-dialog v-model="dialog" max-width="600">
+    <v-dialog :model-value="dialog">
         <v-card>
             <v-card-title>
                 {{ selectedLessonPlan ? 'Редактировать урок' : 'Добавить урок' }}
             </v-card-title>
             <v-card-text>
                 <v-form @submit.prevent="saveLessonPlan">
-                    <!-- Добавьте поля формы в соответствии с вашим объектом lessonPlan -->
-                    <v-text-field v-model="lessonPlan.teacherName" label="ФИО учителя"></v-text-field>
-                    <v-text-field v-model="lessonPlan.date" label="Дата"></v-text-field>
-                    <v-text-field v-model="lessonPlan.subject" label="Предмет"></v-text-field>
-                    <v-text-field v-model="lessonPlan.grade" label="Класс"></v-text-field>
-                    <!-- Добавьте остальные поля -->
-                    <!-- ... -->
+
+                    <v-divider :thickness="2"></v-divider>
+                    <v-row align="center">
+                        <v-col>
+                                <v-text-field v-model="lessonPlan.subject" label="Предмет"></v-text-field>
+                                <v-select
+                                        v-model="lessonPlan.grade"
+                                        label="Класс"
+                                        :items="['7', '8', '9', '10', '11', '12']"
+                                ></v-select>
+                                <v-text-field v-model="lessonPlan.unit" label="Тема урока"></v-text-field>
+                        </v-col>
+                        <v-col>
+                            <v-row>
+                                <v-date-picker v-model="lessonPlan.date" scrollable actions>
+                                </v-date-picker>
+                            </v-row>
+                        </v-col>
+                    </v-row>
+                    <v-divider :thickness="2"></v-divider>
+
+                    <v-text-field v-model="lessonPlan.pd"></v-text-field>
+
+
+
 
                     <v-btn type="submit" color="primary">{{ selectedLessonPlan ? 'Сохранить' : 'Добавить' }}</v-btn>
                     <v-btn @click="closeDialog">Отмена</v-btn>
@@ -23,8 +41,11 @@
 </template>
 
 <script>
+    import VueDatePicker from '@vuepic/vue-datepicker';
+    import '@vuepic/vue-datepicker/dist/main.css'
     export default {
         name: "LessonPlanDialog",
+        components: { VueDatePicker },
         props: {
             dialog: Boolean,
             selectedLessonPlan: Object,
@@ -33,11 +54,22 @@
             return {
                 lessonPlan: { // Используется для хранения данных формы
                     teacherName: '',
-                    date: '',
                     subject: '',
                     grade: '',
-                    // Добавьте остальные поля
-                    // ...
+                    unit: '',
+                    date: null,
+                    pd: '',
+                    lessonObjectives: '',
+                    beginning: '',
+                    middle: '',
+                    end: '',
+                    teachersReflection: {
+                        atw: '',
+                        atbi: ''
+                    },
+                    strategies: [],
+                    assessmentAsLearning: [],
+                    assessmentOfLearning: []
                 },
             };
         },

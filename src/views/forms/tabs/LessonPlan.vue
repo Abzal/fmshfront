@@ -1,33 +1,15 @@
 <template>
     <v-data-table :items="items"></v-data-table>
-    <v-container>
-        <v-container>
-            <v-btn @click="showLessonPlanDialog">Добавить урок</v-btn>
+    <v-btn @click="showLessonPlanDialog">Добавить урок</v-btn>
 
-            <!--<v-data-table :headers="headers" :items="lessonPlans" item-key="id" class="elevation-1">
-                <template v-slot:item="{ item }">
-                    <tr>
-                        <td>{{ item.date[this.$i18n.locale] }}</td>
-                        <td>{{ item.subject[this.$i18n.locale] }}</td>
-                        <td>{{ item.grade[this.$i18n.locale] }}</td>
-                        <td>
-                            <v-btn @click="editLessonPlan(item)">Редактировать</v-btn>
-                            <v-btn @click="deleteLessonPlan(item)">Удалить</v-btn>
-                        </td>
-                    </tr>
-                </template>
-            </v-data-table>-->
+    <lesson-plan-dialog
+            :dialog="dialog"
+            :lessonPlan="selectedLessonPlan"
+            @save="saveLessonPlan"
+            @close="closeLessonPlanDialog"
+    ></lesson-plan-dialog>
 
 
-
-            <lesson-plan-dialog
-                    :dialog="dialog"
-                    :lessonPlan="selectedLessonPlan"
-                    @save="saveLessonPlan"
-                    @close="closeLessonPlanDialog"
-            ></lesson-plan-dialog>
-        </v-container>
-    </v-container>
 </template>
 
 <script>
@@ -137,6 +119,7 @@
                 }
             },
             saveLessonPlan(lessonPlan) {
+                console.log(lessonPlan)
                 // Ваш код для сохранения/обновления урока
                 if (this.selectedLessonPlan) {
                     // Редактирование урока
