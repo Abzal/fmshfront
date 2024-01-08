@@ -1,14 +1,9 @@
 <template>
     <v-container>
-        <v-alert v-if="showErrors" type="error" dismissible>
-            Учитель не выбран
-        </v-alert>
-        <v-alert v-if="showSuccess" type="success" dismissible>
-            Успешно сохранен
-        </v-alert>
+
         <v-autocomplete
                 v-model="selectedItem"
-                label="Teachers"
+                :label="$t('criteria.select-teacher')"
                 :items="teachersFio"
                 item-value="desc"
                 item-text="title"
@@ -17,18 +12,21 @@
         ></v-autocomplete>
         <v-form @submit.prevent="submitSurvey">
             <v-card>
-                <v-card-title class="headline">Наблюдение урока {{selectedItem?'"'+selectedItem.desc+'"':''}}</v-card-title>
+                <v-card-title class="headline">{{$t('criteria.lesson-control')}}  {{selectedItem?'"'+selectedItem.desc+'"':''}}</v-card-title>
                 <v-card-text>
                     <template v-for="(form,idx) in strForm"  :key="idx + '_str_form'">
 
                         <v-row v-if="form.type === 'combobox'">
                             <v-col >
-                                <v-textarea v-model="form.title" rows="2"  :label="form.tags.join(',')" readonly></v-textarea>
+                                <v-textarea v-model="form.title[this.$i18n.locale]" rows="2"  :label="form.tags.map(tag => tag[this.$i18n.locale]).join(',')" readonly></v-textarea>
                             </v-col>
                             <v-col>
                                 <v-select
-                                        label="Select"
-                                        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+                                        :label="$t('criteria.select')"
+                                        v-model="strForm[idx].value"
+                                        :items="answers[this.$i18n.locale]"
+                                        item-title="title"
+                                        item-value="value"
                                 ></v-select>
                                 <!--<v-slider
                                         v-model="strForm[idx].value"
@@ -53,7 +51,7 @@
                             <v-textarea
                                     v-model="strForm[idx].value"
                                     rows="2"
-                                    :label="form.title"
+                                    :label="form.title[this.$i18n.locale]"
                             ></v-textarea>
                         </v-row>
 
@@ -61,8 +59,14 @@
 
                     </template>
                 </v-card-text>
+                <v-alert v-if="showErrors" type="error" dismissible>
+                    {{$t('criteria.teacher-not-found')}}
+                </v-alert>
+                <v-alert v-if="showSuccess" type="success" dismissible>
+                    {{$t('criteria.success-saved')}}
+                </v-alert>
                 <v-card-actions>
-                    <v-btn color="primary" type="submit">Submit</v-btn>
+                    <v-btn color="primary" type="submit">{{$t('criteria.submit')}}</v-btn>
                 </v-card-actions>
             </v-card>
         </v-form>
@@ -84,10 +88,22 @@
                 selectedItem: null,
                 errorMsg: null,
                 answers: {
-                    0: 'Н/Н',
-                    1: 'Н/У',
-                    2: 'хорошо',
-                },
+                    ru: [
+                        {title: 'Н/Н', value: 0},
+                        {title: 'Н/У', value: 1},
+                        {title: 'хорошо', value: 2},
+                    ],
+                    kz: [
+                        {title: "бақыланбайды", value: 0},
+                        {title: "Жақсартуды қажет етеді", value: 1},
+                        {title: "жақсы", value: 2},
+                    ],
+                    en: [
+                        {title: "No", value: 0},
+                        {title: "needs improvement", value: 1},
+                        {title: "good", value: 2},
+                    ],
+                    },
                 satisfactionEmojis: ['☹️', '😐', '😍'],
             }
         },

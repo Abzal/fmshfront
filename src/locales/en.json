@@ -45,5 +45,22 @@
     "until": "Until the end of the registration of applications left:",
     "activities": "Events",
     "last-activities": "Recent events"
+  },
+  "criteria": {
+    "teacher-not-found": "Teacher not selected",
+    "success-saved": "Successfully saved",
+    "lesson-control": "Lesson observation",
+    "select": "Choose",
+    "submit": "Save",
+    "select-teacher": "Select teacher to evaluate",
+    "feedback": "Feedback",
+    "profile": "Profile",
+    "lesson-plan": "Lesson Plan",
+    "select-date": "Select date",
+    "save": "Save",
+    "edit": "Edit",
+    "add-line": "add line",
+    "value": "Value",
+    "name": "Name"
   }
 }

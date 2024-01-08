@@ -1,17 +1,16 @@
 <template>
   <div class="wrapper">
-    {{author}}
     <v-card>
       <v-tabs
               v-model="tab"
               color="deep-purple-accent-4"
               align-tabs="center"
       >
-        <v-tab :value="1">Наблюдение урока</v-tab>
-        <v-tab :value="2">Feedback</v-tab>
+        <v-tab :value="1">{{$t('criteria.lesson-control')}}</v-tab>
+        <v-tab :value="2">{{$t('criteria.feedback')}}</v-tab>
         <!--<v-tab :value="3">statistics</v-tab>-->
-        <v-tab :value="4">Профиль</v-tab>
-        <v-tab :value="5">План урока</v-tab>
+        <v-tab :value="4">{{$t('criteria.profile')}}</v-tab>
+        <v-tab :value="5">{{$t('criteria.lesson-plan')}}</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item
@@ -119,6 +118,7 @@
       }),
 
       saveCriteria(payload){
+
         this.saveAnswers(payload).then(res => {
           console.log(res);
         }).catch(err => {

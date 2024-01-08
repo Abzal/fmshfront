@@ -5,7 +5,7 @@
                 <v-autocomplete
                         v-model="selectedDate"
                         :items="dateArr"
-                        label="Выбрать дату"
+                        :label="$t('criteria.select-date')"
                         item-value="desc"
                         item-text="title"
                 ></v-autocomplete>
