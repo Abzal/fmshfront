@@ -1,5 +1,5 @@
 <template>
-    <v-dialog :model-value="dialog">
+    <v-dialog v-model="show">
         <v-card>
             <v-card-title>
                 {{ selectedLessonPlan ? 'Редактировать урок' : 'Добавить урок' }}
@@ -33,7 +33,7 @@
 
 
                     <v-btn type="submit" color="primary">{{ selectedLessonPlan ? 'Сохранить' : 'Добавить' }}</v-btn>
-                    <v-btn @click="closeDialog">Отмена</v-btn>
+                    <v-btn @click.stop="show=false">Отмена</v-btn>
                 </v-form>
             </v-card-text>
         </v-card>
@@ -79,6 +79,16 @@
                 this.lessonPlan = { ...newVal };
             },
         },
+        computed: {
+            show: {
+                get () {
+                    return this.dialog
+                },
+                set (value) {
+                    this.$emit('close', value)
+                }
+            }
+        },
         methods: {
             saveLessonPlan() {
                 // Валидация данных и отправка данных на сохранение
@@ -87,13 +97,14 @@
                 // Очистка данных формы
                 this.lessonPlan = {
                     teacherName: '',
-                    date: '',
+                    date: null,
                     subject: '',
                     grade: '',
                     // Добавьте остальные поля
                     // ...
                 };
 
+                this.show = false;
                 // Закрытие диалога
                 this.$emit('close');
             },
@@ -101,13 +112,13 @@
                 // Очистка данных формы и закрытие диалога
                 this.lessonPlan = {
                     teacherName: '',
-                    date: '',
+
                     subject: '',
                     grade: '',
                     // Добавьте остальные поля
                     // ...
                 };
-
+                this.show = false;
                 this.$emit('close');
             },
         },
