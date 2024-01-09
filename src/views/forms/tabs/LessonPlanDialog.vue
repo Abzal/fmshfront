@@ -2,7 +2,7 @@
     <v-dialog v-model="show">
         <v-card>
             <v-card-title>
-                {{ selectedLessonPlan ? 'Редактировать урок' : 'Добавить урок' }}
+                {{ selectedLessonPlan ? $t("criteria.edit-lesson") : $t("criteria.add-lesson") }}
             </v-card-title>
             <v-card-text>
                 <v-form @submit.prevent="saveLessonPlan">

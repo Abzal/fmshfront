@@ -1,6 +1,9 @@
 <template>
+
+    <v-btn style="margin: 10px;" @click="showLessonPlanDialog">{{ $t("criteria.add-lesson") }}</v-btn>
+
     <v-data-table :items="items"></v-data-table>
-    <v-btn @click="showLessonPlanDialog">Добавить урок</v-btn>
+
 
     <lesson-plan-dialog
             :dialog="dialog"
