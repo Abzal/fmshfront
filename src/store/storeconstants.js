@@ -24,3 +24,5 @@ export const FETCH_FORMS_ACTION = '[action] fetch forms';
 /**user*/
 export const CREATE_PROFILE_ACTION = '[actions] create profile';
 export const GET_TEACHER_PROFILE_ACTION = '[actions] get teacher profile';
+export const CREATE_PLAN_ACTION = '[actions] create teacher plan';
+export const GET_TEACHER_PLAN_ACTION = '[actions] get teacher plan';

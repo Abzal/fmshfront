@@ -61,6 +61,14 @@
     "edit": "Өңдеу",
     "add-line": "добавить поле",
     "value": "Значение",
-    "name": "Наименование"
+    "name": "Наименование",
+
+    "add-lesson": "Добавить урок",
+    "edit-lesson": "Редактировать урок",
+    "subject": "Subject",
+    "grade": "Grade",
+    "unit": "Unit",
+    "date": "Date",
+    "teachers-name": "Teacher's name"
   }
 }

@@ -1,8 +1,8 @@
 <template>
 
-    <v-btn style="margin: 10px;" @click="showLessonPlanDialog">{{ $t("criteria.add-lesson") }}</v-btn>
+    <v-btn style="margin: 10px;" @click="showLessonPlanDialog">{{$t('criteria.add-lesson')}}</v-btn>
 
-    <v-data-table :items="items"></v-data-table>
+    <v-data-table :headers="headers" :items="items"></v-data-table>
 
 
     <lesson-plan-dialog
@@ -17,6 +17,8 @@
 
 <script>
     import LessonPlanDialog from "@/views/forms/tabs/LessonPlanDialog";
+    import {mapActions, mapGetters} from 'vuex'
+    import {CREATE_PLAN_ACTION, GET_USER_DATA_GETTER} from "@/store/storeconstants";
     export default {
         name: "LessonPlan",
         components: {LessonPlanDialog},
@@ -105,7 +107,16 @@
 
             }
         },
+        computed: {
+            ...mapGetters('auth',{
+                userData: GET_USER_DATA_GETTER
+            }),
+        },
         methods: {
+            ...mapActions('user', {
+                createTeacherPlan: CREATE_PLAN_ACTION
+            }),
+
             showLessonPlanDialog() {
                 this.selectedLessonPlan = null;
                 this.dialog = true;
@@ -122,8 +133,20 @@
                 }
             },
             saveLessonPlan(lessonPlan) {
-                console.log(lessonPlan)
-                // Ваш код для сохранения/обновления урока
+                let lp = {
+                    email: this.userData.email,
+                    iin: this.userData.iin,
+                    date: lessonPlan.date.toISOString(),
+                    grade: lessonPlan.grade + lessonPlan.grade1,
+                    plan: {...lessonPlan, teacherName: this.userData.name}
+                }
+                this.createTeacherPlan(lp).then(res => {
+                    console.log(res);
+                }).catch(e => {
+                    console.log(e)
+                })
+
+               /* // Ваш код для сохранения/обновления урока
                 if (this.selectedLessonPlan) {
                     // Редактирование урока
                     const index = this.lessonPlans.indexOf(this.selectedLessonPlan);
@@ -135,7 +158,7 @@
                     this.lessonPlans.push(lessonPlan);
                 }
 
-                this.dialog = false;
+                this.dialog = false;*/
             },
             closeLessonPlanDialog() {
                 this.dialog = false;
