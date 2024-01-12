@@ -4,7 +4,6 @@
 
     <v-data-table :headers="headers" :items="items"></v-data-table>
 
-
     <lesson-plan-dialog
             :dialog="dialog"
             :lessonPlan="selectedLessonPlan"
@@ -12,13 +11,12 @@
             @close="closeLessonPlanDialog"
     ></lesson-plan-dialog>
 
-
 </template>
 
 <script>
     import LessonPlanDialog from "@/views/forms/tabs/LessonPlanDialog";
     import {mapActions, mapGetters} from 'vuex'
-    import {CREATE_PLAN_ACTION, GET_USER_DATA_GETTER} from "@/store/storeconstants";
+    import {CREATE_PLAN_ACTION, GET_TEACHER_PLANS_ACTION, GET_USER_DATA_GETTER} from "@/store/storeconstants";
     export default {
         name: "LessonPlan",
         components: {LessonPlanDialog},
@@ -28,39 +26,26 @@
                 selectedLessonPlan: null,
                 dialog: false,
 
-                items : [
-                    {
-                        name: 'African Elephant',
-                        species: 'Loxodonta africana',
-                        diet: 'Herbivore',
-                        habitat: 'Savanna, Forests',
-                    },
-                ],
+                items : [],
 
                 headers: [
                     {
-                        title: {kz:'Уақыт',ru:'Дата',en:'Date'},
+                        title: ({kz:'Уақыт',ru:'Дата',en:'Date'})[this.$i18n.locale],
                         align: 'start',
                         sortable: false,
                         value: 'date'
                     },
                     {
-                        title: {kz:'Предмет',ru:'Предмет',en:'Предмет'},
-                        align: 'start',
-                        sortable: false,
-                        value: 'subject'
-                    },
-                    {
-                        title: {kz:'Класс',ru:'Класс',en:'Класс'},
-                        align: 'end',
+                        title: ({kz:'Класс',ru:'Класс',en:'Класс'})[this.$i18n.locale],
+
                         sortable: false,
                         value: 'grade'
                     },
                     {
-                        title: {kz:'Класс',ru:'Класс',en:'Класс'},
+                        title: ({kz: 'Пәні', ru: 'Предмет', en: 'Subject'})[this.$i18n.locale],
                         align: 'end',
                         sortable: false,
-                        value: 'grade'
+                        value: 'plan.subject'
                     },
                 ],
 
@@ -107,6 +92,9 @@
 
             }
         },
+        created() {
+            this.getPlans();
+        },
         computed: {
             ...mapGetters('auth',{
                 userData: GET_USER_DATA_GETTER
@@ -114,9 +102,22 @@
         },
         methods: {
             ...mapActions('user', {
-                createTeacherPlan: CREATE_PLAN_ACTION
+                createTeacherPlan: CREATE_PLAN_ACTION,
+                getTeacherPlans: GET_TEACHER_PLANS_ACTION
             }),
 
+            getPlans(){
+                this.getTeacherPlans(this.userData.email).then(res => {
+                    this.items = res;
+                    for (let i = 0; i < this.items.length; i++){
+                        let d = new Date(this.items[i].date);
+                        this.items[i].date = d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() ;
+                        this.items[i].plan = JSON.parse(this.items[i].plan);
+                    }
+                }).catch(e => {
+                    console.error(e)
+                })
+            },
             showLessonPlanDialog() {
                 this.selectedLessonPlan = null;
                 this.dialog = true;
@@ -141,7 +142,7 @@
                     plan: {...lessonPlan, teacherName: this.userData.name}
                 }
                 this.createTeacherPlan(lp).then(res => {
-                    console.log(res);
+                    this.getPlans();
                 }).catch(e => {
                     console.log(e)
                 })

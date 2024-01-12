@@ -1,5 +1,10 @@
 import axios from "axios";
-import {CREATE_PLAN_ACTION, CREATE_PROFILE_ACTION, GET_TEACHER_PROFILE_ACTION} from "@/store/storeconstants";
+import {
+  CREATE_PLAN_ACTION,
+  CREATE_PROFILE_ACTION,
+  GET_TEACHER_PLANS_ACTION,
+  GET_TEACHER_PROFILE_ACTION
+} from "@/store/storeconstants";
 
 export default {
 
@@ -27,6 +32,18 @@ export default {
 
   async [GET_TEACHER_PROFILE_ACTION](context, payload) {
     return await axios.get(`user/teacher/profile/${payload}`).then(response => {
+      if (response.status === 200) {
+        return response.data;
+      }else return null;
+    }).catch(error => {
+      console.log(error);
+      return null;
+    })
+  },
+
+
+  async [GET_TEACHER_PLANS_ACTION](context, payload) {
+    return await axios.get(`user/teacher/plans/${payload}`).then(response => {
       if (response.status === 200) {
         return response.data;
       }else return null;

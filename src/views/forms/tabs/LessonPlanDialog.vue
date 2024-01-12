@@ -1,5 +1,5 @@
 <template>
-    <v-dialog v-model="show">
+    <v-dialog v-model="show" style="max-width: 1200px">
         <v-card>
             <v-card-title>
 
@@ -45,10 +45,10 @@
                     </v-row>
                     <v-divider :thickness="2"></v-divider>
 
-                    <v-text-field
+                    <!--<v-text-field
                             v-model="lessonPlan.pd"
                             :label="({kz: 'КДМ', ru: 'ЦПР', en: 'PD'})[this.$i18n.locale]"
-                    ></v-text-field>
+                    ></v-text-field>-->
 
                     <v-text-field
                             v-model="lessonPlan.lessonObjectives"
