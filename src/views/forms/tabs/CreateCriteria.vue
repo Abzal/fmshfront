@@ -1,6 +1,38 @@
 <template>
     <v-container>
 
+        <v-dialog v-model="showCurrentProfile">
+            <v-card>
+                <v-card-title class="text-h5">Profile</v-card-title>
+                <v-card-actions>
+                    <p>
+                        {{requiredProfile[0][this.$i18n.locale]}}
+                        <span>
+                            {{currentProfile}}
+                        </span>
+                    </p>
+
+                    <br />
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue-darken-1" variant="text" @click="showCurrentProfile = false" >OK</v-btn>
+                    <v-spacer></v-spacer>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+
+        <v-dialog v-model="showLessonPlan">
+            <v-card>
+                <v-card-title class="text-h5">Lesson plan</v-card-title>
+                <v-card-actions>
+                    {{currentLessonPlan}}
+                    <br />
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue-darken-1" variant="text" @click="showLessonPlan = false" >OK</v-btn>
+                    <v-spacer></v-spacer>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+
         <v-autocomplete
                 v-model="selectedItem"
                 :label="$t('criteria.select-teacher')"
@@ -12,7 +44,20 @@
         ></v-autocomplete>
         <v-form @submit.prevent="submitSurvey">
             <v-card>
-                <v-card-title class="headline">{{$t('criteria.lesson-control')}}  {{selectedItem?'"'+selectedItem.desc+'"':''}}</v-card-title>
+                <v-card-title class="headline">
+                    {{$t('criteria.lesson-control')}}  {{selectedItem?'"'+selectedItem.desc+'"':''}}
+
+                    <template v-if="selectedItem">
+                            <v-icon v-if="currentProfile" @click="showCurrentProfile = true" style="margin: 10px; cursor: pointer;">
+                                mdi-account-file
+                            </v-icon>
+
+                            <v-icon v-if="currentLessonPlan"  @click="showLessonPlan = true" style="margin: 10px; cursor:pointer;">
+                                mdi-alpha-l-box
+                            </v-icon>
+                    </template>
+
+                </v-card-title>
                 <v-card-text>
                     <template v-for="(form,idx) in strForm"  :key="idx + '_str_form'">
 
@@ -59,7 +104,7 @@
 
                     </template>
                 </v-card-text>
-                <v-alert v-if="showErrors" type="error" dismissible>
+                <v-alert v-if="showErrors"  type="error" dismissible>
                     {{$t('criteria.teacher-not-found')}}
                 </v-alert>
                 <v-alert v-if="showSuccess" type="success" dismissible>
@@ -74,8 +119,13 @@
 </template>
 
 <script>
-    import {mapGetters} from "vuex";
-    import {GET_TEACHERS_FIO_GETTER, GET_USER_DATA_GETTER} from "@/store/storeconstants";
+    import {mapActions, mapGetters} from "vuex";
+    import {
+        GET_TEACHER_PLAN_ACTION,
+        GET_TEACHER_PROFILE_ACTION,
+        GET_TEACHERS_FIO_GETTER,
+        GET_USER_DATA_GETTER
+    } from "@/store/storeconstants";
 
     export default {
         name: "CreateCriteria",
@@ -87,24 +137,86 @@
                 showSuccess: false,
                 selectedItem: null,
                 errorMsg: null,
+                dateStringIso: '2024-01-19T18:00:00.000Z',
+
+                currentLessonPlan: null,
+                showLessonPlan: false,
+
+                currentProfile: null,
+                showCurrentProfile: false,
+
                 answers: {
                     ru: [
-                        {title: 'Н/Н', value: 0},
-                        {title: 'Н/У', value: 1},
-                        {title: 'хорошо', value: 2},
+                        {title: 'Н/Н – не наблюдается', value: 0},
+                        {title: '1 - нуждается в улучшении', value: 1},
+                        {title: '2 - хорошо', value: 2},
                     ],
                     kz: [
-                        {title: "бақыланбайды", value: 0},
-                        {title: "Жақсартуды қажет етеді", value: 1},
-                        {title: "жақсы", value: 2},
+                        {title: "Б - бақыланбайды", value: 0},
+                        {title: "1 - Жақсартуды қажет етеді", value: 1},
+                        {title: "2 - жақсы", value: 2},
                     ],
                     en: [
-                        {title: "No", value: 0},
-                        {title: "needs improvement", value: 1},
-                        {title: "good", value: 2},
+                        {title: "N – No", value: 0},
+                        {title: "1 – needs improvement", value: 1},
+                        {title: "2 - good", value: 2},
                     ],
                     },
                 satisfactionEmojis: ['☹️', '😐', '😍'],
+
+                skillLevels: {'ru':[
+                        {'title':'учитель-стажер NIS','value':0},
+                        {'title':'учитель NIS','value':1},
+                        {'title':'учитель-модератор NIS','value':2},
+                        {'title':'учитель-эксперт NIS','value':3},
+                        {'title':'учитель-исследователь NIS','value':4},
+                    ],
+                    'kz':[
+                        {'title':'НЗМ стажер оқытушысы','value':0},
+                        {'title':'НЗМ мұғалімі','value':1},
+                        {'title':'НЗМ оқытушы-модераторы','value':2},
+                        {'title':'НЗМ сарапшы мұғалімі','value':3},
+                        {'title':'НЗМ оқытушы-зерттеуші','value':4},
+                    ],
+                    'en':[
+                        {'title':'NIS trainee teacher','value':0},
+                        {'title':'NIS teacher','value':1},
+                        {'title':'NIS teacher-moderator','value':2},
+                        {'title':'NIS expert teacher','value':3},
+                        {'title':'NIS teacher-researcher','value':4},
+                    ]
+                },
+
+                requiredProfile: [
+                    {'ru':'2. Уровень педагогического мастерства','kz':'2. Оқыту шеберлігінің деңгейі','en':'2. Level of teaching skills'},
+                    {'ru':'3. Аттестационный период','kz':'3. Аттестаттау кезеңі','en':'3. Attestation period'},
+                    {'ru':'4. Тема исследования урока Lesson Study / исследования практики Action Research','kz':'4. Lesson Study / Action Research тақырыбы','en':'4. Lesson Study / Action Research topic'},
+                    {'ru':'5. Цель профессионального развития','kz':'5. Біліктілікті арттыру мақсаты','en':'5. Goal of professional development'},
+                ],
+
+            }
+        },
+        created() {
+            const date = new Date();
+            this.dateStringIso = date.toISOString().split('T')[0] + 'T18:00:00.000Z';
+        },
+        watch: {
+            selectedItem: {
+                handler(val){
+                    if(val && val.desc){
+                        this.getTeacherPlan({email: val.desc, date: this.dateStringIso}).then(res => {
+                            console.log(res)
+                            this.currentLessonPlan = res? JSON.parse(res):res;
+                        }).catch(e => {
+                        });
+                        this.getTeacherProfile(val.desc).then(res => {
+                            console.log(res)
+                            this.currentProfile = res? JSON.parse(res): res;
+                        }).catch(e => {
+                        })
+                    }
+                },
+                deep: true
             }
         },
         computed: {
@@ -114,8 +226,14 @@
             ...mapGetters('auth', {
                 author: GET_USER_DATA_GETTER
             }),
+
         },
+
         methods: {
+            ...mapActions('user', {
+                getTeacherPlan: GET_TEACHER_PLAN_ACTION,
+                getTeacherProfile: GET_TEACHER_PROFILE_ACTION
+            }),
             submitSurvey() {
                 if (this.selectedItem){
                     let answers = [];
